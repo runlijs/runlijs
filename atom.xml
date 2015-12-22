@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-22T01:33:57.000Z</updated>
+  <updated>2015-12-22T02:18:31.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,27 +19,41 @@
     <link href="http://yoursite.com/2015/12/21/JavaScript%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     <id>http://yoursite.com/2015/12/21/JavaScript正则表达式/</id>
     <published>2015-12-21T09:20:29.000Z</published>
-    <updated>2015-12-22T01:33:57.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="u5728_u524D_u7AEF_u9879_u76EE_u4E2D_u7ECF_u5E38_u4F1A_u7528_u5230_u4E00_u4E2A_u4E9B_u6B63_u5219_u8868_u8FBE_uFF0C_u7136_u540E_u6211_u5728_u7F51_u4E0A_u627E_u4E86_u4E00_u4E9B_u5E38_u7528_u7684_u6B63_u5219_u8868_u8FBE_u5F0F"><a href="#u5728_u524D_u7AEF_u9879_u76EE_u4E2D_u7ECF_u5E38_u4F1A_u7528_u5230_u4E00_u4E2A_u4E9B_u6B63_u5219_u8868_u8FBE_uFF0C_u7136_u540E_u6211_u5728_u7F51_u4E0A_u627E_u4E86_u4E00_u4E9B_u5E38_u7528_u7684_u6B63_u5219_u8868_u8FBE_u5F0F" class="headerlink" title="在前端项目中经常会用到一个些正则表达，然后我在网上找了一些常用的正则表达式"></a>在前端项目中经常会用到一个些正则表达，然后我在网上找了一些常用的正则表达式</h1><h2 id="u6570_u5B57_u7C7B_u8868_u8FBE_u5F0F"><a href="#u6570_u5B57_u7C7B_u8868_u8FBE_u5F0F" class="headerlink" title="数字类表达式"></a>数字类表达式</h2><blockquote>
+    <updated>2015-12-22T02:18:31.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="u5728_u524D_u7AEF_u9879_u76EE_u4E2D_u7ECF_u5E38_u4F1A_u7528_u5230_u4E00_u4E2A_u4E9B_u6B63_u5219_u8868_u8FBE_uFF0C_u6240_u4EE5_u5C31_u5728_u7F51_u4E0A_u6574_u7406_u4E00_u4E9B_u5E38_u7528_u7684_u6B63_u5219_u8868_u8FBE_u5F0F_uFF0C_u5982_u6709_u5199_u7684_u4E0D_u5BF9_u7684_u5730_u65B9_uFF0C_u53EF_u4EE5_u591A_u591A_u4EA4_u6D41"><a href="#u5728_u524D_u7AEF_u9879_u76EE_u4E2D_u7ECF_u5E38_u4F1A_u7528_u5230_u4E00_u4E2A_u4E9B_u6B63_u5219_u8868_u8FBE_uFF0C_u6240_u4EE5_u5C31_u5728_u7F51_u4E0A_u6574_u7406_u4E00_u4E9B_u5E38_u7528_u7684_u6B63_u5219_u8868_u8FBE_u5F0F_uFF0C_u5982_u6709_u5199_u7684_u4E0D_u5BF9_u7684_u5730_u65B9_uFF0C_u53EF_u4EE5_u591A_u591A_u4EA4_u6D41" class="headerlink" title="在前端项目中经常会用到一个些正则表达，所以就在网上整理一些常用的正则表达式，如有写的不对的地方，可以多多交流"></a>在前端项目中经常会用到一个些正则表达，所以就在网上整理一些常用的正则表达式，如有写的不对的地方，可以多多交流</h1><h2 id="u6570_u5B57_u7C7B_u8868_u8FBE_u5F0F"><a href="#u6570_u5B57_u7C7B_u8868_u8FBE_u5F0F" class="headerlink" title="数字类表达式"></a>数字类表达式</h2><blockquote>
 <ol>
 <li>数字 /^[0-9]*$/ 或者 /^\d$/</li>
 <li>n位数字 /^[0-9]{n}$/ 或者 /^\d{n}$/</li>
 <li>到少n位数字  /^[0-9]{n,}$/ 或者 /^\d{n,}$/</li>
 <li>n-m位数字   /^[0-9]{n,m}$/ 或者 /^\d{n,m}$/</li>
-<li>正负整数    /^(-|+)*\d+$/</li>
-<li>正负小数      /^(-|+)*\d+(.\d+)$/</li>
-<li>正的两位小数  /^[1-9]\d+(.\d{2})$/</li>
+<li>正负整数    /^(-|+)?\d+$/</li>
+<li>正负小数      /^(-|+)?\d*(.\d+)$/</li>
+<li>2位小数的正实数  /^[1-9]\d+(.\d{2})$/</li>
+<li>大于0的正整数   /^+?[1-9]\d*$/</li>
 <li>1-99的正整数 /^[1-9]{1,2}$/</li>
+<li>非正整数    /^-[0-9]<em>$/ 或者 /^-[0-9]\d</em>$/</li>
+<li>正负浮点数  /^(-?\d+)(.\d+)$/</li>
+</ol>
+</blockquote>
+<h2 id="u6821_u9A8C_u5B57_u7B26_u4E32_u8868_u8FBE_u5F0F"><a href="#u6821_u9A8C_u5B57_u7B26_u4E32_u8868_u8FBE_u5F0F" class="headerlink" title="校验字符串表达式"></a>校验字符串表达式</h2><blockquote>
+<ol>
+<li>汉字   /^[\u4e00-\u9fa5]{0,}$/</li>
+<li>大小写字母  /^[a-zA-Z]+$/</li>
+<li>大小字字母数字  /^[a-zA-Z0-9]+$/</li>
+<li>26位大写字母 /^[A-Z]+$/</li>
+<li>26位小写字母 /^[a-z]+$/</li>
+<li>字母数字下划线 /^[a-zA-Z0-9_]+$/</li>
 </ol>
 </blockquote>
 <h2 id="u5176_u5B9E_u7C7B_u9700_u6C42_u8868_u8FBE_u5F0F"><a href="#u5176_u5B9E_u7C7B_u9700_u6C42_u8868_u8FBE_u5F0F" class="headerlink" title="其实类需求表达式"></a>其实类需求表达式</h2><blockquote>
 <ol>
 <li>11号手机号码 /^(13|14|15|18|19)[0-9]{9}$/</li>
+<li>邮箱表达式   /^^\w+([-+.]\w+)<em>@\w+([-.]\w+)</em>.\w+([-.]\w+)*$$/</li>
 </ol>
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="u5728_u524D_u7AEF_u9879_u76EE_u4E2D_u7ECF_u5E38_u4F1A_u7528_u5230_u4E00_u4E2A_u4E9B_u6B63_u5219_u8868_u8FBE_uFF0C_u7136_u540E_u6211_]]>
+    <![CDATA[<h1 id="u5728_u524D_u7AEF_u9879_u76EE_u4E2D_u7ECF_u5E38_u4F1A_u7528_u5230_u4E00_u4E2A_u4E9B_u6B63_u5219_u8868_u8FBE_uFF0C_u6240_u4EE5_u5C31_]]>
     </summary>
     
       <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
