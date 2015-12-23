@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-23T06:45:18.000Z</updated>
+  <updated>2015-12-23T07:19:55.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/12/23/javascript%E4%B8%AD%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%AD%A6%E4%B9%A0/"/>
     <id>http://yoursite.com/2015/12/23/javascript中的正则表达学习/</id>
     <published>2015-12-23T01:30:18.000Z</published>
-    <updated>2015-12-23T06:45:18.000Z</updated>
+    <updated>2015-12-23T07:19:55.000Z</updated>
     <content type="html"><![CDATA[<h1 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a>定义</h1><p>###在javascript中我们可以通过内建的类定义一个正则表达式</p>
 <blockquote>
 <p>var re = new RegExp(‘[0-9]’);</p>
@@ -76,7 +76,13 @@
 <li>/\W/ 任何一个非数字字母下划线，等价于/[^a-zA-Z0-9_]/</li>
 <li>/\s/ 任何一个空白字符，包括换页符、换行符、回车符、制表符和垂直制表符，等价于[\f\n\r\t\v]</li>
 <li>/\S/ 任何一个非空白字符，等价于[^\f\n\r\t\v]</li>
+<li>/./  任何一个非空格回车，等价于[^\n\r]<br>相同字母大小写总是进行取非操作的</li>
 </ul>
+</blockquote>
+<p>#贪婪模式(重复模式)<br>以匹配一个邮箱username@email.com为例，邮箱包括一个用户名，@符号与一个域名，用户名与域名的的个数无法判断，但是可以肯定的是用户名与域名至少有一个字符<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// \w 写特殊字符</span></span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/^\w+@\w+.\w+$/</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">'user_name@email.com'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(re.test(str)) <span class="comment">// true</span></span><br></pre></td></tr></table></figure></p>
+<p>贪婪模式有几个符号我们需要了解</p>
+<blockquote>
+<p>1、 + 表示出现一次或多次，至少一次<br>2、 * 表示出现任意次数，零次，一次，或多次<br>3、 ? 表示出来零次或一次，最多一次<br>4、 {n}   能且只能出现n次<br>5、 {n,}  最少出现n次，最多不限<br>6、 {n,m} 最少出现n次，最多出现m次</p>
 </blockquote>
 ]]></content>
     <summary type="html">
