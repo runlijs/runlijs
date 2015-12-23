@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-23T05:17:36.000Z</updated>
+  <updated>2015-12-23T05:28:53.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/12/23/javascript%E4%B8%AD%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%AD%A6%E4%B9%A0/"/>
     <id>http://yoursite.com/2015/12/23/javascript中的正则表达学习/</id>
     <published>2015-12-23T01:30:18.000Z</published>
-    <updated>2015-12-23T05:17:36.000Z</updated>
+    <updated>2015-12-23T05:28:53.000Z</updated>
     <content type="html"><![CDATA[<h1 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a>定义</h1><p>###在javascript中我们可以通过内建的类定义一个正则表达式</p>
 <blockquote>
 <p>var re = new RegExp(‘[0-9]’);</p>
@@ -53,6 +53,12 @@
 <ul>
 <li>global – 布尔值，若全局选项g已设置则返回true，否则返回false；</li>
 <li>ignoreCase – 布尔值，若忽略大小写选项i已设置则返回true，否则返回false；</li>
+</ul>
+</blockquote>
+<p>#元字符</p>
+<h4 id="u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u4E00_u4E9B_u7279_u6B8A_u5B57_u7B26_u662F_u4E0D_u80FD_u76F4_u63A5_u4F7F_u7528_u7684_uFF0C_u5FC5_u987B_u5BF9_u5B83_u8FDB_u884C_u8F6C_u4E49_u540E_u624D_u53EF_u4EE5_uFF0C_u6BD4_u5982_u2019_5C_u2019_uFF0C_u56E0_u4E3A_u8FD9_u4E9B_u5B57_u7B26_u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u7279_u6B8A_u7684_u8BED_u6CD5_u542B_u4E49_uFF0C_u8FD9_u7C7B_u5B57_u7B26_u88AB_u79F0_u4E3A_u5143_u5B57_u7B26_uFF0C_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u7684_u5143_u5B57_u7B26_u6709"><a href="#u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u4E00_u4E9B_u7279_u6B8A_u5B57_u7B26_u662F_u4E0D_u80FD_u76F4_u63A5_u4F7F_u7528_u7684_uFF0C_u5FC5_u987B_u5BF9_u5B83_u8FDB_u884C_u8F6C_u4E49_u540E_u624D_u53EF_u4EE5_uFF0C_u6BD4_u5982_u2019_5C_u2019_uFF0C_u56E0_u4E3A_u8FD9_u4E9B_u5B57_u7B26_u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u7279_u6B8A_u7684_u8BED_u6CD5_u542B_u4E49_uFF0C_u8FD9_u7C7B_u5B57_u7B26_u88AB_u79F0_u4E3A_u5143_u5B57_u7B26_uFF0C_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u7684_u5143_u5B57_u7B26_u6709" class="headerlink" title="在正则表达式中有一些特殊字符是不能直接使用的，必须对它进行转义后才可以，比如’\’，因为这些字符在正则表达式中有特殊的语法含义，这类字符被称为元字符，正则表达式中的元字符有"></a>在正则表达式中有一些特殊字符是不能直接使用的，必须对它进行转义后才可以，比如’\’，因为这些字符在正则表达式中有特殊的语法含义，这类字符被称为元字符，正则表达式中的元字符有</h4><blockquote>
+<ul>
+<li>. \ / ? * + { } [ ( ) ] ^ $ |</li>
 </ul>
 </blockquote>
 ]]></content>
