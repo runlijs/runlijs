@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-23T05:28:53.000Z</updated>
+  <updated>2015-12-23T06:08:06.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/12/23/javascript%E4%B8%AD%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%AD%A6%E4%B9%A0/"/>
     <id>http://yoursite.com/2015/12/23/javascript中的正则表达学习/</id>
     <published>2015-12-23T01:30:18.000Z</published>
-    <updated>2015-12-23T05:28:53.000Z</updated>
+    <updated>2015-12-23T06:08:06.000Z</updated>
     <content type="html"><![CDATA[<h1 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a>定义</h1><p>###在javascript中我们可以通过内建的类定义一个正则表达式</p>
 <blockquote>
 <p>var re = new RegExp(‘[0-9]’);</p>
@@ -57,10 +57,15 @@
 </blockquote>
 <p>#元字符</p>
 <h4 id="u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u4E00_u4E9B_u7279_u6B8A_u5B57_u7B26_u662F_u4E0D_u80FD_u76F4_u63A5_u4F7F_u7528_u7684_uFF0C_u5FC5_u987B_u5BF9_u5B83_u8FDB_u884C_u8F6C_u4E49_u540E_u624D_u53EF_u4EE5_uFF0C_u6BD4_u5982_u2019_5C_u2019_uFF0C_u56E0_u4E3A_u8FD9_u4E9B_u5B57_u7B26_u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u7279_u6B8A_u7684_u8BED_u6CD5_u542B_u4E49_uFF0C_u8FD9_u7C7B_u5B57_u7B26_u88AB_u79F0_u4E3A_u5143_u5B57_u7B26_uFF0C_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u7684_u5143_u5B57_u7B26_u6709"><a href="#u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u4E00_u4E9B_u7279_u6B8A_u5B57_u7B26_u662F_u4E0D_u80FD_u76F4_u63A5_u4F7F_u7528_u7684_uFF0C_u5FC5_u987B_u5BF9_u5B83_u8FDB_u884C_u8F6C_u4E49_u540E_u624D_u53EF_u4EE5_uFF0C_u6BD4_u5982_u2019_5C_u2019_uFF0C_u56E0_u4E3A_u8FD9_u4E9B_u5B57_u7B26_u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u7279_u6B8A_u7684_u8BED_u6CD5_u542B_u4E49_uFF0C_u8FD9_u7C7B_u5B57_u7B26_u88AB_u79F0_u4E3A_u5143_u5B57_u7B26_uFF0C_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u7684_u5143_u5B57_u7B26_u6709" class="headerlink" title="在正则表达式中有一些特殊字符是不能直接使用的，必须对它进行转义后才可以，比如’\’，因为这些字符在正则表达式中有特殊的语法含义，这类字符被称为元字符，正则表达式中的元字符有"></a>在正则表达式中有一些特殊字符是不能直接使用的，必须对它进行转义后才可以，比如’\’，因为这些字符在正则表达式中有特殊的语法含义，这类字符被称为元字符，正则表达式中的元字符有</h4><blockquote>
-<ul>
-<li>. \ / ? * + { } [ ( ) ] ^ $ |</li>
-</ul>
+<p>. \ / ? * + { } [ ( ) ] ^ $ |</p>
 </blockquote>
+<p>#范围匹配</p>
+<h4 id="u4E00_u4E2A_u7B80_u5355_u7684_u5B57_u7B26_u5C31_u53EF_u4EE5_u662F_u4E00_u4E2A_u5339_u914D_u6A21_u5F0F_uFF0C_u4F46_u662F_u73B0_u5B9E_u60C5_u51B5_u4E0D_u4F1A_u8FD9_u4E48_u7B80_u5355_uFF0C_u6BD4_u5982_u6211_u4EEC_u9700_u8981_u5339_u914D0-9_u7684_u6570_u5B57"><a href="#u4E00_u4E2A_u7B80_u5355_u7684_u5B57_u7B26_u5C31_u53EF_u4EE5_u662F_u4E00_u4E2A_u5339_u914D_u6A21_u5F0F_uFF0C_u4F46_u662F_u73B0_u5B9E_u60C5_u51B5_u4E0D_u4F1A_u8FD9_u4E48_u7B80_u5355_uFF0C_u6BD4_u5982_u6211_u4EEC_u9700_u8981_u5339_u914D0-9_u7684_u6570_u5B57" class="headerlink" title="一个简单的字符就可以是一个匹配模式，但是现实情况不会这么简单，比如我们需要匹配0-9的数字"></a>一个简单的字符就可以是一个匹配模式，但是现实情况不会这么简单，比如我们需要匹配0-9的数字</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">6</span>;</span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/^[0123456789]$/</span></span><br><span class="line"><span class="built_in">console</span>.log(re.test(a)) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(re.test(b)) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h4 id="u5982_u679C_u6211_u4EEC_u8981_u5339_u914D26_u4E2A_u5927_u5C0F_u5199_u5B57_u6BCD_uFF0C_u5982_u4E0B_uFF0C_u4EE3_u7801_u4F1A_u5F88_u4E0D_u7F8E_u89C2_2C_u4E5F_u4E0D_u7B80_u6D01"><a href="#u5982_u679C_u6211_u4EEC_u8981_u5339_u914D26_u4E2A_u5927_u5C0F_u5199_u5B57_u6BCD_uFF0C_u5982_u4E0B_uFF0C_u4EE3_u7801_u4F1A_u5F88_u4E0D_u7F8E_u89C2_2C_u4E5F_u4E0D_u7B80_u6D01" class="headerlink" title="如果我们要匹配26个大小写字母，如下，代码会很不美观,也不简洁"></a>如果我们要匹配26个大小写字母，如下，代码会很不美观,也不简洁</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> re = <span class="regexp">/^[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]$/</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="u8FD9_u6837_u6211_u4EEC_u53EF_u4EE5_u7528_u8303_u56F4_u5339_u914D_u8868_u8FBE_u5F0F_u2019-_u2018_uFF0C_u8FD9_u6837_u5C31_u53EF_u4EE5_u4E86_uFF0C_u201C-_u201D_u7528_u6765_u5B9A_u4E49_u4E00_u4E2A_u5339_u914D_u533A_u95F4_uFF0C_u5B57_u7B26_u7684_u5177_u4F53_u987A_u5E8F_u7531ASCII_u5B57_u7B26_u8868_u786E_u5B9A_uFF0C_u6240_u4EE5_u4E0D_u80FD_u5199_u6210/A-z/_uFF0C_u56E0_u4E3AZ-a_u4E4B_u95F4_u8FD8_u5305_u542B_u7740_u5176_u4ED6_u5B57_u7B26_u3002"><a href="#u8FD9_u6837_u6211_u4EEC_u53EF_u4EE5_u7528_u8303_u56F4_u5339_u914D_u8868_u8FBE_u5F0F_u2019-_u2018_uFF0C_u8FD9_u6837_u5C31_u53EF_u4EE5_u4E86_uFF0C_u201C-_u201D_u7528_u6765_u5B9A_u4E49_u4E00_u4E2A_u5339_u914D_u533A_u95F4_uFF0C_u5B57_u7B26_u7684_u5177_u4F53_u987A_u5E8F_u7531ASCII_u5B57_u7B26_u8868_u786E_u5B9A_uFF0C_u6240_u4EE5_u4E0D_u80FD_u5199_u6210/A-z/_uFF0C_u56E0_u4E3AZ-a_u4E4B_u95F4_u8FD8_u5305_u542B_u7740_u5176_u4ED6_u5B57_u7B26_u3002" class="headerlink" title="这样我们可以用范围匹配表达式’-‘，这样就可以了，“-”用来定义一个匹配区间，字符的具体顺序由ASCII字符表确定，所以不能写成/A-z/，因为Z-a之间还包含着其他字符。"></a>这样我们可以用范围匹配表达式’-‘，这样就可以了，“-”用来定义一个匹配区间，字符的具体顺序由ASCII字符表确定，所以不能写成/A-z/，因为Z-a之间还包含着其他字符。</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> reNum = <span class="regexp">/^[0-9]$/</span></span><br><span class="line"><span class="keyword">var</span> reStr = <span class="regexp">/^[a-zA-Z]$/</span></span><br></pre></td></tr></table></figure>
+<p>#取非匹配</p>
+<p>####很多编程语言中都使用“!”取非操作，包括javascript。正则表达式中也有取非操作，比如/[^0-9]/就是一个取非操作的正则表达式了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">var</span> s = <span class="string">"o"</span>;</span><br><span class="line"><span class="keyword">var</span> rec = <span class="regexp">/[^0-9]/</span>;<span class="comment">//取非数字</span></span><br><span class="line"><span class="built_in">console</span>.log(rec.test(i));<span class="comment">//false</span></span><br><span class="line"><span class="built_in">console</span>.log(rec.test(s));<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
 ]]></content>
     <summary type="html">
     <![CDATA[<h1 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a>定义</h1><p>###在javascript中我们可以通过内建的类定义一个正则表达式</p>
