@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-23T03:08:39.000Z</updated>
+  <updated>2015-12-23T03:50:32.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,22 +19,37 @@
     <link href="http://yoursite.com/2015/12/23/javascript%E4%B8%AD%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%AD%A6%E4%B9%A0/"/>
     <id>http://yoursite.com/2015/12/23/javascript中的正则表达学习/</id>
     <published>2015-12-23T01:30:18.000Z</published>
-    <updated>2015-12-23T03:08:39.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a>定义</h1><h3 id="u5728javascript_u4E2D_u6211_u4EEC_u53EF_u4EE5_u901A_u8FC7_u5185_u5EFA_u7684_u7C7B_u5B9A_u4E49_u4E00_u4E2A_u6B63_u5219_u8868_u8FBE_u5F0F"><a href="#u5728javascript_u4E2D_u6211_u4EEC_u53EF_u4EE5_u901A_u8FC7_u5185_u5EFA_u7684_u7C7B_u5B9A_u4E49_u4E00_u4E2A_u6B63_u5219_u8868_u8FBE_u5F0F" class="headerlink" title="在javascript中我们可以通过内建的类定义一个正则表达式"></a>在javascript中我们可以通过内建的类定义一个正则表达式</h3><blockquote>
+    <updated>2015-12-23T03:50:32.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a>定义</h1><p>###在javascript中我们可以通过内建的类定义一个正则表达式</p>
+<blockquote>
 <p>var re = new RegExp(‘[0-9]’);</p>
 </blockquote>
-<h3 id="u5B9E_u9645_u4E0ARegExp_u7C7B_u53EF_u4EE5_u63A5_u6536_u4E24_u4E2A_u53C2_u6570_uFF0C_u9664_u4E86_u672C_u8EAB_u7684_u9700_u8981_u5339_u914D_u7684_u6A21_u5F0F_u5B57_u7B26_u4E32_u5916_uFF0C_u8FD8_u53EF_u4EE5_u5B9A_u4E49_u989D_u5916_u5904_u7406_u65B9_u5F0F_u7684_u7B2C_u4E8C_u4E2A_u53C2_u6570"><a href="#u5B9E_u9645_u4E0ARegExp_u7C7B_u53EF_u4EE5_u63A5_u6536_u4E24_u4E2A_u53C2_u6570_uFF0C_u9664_u4E86_u672C_u8EAB_u7684_u9700_u8981_u5339_u914D_u7684_u6A21_u5F0F_u5B57_u7B26_u4E32_u5916_uFF0C_u8FD8_u53EF_u4EE5_u5B9A_u4E49_u989D_u5916_u5904_u7406_u65B9_u5F0F_u7684_u7B2C_u4E8C_u4E2A_u53C2_u6570" class="headerlink" title="实际上RegExp类可以接收两个参数，除了本身的需要匹配的模式字符串外，还可以定义额外处理方式的第二个参数"></a>实际上RegExp类可以接收两个参数，除了本身的需要匹配的模式字符串外，还可以定义额外处理方式的第二个参数</h3><blockquote>
+<p>###实际上RegExp类可以接收两个参数，除了本身的需要匹配的模式字符串外，还可以定义额外处理方式的第二个参数</p>
+<blockquote>
 <p>var re = new RegExp(‘[0-9]’,’g’);</p>
 </blockquote>
-<h3 id="u6211_u4EEC_u53EF_u4EE5_u6253_u5370_u770B_u4E0Bre_u7684_u503C"><a href="#u6211_u4EEC_u53EF_u4EE5_u6253_u5370_u770B_u4E0Bre_u7684_u503C" class="headerlink" title="我们可以打印看下re的值"></a>我们可以打印看下re的值</h3><blockquote>
+<p>###我们可以打印看下re的值</p>
+<blockquote>
 <p>console.log(re)// /[0-9]/g</p>
 </blockquote>
-<h3 id="u6240_u4EE5_u6211_u4EEC_u53EF_u4EE5_u7528_u7B2C_u4E8C_u79CD_u65B9_u5F0F_u5B9A_u4E49_u6B63_u5219_u8868_u8FBE_u5F0F"><a href="#u6240_u4EE5_u6211_u4EEC_u53EF_u4EE5_u7528_u7B2C_u4E8C_u79CD_u65B9_u5F0F_u5B9A_u4E49_u6B63_u5219_u8868_u8FBE_u5F0F" class="headerlink" title="所以我们可以用第二种方式定义正则表达式"></a>所以我们可以用第二种方式定义正则表达式</h3><blockquote>
+<p>###所以我们可以用第二种方式定义正则表达式</p>
+<blockquote>
 <p>var re = /[0-9]/g</p>
+</blockquote>
+<p>###如果我们需要匹配’\’<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第一种方式</span></span><br><span class="line"><span class="keyword">var</span> re = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'\\\\'</span>);</span><br><span class="line"><span class="comment">//第二种方式</span></span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/\\/</span></span><br></pre></td></tr></table></figure></p>
+<p>####记住，一个完整的正则表达式里’\’后面一定会有会另外一个字符</p>
+<p>#javascript中的正则表达式<br>其实上面我们已经简单的介绍了正则表达式的定义，但是要如何的使用呢？在javascript中RegRxp和String中都有方式处理这些正则表达式</p>
+<blockquote>
+<ul>
+<li>test – RegRxp中的test方法用来检查字符串是否匹配正则表达式，返回布尔值</li>
+<li>exec – RegRxp中的exec方法返回包含第一个匹配的的数组或null；<br>*</li>
+</ul>
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a>定义</h1><h3 id="u5728javascript_u4E2D_u6211_u4EEC_u53EF_u4EE5_u]]>
+    <![CDATA[<h1 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a>定义</h1><p>###在javascript中我们可以通过内建的类定义一个正则表达式</p>
+<blockquote>
+]]>
     </summary>
     
       <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
