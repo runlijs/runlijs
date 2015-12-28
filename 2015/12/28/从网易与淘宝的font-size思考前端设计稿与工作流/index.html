@@ -69,13 +69,19 @@
 <p>第二，当deviceWidth大于设计稿的横向分辨率时，html的font-size始终等于横向分辨率/body元素宽：</p>
 <div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-19.jpeg" alt=""><br></div><br><div class="center">640*680</div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-20.jpeg" alt=""><br></div><br><div class="center">641*680</div>
 
-
-
-
-
-
-
+<p>之所以这么干，是因为当deviceWidth大于640时，则物理分辨率大于1280(这就看设备的devicePixelRatio这个值了)，应该去访问pc网站了。事实就是这样，你从手机访问网易，看到的是触屏版的页面，如果从pad访问，看到的就是电脑版的页面。如果你也想这么干，只要把总结中第三步的代码稍微改一下就行了：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> deviceWidth = <span class="built_in">document</span>.documentElement.clientWidth;</span><br><span class="line"><span class="keyword">if</span>(deviceWidth &gt; <span class="number">640</span>) deviceWidth = <span class="number">640</span>;</span><br><span class="line"><span class="built_in">document</span>.documentElement.style.fontSize = deviceWidth / <span class="number">6.4</span> + <span class="string">'px'</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="4-_u6DD8_u5B9D_u7684_u505A_u6CD5"><a href="#4-_u6DD8_u5B9D_u7684_u505A_u6CD5" class="headerlink" title="4.淘宝的做法"></a>4.淘宝的做法</h1><p>看看淘宝在不同分辨率下，呈现的效果：</p>
+<p><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-21.jpeg" alt=""><br></div></p>
+<p><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-22.jpeg" alt=""><br></div></p>
+<p><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-23.jpeg" alt=""><br></div><br>淘宝的效果跟网易的效果其实是类似的，随着分辨率的变化，页面元素的尺寸和间距都相应变化，这是因为淘宝的尺寸也是使用了rem的原因。在介绍它的做法之前，先来了解一点关于viewport的知识，通常我们采用如下代码设置viewport:</p>
 <blockquote>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+
+
+
 <p>作者：流云诸葛<br>原文链接：<a href="http://www.cnblogs.com/lyzg/p/4877277.html" target="_blank" rel="external">http://www.cnblogs.com/lyzg/p/4877277.html</a></p>
 </blockquote>
 </div></article><div class="pagination"><span class="pagination-prev">PREV</span><a href="/2015/12/23/javascript中的正则表达学习/" class="pagination-next">NEXT</a></div></div><aside class="sidebar"><h3>分类标签</h3><ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li></ul><h3>最新文章</h3><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2015/12/28/从网易与淘宝的font-size思考前端设计稿与工作流/">从网易与淘宝的font-size思考前端设计稿与工作流</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/23/javascript中的正则表达学习/">javascript中的正则表达学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/22/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/21/JavaScript正则表达式/">JavaScript常用正则表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/18/mac-sublime-text-3-安装插件/">mac sublime text 3 安装插件</a></li></ul></aside></section></div><div class="extra"></div><footer class="footer"><div class="row-flex-row limit-width vh-center"><div class="copyright"><P>© 2015 <a href="/">John Doe</P></div><div class="power"><p><a href="https://hexo.io">Hexo</a>, 
