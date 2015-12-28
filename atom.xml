@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-28T03:04:20.000Z</updated>
+  <updated>2015-12-28T03:09:57.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/12/28/%E4%BB%8E%E7%BD%91%E6%98%93%E4%B8%8E%E6%B7%98%E5%AE%9D%E7%9A%84font-size%E6%80%9D%E8%80%83%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E7%A8%BF%E4%B8%8E%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
     <id>http://yoursite.com/2015/12/28/从网易与淘宝的font-size思考前端设计稿与工作流/</id>
     <published>2015-12-28T01:49:47.000Z</published>
-    <updated>2015-12-28T03:04:20.000Z</updated>
+    <updated>2015-12-28T03:09:57.000Z</updated>
     <content type="html"><![CDATA[<p>本文结合自己对网易与淘宝移动端首页html元素上的font-size这个属性的思考与学习，讨论html5设计稿尺寸以及前端与设计之间协作流程的问题，内容较多，但对你的技术和工作一定有价值，欢迎阅读与点评 </p>
 <h1 id="1-__u95EE_u9898_u7684_u5F15_u51FA"><a href="#1-__u95EE_u9898_u7684_u5F15_u51FA" class="headerlink" title="1. 问题的引出"></a>1. 问题的引出</h1><p>最近阅读白树的的博文《<a href="http://www.cnblogs.com/PeunZhang/p/3407453.html" target="_blank" rel="external">移动web资源的整理</a>》时，他在博文中有一段指出，如果html5要适应各种分辨率的移动设备，应该使用rem这样的尺寸单位，同时给出了一段针对各个分辨率范围在html上设置font-size的代码：</p>
 <blockquote>
@@ -35,7 +35,7 @@
 <p>（3）设计稿都是以分辨率来标明尺寸的，前端在根据设计稿里各个元素的像素尺寸转换为rem时，该以哪个font-size为准呢？这需要去写才能知道。</p>
 <p>正是因为以上担到的一些不足，我觉得这种适配方式不是特别好，写起来太麻烦。这了完成工作，我们需要找寻更简单更有效率的方法。那么html5该如何去做众多移动设备的适配呢？我目前已知的有3种解决方法，将会在下文的第2，3，4部分阐述。</p>
 <h1 id="2-__u7B80_u5355_u95EE_u9898_u7B80_u5355_u89E3_u51B3"><a href="#2-__u7B80_u5355_u95EE_u9898_u7B80_u5355_u89E3_u51B3" class="headerlink" title="2. 简单问题简单解决"></a>2. 简单问题简单解决</h1><p>我觉得有些web app不一定很复杂,比如拉勾网，你看看它的页面在iphone4,iphone6,ipad下的样子就知道了：</p>
-<p><img src="http://mmbiz.qpic.cn/mmbiz/Xb8hdeCAkhVzY3VENLzZsXuvkV5eJ9sVcncOOwd034vUkfeQBTeAzlxQnpW4hKd4ibmNIU9xZ5beLSmxK4eDj7A/640?wx_fmt=png&amp;wxfrom=5&amp;wx_lazy=1" alt="拉勾iphone4"></p>
+<p><img src="http://7xo19o.com1.z0.glb.clouddn.com/640.jpeg" alt="拉勾iphone4"><br>![拉勾iphone6](<a href="http://7xo19o.com1.z0.glb.clouddn.com/640-2.jpeg）" target="_blank" rel="external">http://7xo19o.com1.z0.glb.clouddn.com/640-2.jpeg）</a><br>![拉勾ipad](<a href="http://7xo19o.com1.z0.glb.clouddn.com/640-3.jpeg）" target="_blank" rel="external">http://7xo19o.com1.z0.glb.clouddn.com/640-3.jpeg）</a></p>
 <blockquote>
 <p>作者：流云诸葛<br>原文链接：<a href="http://www.cnblogs.com/lyzg/p/4877277.html" target="_blank" rel="external">http://www.cnblogs.com/lyzg/p/4877277.html</a></p>
 </blockquote>
