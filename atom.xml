@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-28T06:44:44.000Z</updated>
+  <updated>2015-12-28T06:56:51.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/12/28/%E4%BB%8E%E7%BD%91%E6%98%93%E4%B8%8E%E6%B7%98%E5%AE%9D%E7%9A%84font-size%E6%80%9D%E8%80%83%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E7%A8%BF%E4%B8%8E%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
     <id>http://yoursite.com/2015/12/28/从网易与淘宝的font-size思考前端设计稿与工作流/</id>
     <published>2015-12-28T01:49:47.000Z</published>
-    <updated>2015-12-28T06:44:44.000Z</updated>
+    <updated>2015-12-28T06:56:51.000Z</updated>
     <content type="html"><![CDATA[<p>本文结合自己对网易与淘宝移动端首页html元素上的font-size这个属性的思考与学习，讨论html5设计稿尺寸以及前端与设计之间协作流程的问题，内容较多，但对你的技术和工作一定有价值，欢迎阅读与点评 </p>
 <h1 id="1-__u95EE_u9898_u7684_u5F15_u51FA"><a href="#1-__u95EE_u9898_u7684_u5F15_u51FA" class="headerlink" title="1. 问题的引出"></a>1. 问题的引出</h1><p>最近阅读白树的的博文《<a href="http://www.cnblogs.com/PeunZhang/p/3407453.html" target="_blank" rel="external">移动web资源的整理</a>》时，他在博文中有一段指出，如果html5要适应各种分辨率的移动设备，应该使用rem这样的尺寸单位，同时给出了一段针对各个分辨率范围在html上设置font-size的代码：</p>
 <blockquote>
@@ -61,15 +61,22 @@
 <div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-8.jpeg" alt=""><br></div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-9.jpeg" alt=""><br></div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-10.jpeg" alt=""><br></div>
 
 <p>从上面几张图可以看出，随着分辨率的增大，页面的效果会发生明显变化，主要体现在各个元素的宽高与间距。375*680的比320*680的导航栏明显要高。能够达到这种效果的根本原因就是因为网易页面里除了font-size之外的其它css尺寸都使用了rem作为单位，比如你看导航栏的高度设置代码：</p>
-<div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-11.png" alt=""><br></div><br>可是在文本第1部分提到，使用rem布局结合在html上根据不同分辨率设置不同font-size在很多不好解决的麻烦，网易是如何解决的呢？<b>最根本的原因在于，网易页面上html的font-size不是预先通过媒介查询在css里定义好的，页是通过js计算出来的。</b>所以当分辨率发生变化时，html的font-size就会变，不过这得在你调整分辨率后，刷新页面才能看到效果。你看代码就知道为啥font-size是直接写到html的style上面的了(js设置的原因)<br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-12.png" alt=""><br></div><br>它是根据什么计算的，这就跟设计稿有关了，拿网易来说，它的设计稿应该是基于iphone4或者iphone5来的，所以它的设计稿竖直放时的横向分辨率为640px，为了计算方便，取一个100px的font-size为参照，那么body元素的宽度就可以设置为width:6.4rem，于是html的font-size=deviceWidth/6.4。这个deviceWidth就是viewport设置中的那个deviceWidth。根据这个计算规则，可得出本部分开始的四张截图中html的font-size大小如下：<br><br>&gt;  deviceWidth = 320，font-size = 320 / 6.4 = 50px<br>&gt;  deviceWidth = 375，font-size = 375 / 6.4 = 58.59375px<br>&gt;  deviceWidth = 414，font-size = 414 / 6.4 = 64.6875px<br>&gt;  deviceWidth = 500，font-size = 500 / 6.4 = 78.125px<br><br>事实上网易就是这么干的，你看它的代码就知道，body元素的完是<br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-13.png" alt=""><br></div><br>根据这个可以肯定它的设计稿竖着时的横向分辨率为640。然后你再看看网易在分辨率为320*680，375*680，414*680，500*680时，html的font-size是不是与上面计算的一致：<br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-14.jpeg" alt=""><br></div><br><div class="center"><br>    320*680<br></div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-15.jpeg" alt=""><br></div><br><div class="center">375*680</div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-16.png" alt=""><br></div><br><div class="center">414*680</div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-17.jpeg" alt=""><br></div><br><div class="center">500*680</div>
+<div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-11.png" alt=""><br></div><br>可是在文本第1部分提到，使用rem布局结合在html上根据不同分辨率设置不同font-size在很多不好解决的麻烦，网易是如何解决的呢？<b>最根本的原因在于，网易页面上html的font-size不是预先通过媒介查询在css里定义好的，页是通过js计算出来的。</b>所以当分辨率发生变化时，html的font-size就会变，不过这得在你调整分辨率后，刷新页面才能看到效果。你看代码就知道为啥font-size是直接写到html的style上面的了(js设置的原因)<br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-12.png" alt=""><br></div><br>它是根据什么计算的，这就跟设计稿有关了，拿网易来说，它的设计稿应该是基于iphone4或者iphone5来的，所以它的设计稿竖直放时的横向分辨率为640px，为了计算方便，取一个100px的font-size为参照，那么body元素的宽度就可以设置为width:6.4rem，于是html的font-size=deviceWidth/6.4。这个deviceWidth就是viewport设置中的那个deviceWidth。根据这个计算规则，可得出本部分开始的四张截图中html的font-size大小如下：<br><br><br><br>&gt;   deviceWidth = 320，font-size = 320 / 6.4 = 50px<br>&gt;   deviceWidth = 375，font-size = 375 / 6.4 = 58.59375px<br>&gt;   deviceWidth = 414，font-size = 414 / 6.4 = 64.6875px<br>&gt;   deviceWidth = 500，font-size = 500 / 6.4 = 78.125px<br><br>事实上网易就是这么干的，你看它的代码就知道，body元素的完是<br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-13.png" alt=""><br></div><br>根据这个可以肯定它的设计稿竖着时的横向分辨率为640。然后你再看看网易在分辨率为320*680，375*680，414*680，500*680时，html的font-size是不是与上面计算的一致：<br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-14.jpeg" alt=""><br></div><br><div class="center"><br>    320*680<br></div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-15.jpeg" alt=""><br></div><br><div class="center">375*680</div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-16.png" alt=""><br></div><br><div class="center">414*680</div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-17.jpeg" alt=""><br></div><br><div class="center">500*680</div>
 
 <p>这个deviceWidth通过document.documentElement.clientWidth就能取到了，所以当页面的dom ready后，做的第一件事情就是：</p>
-<blockquote>
-<p>  document.documentElement.style.fontSize = document.documentElement.clientWidth / 6.4 + ‘px’;</p>
-</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.documentElement.style.fontSize = <span class="built_in">document</span>.documentElement.clientWidth / <span class="number">6.4</span> + <span class="string">'px'</span>;</span><br></pre></td></tr></table></figure>
 <p>这个6.4怎么来的，当然是根据设计稿的横向分辨率/100得来的。下面总结下网易的这种做法：<br>(1)先拿设计稿竖着的横向分辨率除以100得到body元素的宽度：</p>
 <blockquote>
-<p>  如果设计稿基于iphone6，横向分辨率为750，body的width为750 / 100 = 7.5rem<br>  如果设计稿基于iphone4/5，横向分辨率为640，body的width为640 / 100 = 6.4rem</p>
+<p>  如果设计稿基于iphone6，横向分辨率为750，body的width为750 / 100 = 7.5rem<br>  如果设计稿基于iphone4/5，横向分辨率为640，body的width为640 / 100 = 6.4rem<br>(2)布局时，设计图标注的尺寸除以100得到css中的尺寸，比如下图：</p>
+</blockquote>
+<div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-18.jpeg" alt=""><br></div>
+
+<p>播放器高度为210px，写样式的时候css应该这么写：height: 2.1rem。之所以取一个100作为参照，就是为了这里计算rem的方便!</p>
+<p>(3)在dom ready以后，通过以下代码设置html的font-size:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.documentElement.style.fontSize = <span class="built_in">document</span>.documentElement.clientWidth / <span class="number">6.4</span> + <span class="string">'px'</span>;</span><br></pre></td></tr></table></figure>
+<p>6.4只是举个例子，如果是750的设计稿，应该除以7.5。</p>
+<p>(4)font-size可能需要额外的媒介查询，并且font-size不能使用rem，如网易的设置：</p>
+<blockquote>
 <p>作者：流云诸葛<br>原文链接：<a href="http://www.cnblogs.com/lyzg/p/4877277.html" target="_blank" rel="external">http://www.cnblogs.com/lyzg/p/4877277.html</a></p>
 </blockquote>
 ]]></content>
