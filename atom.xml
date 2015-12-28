@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-28T07:41:18.000Z</updated>
+  <updated>2015-12-28T07:46:55.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/12/28/%E4%BB%8E%E7%BD%91%E6%98%93%E4%B8%8E%E6%B7%98%E5%AE%9D%E7%9A%84font-size%E6%80%9D%E8%80%83%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E7%A8%BF%E4%B8%8E%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
     <id>http://yoursite.com/2015/12/28/从网易与淘宝的font-size思考前端设计稿与工作流/</id>
     <published>2015-12-28T01:49:47.000Z</published>
-    <updated>2015-12-28T07:41:18.000Z</updated>
+    <updated>2015-12-28T07:46:55.000Z</updated>
     <content type="html"><![CDATA[<p>本文结合自己对网易与淘宝移动端首页html元素上的font-size这个属性的思考与学习，讨论html5设计稿尺寸以及前端与设计之间协作流程的问题，内容较多，但对你的技术和工作一定有价值，欢迎阅读与点评 </p>
 <h1 id="1-__u95EE_u9898_u7684_u5F15_u51FA"><a href="#1-__u95EE_u9898_u7684_u5F15_u51FA" class="headerlink" title="1. 问题的引出"></a>1. 问题的引出</h1><p>最近阅读白树的的博文《<a href="http://www.cnblogs.com/PeunZhang/p/3407453.html" target="_blank" rel="external">移动web资源的整理</a>》时，他在博文中有一段指出，如果html5要适应各种分辨率的移动设备，应该使用rem这样的尺寸单位，同时给出了一段针对各个分辨率范围在html上设置font-size的代码：</p>
 <blockquote>
@@ -97,7 +97,15 @@
 <p>最后还有一个情况要说明，跟网易一样，淘宝也设置了一个临界点，当设备竖着时横向物理分辨率大于1080时，html的font-size就不会变化了，原因也是一样的，分辨率已经可以去访问电脑版页面了。</p>
 <p><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-27.jpeg" alt=""><br></div></p>
 <p><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-28.jpeg" alt=""><br></div><br>关于这种做法的具体实现，淘宝已经给我们提供了一个开源的解决方案，具体请查看：<br>　　<a href="https://github.com/amfe/lib-flexible" target="_blank" rel="external">https://github.com/amfe/lib-flexible</a></p>
+<h1 id="5-_u6BD4_u8F83_u7F51_u6613_u4E0E_u6DD8_u5B9D_u7684_u505A_u6CD5"><a href="#5-_u6BD4_u8F83_u7F51_u6613_u4E0E_u6DD8_u5B9D_u7684_u505A_u6CD5" class="headerlink" title="5.比较网易与淘宝的做法"></a>5.比较网易与淘宝的做法</h1><p>###共同点</p>
 <blockquote>
+<ul>
+<li>都能适配所有的手机设备，对于pad，网易与淘宝都会跳转到pc页面，不再使用触屏版的页面</li>
+<li>都需要动态设置html的font-size</li>
+<li>布局时各元素的尺寸值都是根据设计稿标注的尺寸计算出来，由于html的font-size是动态调整的，所以能够做到不同分辨率下页面布局呈现等比变化</li>
+<li>容器元素的font-size都不用rem，需要额外地外font-size做媒介查询</li>
+<li>都能应用于尺寸不同的设计稿，只要按以上总结的方法去用就可以了</li>
+</ul>
 <p>作者：流云诸葛<br>原文链接：<a href="http://www.cnblogs.com/lyzg/p/4877277.html" target="_blank" rel="external">http://www.cnblogs.com/lyzg/p/4877277.html</a></p>
 </blockquote>
 ]]></content>
