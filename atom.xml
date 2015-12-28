@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-28T02:37:10.000Z</updated>
+  <updated>2015-12-28T03:00:55.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,21 +19,30 @@
     <link href="http://yoursite.com/2015/12/28/%E4%BB%8E%E7%BD%91%E6%98%93%E4%B8%8E%E6%B7%98%E5%AE%9D%E7%9A%84font-size%E6%80%9D%E8%80%83%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E7%A8%BF%E4%B8%8E%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
     <id>http://yoursite.com/2015/12/28/从网易与淘宝的font-size思考前端设计稿与工作流/</id>
     <published>2015-12-28T01:49:47.000Z</published>
-    <updated>2015-12-28T02:37:10.000Z</updated>
+    <updated>2015-12-28T03:00:55.000Z</updated>
     <content type="html"><![CDATA[<p>本文结合自己对网易与淘宝移动端首页html元素上的font-size这个属性的思考与学习，讨论html5设计稿尺寸以及前端与设计之间协作流程的问题，内容较多，但对你的技术和工作一定有价值，欢迎阅读与点评 </p>
-<h1 id="1_uFF0C_u95EE_u9898_u7684_u5F15_u51FA"><a href="#1_uFF0C_u95EE_u9898_u7684_u5F15_u51FA" class="headerlink" title="1，问题的引出"></a>1，问题的引出</h1><p>最近阅读白树的的博文《<a href="http://www.cnblogs.com/PeunZhang/p/3407453.html" target="_blank" rel="external">移动web资源的整理</a>》时，他在博文中有一段指出，如果html5要适应各种分辨率的移动设备，应该使用rem这样的尺寸单位，同时给出了一段针对各个分辨率范围在html上设置font-size的代码：</p>
+<h1 id="1-__u95EE_u9898_u7684_u5F15_u51FA"><a href="#1-__u95EE_u9898_u7684_u5F15_u51FA" class="headerlink" title="1. 问题的引出"></a>1. 问题的引出</h1><p>最近阅读白树的的博文《<a href="http://www.cnblogs.com/PeunZhang/p/3407453.html" target="_blank" rel="external">移动web资源的整理</a>》时，他在博文中有一段指出，如果html5要适应各种分辨率的移动设备，应该使用rem这样的尺寸单位，同时给出了一段针对各个分辨率范围在html上设置font-size的代码：</p>
 <blockquote>
 <p>html{font-size:10px}<br>@media screen and (min-width:321px) and (max-width:375px) html {font-size:11px;}<br>@media screen and (min-width:376px) and (max-width:414px) html {font-size:13px}<br>@media screen and (min-width:415px) and (max-width:639px){html{font-size:15px}}<br>@media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}<br>@media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}<br>@media screen and (min-width:750px) and (max-width:799px){html{font-size:23.5px}}<br>@media screen and (min-width:800px){html{font-size:25px}}</p>
 </blockquote>
 <p>在实际项目中，把与元素尺寸有关的css,如width,height,line-height,margin,padding等都以rem作为单位，这样页面在不同设备下就保持一致的网页的布局，举例来说，网页有一个.item类，设置了width为3.4rem，该类在不同的分辨率下对应的实际宽度如下：</p>
 <blockquote>
 <p>321px &lt;= device-width &lt;= 375px，font-size:11px        —&gt;  .item的width：34px<br>376px &lt;= device-width &lt;= 414px，font-size:12px        —&gt;  .item的width：37.4px<br>415px &lt;= device-width &lt;= 639px，font-size:15px        —&gt;  .item的width：40.8px<br>640px &lt;= device-width &lt;= 719px，font-size:20px        —&gt;  .item的width：51px<br>720px &lt;= device-width &lt;= 749px，font-size:22.5px      —&gt;  .item的width：76.5px<br>750px &lt;= device-width &lt;= 799px，font-size:23.5px      —&gt;  .item的width：79.8999999px<br>800px &lt;= device-width         ，font-size:25px        —&gt;  .item的width：85px</p>
+</blockquote>
+<p>以上代码乍看没啥问题，响应式设计不就应该是这么干的吗？但是从工作量和复杂度方面来考虑，它有以下几个不足：</p>
+<p>（1）.item类在所有设备下的width都是3.4rem，但是不同分辨率下的实际像素是不一样的，所以在有些分辨率下，width的界面效果不一定合适，有可能太宽，有可能太窄，这时候就要对width进行调整，那么就需要针对.item写媒介查询的代码，为该分辨率重新设计一个rem值。然而，这里有7种媒介查询的情况，css又有很多跟尺寸相关的属性，哪个属性的哪个分辨率范围不合适都是不定的，最后会导致要写很多媒介查询才能适配所有设备，而且在写的时候rem都得根据某个分辨率html的font-size去算，这个计算可不见得每次都那么容易，比如40px/23.5px,这个rem值口算不出来吧！由此可见这其中的麻烦有多少。</p>
+<p>（2）以上代码中给出的7个范围下的font-size不一定是合适的，这7个范围也不一定合适，实际有可能不需要这么多，所以找出这个些个范围，以及第个范围最合适的font-size也很麻烦。</p>
+<p>（3）设计稿都是以分辨率来标明尺寸的，前端在根据设计稿里各个元素的像素尺寸转换为rem时，该以哪个font-size为准呢？这需要去写才能知道。</p>
+<pre><code>正是因为以上担到的一些不足，我觉得这种适配方式不是特别好，
+</code></pre><p>写起来太麻烦。这了完成工作，我们需要找寻更简单更有效率的方法。那么html5该如何去做众多移动设备的适配呢？我目前已知的有3种解决方法，将会在下文的第2，3，4部分阐述。</p>
+<h1 id="2-__u7B80_u5355_u95EE_u9898_u7B80_u5355_u89E3_u51B3"><a href="#2-__u7B80_u5355_u95EE_u9898_u7B80_u5355_u89E3_u51B3" class="headerlink" title="2. 简单问题简单解决"></a>2. 简单问题简单解决</h1><pre><code>我觉得有些web app不一定很复杂,比如拉勾网，你看看它的页面在iphone4,iphone6,ipad下的样子就知道了：
+</code></pre><blockquote>
 <p>作者：流云诸葛<br>原文链接：<a href="http://www.cnblogs.com/lyzg/p/4877277.html" target="_blank" rel="external">http://www.cnblogs.com/lyzg/p/4877277.html</a></p>
 </blockquote>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>本文结合自己对网易与淘宝移动端首页html元素上的font-size这个属性的思考与学习，讨论html5设计稿尺寸以及前端与设计之间协作流程的问题，内容较多，但对你的技术和工作一定有价值，欢迎阅读与点评 </p>
-<h1 id="1_uFF0C_u95EE_u9898_u7]]>
+<h1 id="1-__u95EE_u9898_u7684_]]>
     </summary>
     
       <category term="html" scheme="http://yoursite.com/tags/html/"/>
