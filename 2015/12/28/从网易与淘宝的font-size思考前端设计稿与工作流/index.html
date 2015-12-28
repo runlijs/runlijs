@@ -56,7 +56,7 @@
 <p>(3)在dom ready以后，通过以下代码设置html的font-size:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.documentElement.style.fontSize = <span class="built_in">document</span>.documentElement.clientWidth / <span class="number">6.4</span> + <span class="string">'px'</span>;</span><br></pre></td></tr></table></figure>
 <p>6.4只是举个例子，如果是750的设计稿，应该除以7.5。</p>
-<p>(4)font-size可能需要额外的媒介查询，并且font-size不能使用rem，如网易的设置：</p>
+<p>(4)font-size可能需要额外的媒介查询，并且font-size不能使用rem，如网易的设置：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (max-width:<span class="number">321px</span>)</span>&#123;</span><br><span class="line">    <span class="class">.m-navlist</span><span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">15px</span></span></span></span>&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>@media screen and (max-width:321px){<br>    .m-navlist{font-size:15px}<br>}<br>@media screen and (min-width:321px) and (max-width:400px){<br>    .m-navlist{font-size:16px}<br>}<br>@media screen and (min-width:400px){<br>    .m-navlist{font-size:18px}<br>}</p>
 </blockquote>
@@ -78,10 +78,10 @@
 <blockquote>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-
-
-
-
+</blockquote>
+<p>这样整个网页在设备内显示时的页面宽度就会等于设备逻辑像素大小，也就是device-width。这个device-width的计算公式为：</p>
+<p>设备的物理分辨率/(devicePixelRatio*scale)，在scale为1的情况下，device-width=设备的物理分辨率/devicePixelRatio 。</p>
+<blockquote>
 <p>作者：流云诸葛<br>原文链接：<a href="http://www.cnblogs.com/lyzg/p/4877277.html" target="_blank" rel="external">http://www.cnblogs.com/lyzg/p/4877277.html</a></p>
 </blockquote>
 </div></article><div class="pagination"><span class="pagination-prev">PREV</span><a href="/2015/12/23/javascript中的正则表达学习/" class="pagination-next">NEXT</a></div></div><aside class="sidebar"><h3>分类标签</h3><ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li></ul><h3>最新文章</h3><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2015/12/28/从网易与淘宝的font-size思考前端设计稿与工作流/">从网易与淘宝的font-size思考前端设计稿与工作流</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/23/javascript中的正则表达学习/">javascript中的正则表达学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/22/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/21/JavaScript正则表达式/">JavaScript常用正则表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/18/mac-sublime-text-3-安装插件/">mac sublime text 3 安装插件</a></li></ul></aside></section></div><div class="extra"></div><footer class="footer"><div class="row-flex-row limit-width vh-center"><div class="copyright"><P>© 2015 <a href="/">John Doe</P></div><div class="power"><p><a href="https://hexo.io">Hexo</a>, 
