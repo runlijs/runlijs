@@ -75,14 +75,17 @@
 <p>最后还有一个情况要说明，跟网易一样，淘宝也设置了一个临界点，当设备竖着时横向物理分辨率大于1080时，html的font-size就不会变化了，原因也是一样的，分辨率已经可以去访问电脑版页面了。</p>
 <p><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-27.jpeg" alt=""><br></div></p>
 <p><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-28.jpeg" alt=""><br></div><br>关于这种做法的具体实现，淘宝已经给我们提供了一个开源的解决方案，具体请查看：<br>　　<a href="https://github.com/amfe/lib-flexible" target="_blank" rel="external">https://github.com/amfe/lib-flexible</a></p>
-<h1 id="5-_u6BD4_u8F83_u7F51_u6613_u4E0E_u6DD8_u5B9D_u7684_u505A_u6CD5"><a href="#5-_u6BD4_u8F83_u7F51_u6613_u4E0E_u6DD8_u5B9D_u7684_u505A_u6CD5" class="headerlink" title="5.比较网易与淘宝的做法"></a>5.比较网易与淘宝的做法</h1><p>###共同点</p>
-<blockquote>
+<h1 id="5-_u6BD4_u8F83_u7F51_u6613_u4E0E_u6DD8_u5B9D_u7684_u505A_u6CD5"><a href="#5-_u6BD4_u8F83_u7F51_u6613_u4E0E_u6DD8_u5B9D_u7684_u505A_u6CD5" class="headerlink" title="5.比较网易与淘宝的做法"></a>5.比较网易与淘宝的做法</h1><h3 id="u5171_u540C_u70B9"><a href="#u5171_u540C_u70B9" class="headerlink" title="共同点"></a>共同点</h3><blockquote>
 <ul>
 <li>都能适配所有的手机设备，对于pad，网易与淘宝都会跳转到pc页面，不再使用触屏版的页面</li>
 <li>都需要动态设置html的font-size</li>
 <li>布局时各元素的尺寸值都是根据设计稿标注的尺寸计算出来，由于html的font-size是动态调整的，所以能够做到不同分辨率下页面布局呈现等比变化</li>
 <li>容器元素的font-size都不用rem，需要额外地外font-size做媒介查询</li>
-<li>都能应用于尺寸不同的设计稿，只要按以上总结的方法去用就可以了<br>###不同点</li>
+<li>都能应用于尺寸不同的设计稿，只要按以上总结的方法去用就可以了</li>
+</ul>
+</blockquote>
+<h3 id="u4E0D_u540C_u70B9"><a href="#u4E0D_u540C_u70B9" class="headerlink" title="不同点"></a>不同点</h3><blockquote>
+<ul>
 <li>淘宝的设计稿是基于750的横向分辨率，网易的设计稿是基于640的横向分辨率，还要强调的是，虽然设计稿不同，但是最终的结果是一致的，设计稿的尺寸一个公司的设计人员的工作标准，每个公司不一样而已</li>
 <li>淘宝还需要动态设置viewport的scale，网易不用</li>
 <li>最重要的区别就是，网易的做法，rem值很好计算，淘宝的做法肯定得用计算器才能用好了，不过要是你使用less和sass这样的css处理器，就好办多了，以淘宝跟less举例，我们可以这样编写less<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//定义一个变量和一个mixin</span><br><span class="line">@baseFontSize:75;</span><br><span class="line">.px2rem(@name,@px)&#123;</span><br><span class="line">	@&#123;name&#125;:@px/@baseFontSize\*1rem;</span><br><span class="line">&#125;</span><br><span class="line">//使用示例</span><br><span class="line">.container&#123;</span><br><span class="line">	.px2rem(height,240)</span><br><span class="line">&#125;</span><br><span class="line">//less翻译结果</span><br><span class="line">.container&#123;</span><br><span class="line">	height:3.2rem</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
