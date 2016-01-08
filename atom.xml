@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-28T08:41:22.000Z</updated>
+  <updated>2015-12-18T02:54:46.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://yoursite.com/2016/01/08/hello-world/"/>
+    <id>http://yoursite.com/2016/01/08/hello-world/</id>
+    <published>2016-01-08T03:47:50.000Z</published>
+    <updated>2015-12-18T02:54:46.000Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[ES6中isMounted()不支持，如何判断组件是否存在]]></title>
+    <link href="http://yoursite.com/2016/01/08/ES6%E4%B8%ADisMounted-%E4%B8%8D%E6%94%AF%E6%8C%81%EF%BC%8C%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E7%BB%84%E4%BB%B6%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8/"/>
+    <id>http://yoursite.com/2016/01/08/ES6中isMounted-不支持，如何判断组件是否存在/</id>
+    <published>2016-01-08T02:44:10.000Z</published>
+    <updated>2016-01-08T03:47:11.000Z</updated>
+    <content type="html"><![CDATA[<p>先上代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//app.js</span></span><br><span class="line">render((</span><br><span class="line">	<span class="xml"><span class="tag">&lt;<span class="title">Router</span> <span class="attribute">history</span>=<span class="value">&#123;browserHistory&#125;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">'/main'</span> <span class="attribute">component</span>=<span class="value">&#123;</span> <span class="attribute">MainMenu</span> &#125;&gt;</span><span class="tag">&lt;/<span class="title">Route</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/hot"</span> <span class="attribute">component</span>=<span class="value">&#123;</span> <span class="attribute">HotComponent</span> &#125;&gt;</span><span class="tag">&lt;/<span class="title">Route</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">Router</span>&gt;</span></span><br><span class="line">)</span>,<span class="built_in">document</span>.getElementById(<span class="string">'container'</span>))</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//MainMenu.js</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainMenu</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	constructor(props)&#123;</span><br><span class="line">		<span class="keyword">super</span>(props)</span><br><span class="line">		<span class="keyword">this</span>.state = &#123;</span><br><span class="line">			list : [GoodsStore.CategoryList],</span><br><span class="line">			categoryIndex : GoodsStore.categoryIndex</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	componentDidMount()&#123;</span><br><span class="line">		GoodsStore.addChangeCategory(<span class="keyword">this</span>.changeCategory.bind(<span class="keyword">this</span>));</span><br><span class="line">		GoodsStore.getCategoryList();</span><br><span class="line">	&#125;</span><br><span class="line">	componentWillUnmount()&#123;</span><br><span class="line">		GoodsStore.removeChangeCategory(<span class="keyword">this</span>.changeCategory.bind(<span class="keyword">this</span>))</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	changeCategory()&#123;</span><br><span class="line">		<span class="keyword">this</span>.setState(&#123;</span><br><span class="line">			categoryIndex:GoodsStore.categoryIndex</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	handleClick(index,e)&#123;</span><br><span class="line">		GoodsAction.changeCategory(index);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	render()&#123;</span><br><span class="line">		<span class="keyword">let</span> list = <span class="keyword">this</span>.state.list;</span><br><span class="line">		<span class="keyword">let</span> categoryIndex = <span class="keyword">this</span>.state.categoryIndex;</span><br><span class="line">		list = list.map((items,i)=&gt;&#123;</span><br><span class="line">			<span class="keyword">let</span> &#123; name, categoryId &#125; = items</span><br><span class="line">			<span class="keyword">let</span> active = categoryIndex == i ? <span class="string">'active'</span> : <span class="string">''</span>;</span><br><span class="line">			<span class="keyword">return</span>(</span><br><span class="line">				<span class="xml"><span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">&#123;i&#125;</span> <span class="attribute">className</span>=<span class="value">&#123;active&#125;</span> <span class="attribute">onClick</span>=<span class="value">&#123;</span> <span class="attribute">this.handleClick.bind</span>(<span class="attribute">this</span>,<span class="attribute">i</span>) &#125;&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="title">a</span>&gt;</span>&#123; name &#125;<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">			)</span></span><br><span class="line">		&#125;)</span><br><span class="line">		<span class="keyword">return</span>(</span><br><span class="line">			<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"main-classes-list"</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"main-left"</span> <span class="attribute">id</span>=<span class="value">'main-left'</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'scroller'</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="title">ul</span> <span class="attribute">className</span>=<span class="value">"main-left-ul"</span>&gt;</span></span><br><span class="line">								&#123; list &#125;</span><br><span class="line">							<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">		)</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其它部分上传到github上</p>
+<p>当路由在/main和/hot之间切换的时候，MainMenu组件会报如下错误 </p>
+<blockquote>
+<p>Warning: setState(…): Can only update a mounted or mounting component. This usually means you called setState() on an unmounted component. This is a no-op. Please check the code for the undefined component.</p>
+</blockquote>
+<p>上面的代码中，由于ES6不支持自动绑定，所以需要使用.bind(this)，这就造成了add 和 remove事件监听的时候，上下两个 changeCategory 函数返回了两个不同的函数对象。</p>
+<p>于是组件销毁时GoodsStore.removeChangeCategory方法还是监听了change事件，没有移除事件成功。<br>于时在组件在次创建时，GoodsStore.addChangeCategory方法监听的change事件触发 ，但是component组件的状态还是unmounted，所以这时不会出现以上错误 ，</p>
+<p>这时我们就需要使用isMounted()来判断一下组件是否存在，<br>但是isMounted()方法在ES6中暂时还不支持，</p>
+<p>这时我们就需要在.bind(this)上做手脚，<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">constructor(props)&#123;</span><br><span class="line">	<span class="keyword">super</span>(props)</span><br><span class="line">	<span class="keyword">this</span>.state = &#123;</span><br><span class="line">		list : [GoodsStore.CategoryList],</span><br><span class="line">		categoryIndex : GoodsStore.categoryIndex</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">this</span>.changeCategory = <span class="keyword">this</span>.changeCategory.bind(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line">componentDidMount()&#123;</span><br><span class="line">	GoodsStore.addChangeCategory(<span class="keyword">this</span>.changeCategory);</span><br><span class="line">	GoodsStore.getCategoryList();</span><br><span class="line">&#125;</span><br><span class="line">componentWillUnmount()&#123;</span><br><span class="line">	GoodsStore.removeChangeCategory(<span class="keyword">this</span>.changeCategory)</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>先上代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span]]>
+    </summary>
+    
+      <category term="React" scheme="http://yoursite.com/tags/React/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[从网易与淘宝的font-size思考前端设计稿与工作流]]></title>
@@ -221,28 +269,6 @@
     </summary>
     
       <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://yoursite.com/2015/12/22/hello-world/"/>
-    <id>http://yoursite.com/2015/12/22/hello-world/</id>
-    <published>2015-12-22T00:58:47.000Z</published>
-    <updated>2015-12-18T02:54:46.000Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
-    </summary>
     
   </entry>
   
