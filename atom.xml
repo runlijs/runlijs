@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-18T02:54:46.000Z</updated>
+  <updated>2016-01-17T09:37:48.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[mac的nginx安装和配置]]></title>
+    <link href="http://yoursite.com/2016/01/17/mac%E7%9A%84nginx%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2016/01/17/mac的nginx安装和配置/</id>
+    <published>2016-01-17T09:27:46.000Z</published>
+    <updated>2016-01-17T09:37:48.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="mac_u4E2D_u4F7F_u7528homebrew_u5B89_u88C5nginx"><a href="#mac_u4E2D_u4F7F_u7528homebrew_u5B89_u88C5nginx" class="headerlink" title="mac中使用homebrew安装nginx"></a>mac中使用homebrew安装nginx</h1><p>先用命令安装 homebrew<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -LsSf http://github.com/mxcl/homebrew/tarball/master | sudo tar xvz -C/usr/<span class="built_in">local</span> --strip <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>安装好brew后在安装nginx</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo brew install nginx&#10;==&#62; Installing dependencies for nginx: pcre, openssl&#10;==&#62; Installing nginx dependency: pcre&#10;==&#62; Downloading https://homebrew.bintray.com/bottles/pcre-8.38.el_capitan.bottle.tar.gz</span><br></pre></td></tr></table></figure>
+<p>安装nginx前，要先安装 pcre,openssl，<br>这个过程十几分钟，耐心等待</p>
+<p>安装好后nginx.conf的配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/etc/nginx</span><br></pre></td></tr></table></figure></p>
+<p>常用命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx <span class="operator">-s</span> stop // 停止</span><br><span class="line">sudo nginx <span class="operator">-s</span> reload // 重启</span><br><span class="line">sudo nginx // 启动</span><br></pre></td></tr></table></figure>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="mac_u4E2D_u4F7F_u7528homebrew_u5B89_u88C5nginx"><a href="#mac_u4E2D_u4F7F_u7528homebrew_u5B89_u88C5nginx" class="headerlink" title="]]>
+    </summary>
+    
+      <category term="nginx" scheme="http://yoursite.com/tags/nginx/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Hello World]]></title>
