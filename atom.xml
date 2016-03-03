@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-01-18T02:59:28.000Z</updated>
+  <updated>2016-03-03T03:31:23.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,11 +15,27 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[html input number 移位小箭头]]></title>
+    <link href="http://yoursite.com/2016/03/03/html-input-number-%E7%A7%BB%E4%BD%8D%E5%B0%8F%E7%AE%AD%E5%A4%B4/"/>
+    <id>http://yoursite.com/2016/03/03/html-input-number-移位小箭头/</id>
+    <published>2016-03-03T03:29:17.000Z</published>
+    <updated>2016-03-03T03:31:23.000Z</updated>
+    <content type="html"><![CDATA[<p>我们在手机端开发的时候，一些input类型会带一些小的图标，</p>
+<p>隐藏input=’number’的小箭头，添加一个伪类<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="pseudo">::-webkit-inner-spin-button</span><span class="rules">&#123; </span><br><span class="line">	<span class="rule"><span class="attribute">visibility</span>:<span class="value">hidden </span><br><span class="line"></span></span></span>&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>我们在手机端开发的时候，一些input类型会带一些小的图标，</p>
+<p>隐藏input=’number’的小箭头，添加一个伪类<br><figure class="highlight css"><table><tr><td class="gutter"><pre><sp]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[掌握Node.js的文件系统[File System 基础]]]></title>
     <link href="http://yoursite.com/2016/01/18/%E6%8E%8C%E6%8F%A1Node-js%E7%9A%84%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F-File-System-%E5%9F%BA%E7%A1%80/"/>
     <id>http://yoursite.com/2016/01/18/掌握Node-js的文件系统-File-System-基础/</id>
     <published>2016-01-18T01:20:01.000Z</published>
-    <updated>2016-01-18T02:59:28.000Z</updated>
+    <updated>2016-01-18T03:01:14.000Z</updated>
     <content type="html"><![CDATA[<p>Node最引以为傲的就是它有一个非常小的核心，有一些语言绑定了完整的POSIX API,而Node实现了尽可能少的绑定，并通过同步，异步或流API形式暴露他们。</p>
 <p>这种方法意味着，操作系统中有一些非常方便的功能，需要在Node中重建。这是一个教你如何使用文件系统软件包的实用教程。</p>
 <h1 id="u5F15_u7528_u6587_u4EF6"><a href="#u5F15_u7528_u6587_u4EF6" class="headerlink" title="引用文件"></a>引用文件</h1><p>与文件系统的交互很重要的一点是要指向正确的文件。由于NPM的包使用相对路径引用，所以你不能把路径写死在代码。有两个主要方式来以确保包能引用到正确的文件</p>
