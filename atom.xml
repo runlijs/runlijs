@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-03T03:31:23.000Z</updated>
+  <updated>2016-03-07T03:04:03.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Centos安装Nodejs]]></title>
+    <link href="http://yoursite.com/2016/03/07/Centos%E5%AE%89%E8%A3%85Nodejs/"/>
+    <id>http://yoursite.com/2016/03/07/Centos安装Nodejs/</id>
+    <published>2016-03-07T02:57:28.000Z</published>
+    <updated>2016-03-07T03:04:03.000Z</updated>
+    <content type="html"><![CDATA[<p>安装nodejs前，先安装以下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y gcc make gcc-c++ openssl-devel wget</span><br></pre></td></tr></table></figure></p>
+<p>然后下载源码安装</p>
+<p><a href="https://nodejs.org/dist/" target="_blank" rel="external">!https://nodejs.org/dist/</a></p>
+<p>在这里选择你要下载的版本源码</p>
+<p>下载好源码后解压,然后安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget http://nodejs.org/dist/v4.<span class="number">3.2</span>/node-v4.<span class="number">3.2</span>.tar.gz</span><br><span class="line">tar -zvxf node-v4.<span class="number">3.2</span>t.tar.gz</span><br><span class="line"><span class="built_in">cd</span> node-v4.<span class="number">3.2</span></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>安装nodejs前，先安装以下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td clas]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[html input number 移位小箭头]]></title>
