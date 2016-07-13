@@ -1,6 +1,1219 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> Hexo</title><meta name="description" content="A Blog Powered By Hexo"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/jekyll.css"><!--[if lt IE 9]>
-<script src="js/html5shiv.min.js"></script>
-<script src="js/respond.min.js"></script>
-<![endif]--></head><body><header class="row-flex-row limit-width vh-center"><a href="/" class="logo"><img src="/favicon.png"></a><nav><ul class="nav-list"><li class="nav-list-item"><a href="/" class="nav-link active">主页</a></li><li class="nav-list-item"><a href="/archives/" class="nav-link">   博客</a></li><li class="nav-list-item"><a href="https://github.com/runlijs" target="_blank" class="nav-link">   github</a></li></ul></nav></header><div class="container limit-width"><section class="row-flex-row"><div class="home"><article class="post-block"><h2 class="post-title"><a href="/2016/07/13/2016-07-13商品搜索与订单商品评论/" class="post-title-link">2016-07-13商品搜索与订单商品评论</a><div class="post-badge-wrap"><div class="post-badge"><span class="post-badge-msg">Issue №</span><span class="post-num">11</span></div></div></h2><div class="post-meta"><div class="post-time">Wednesday, July 13th 2016</div></div><div class="post-content"></div><div class="read-more"><a href="/2016/07/13/2016-07-13商品搜索与订单商品评论/"> 阅读全文</a></div></article></div></section></div><div class="extra"><section class="installtheme"><div class="row-flex row-flex-row limit-width"><div class="intro"><h3> 
-如果你喜欢 <a href="https://github.com/pinggod/hexo-theme-jekyll">Hexo-theme-hexo </a>, 何不动手尝试一下!</h3></div><div class="code"><div class="title">Quick-start Instructions</div><div class="shell"> <div class="line"><span class="output"># Prerequisite: Git, Node, Hexo</span></div><div class="line"><span class="path">~</span><span class="prompt">$</span><span class="command">hexo init blog && cd blog</span></div><div class="line"><span class="path">~/blog</span><span class="prompt">$</span><span class="command">npm install</span></div><div class="line"><span class="path">~/blog</span><span class="prompt">$</span><span class="command">git clone [hexo-theme-jekyll]</span></div><div class="line"><span class="path">~/blog</span><span class="prompt">$</span><span class="command">vim _config.yml</span></div></div></div></div></section><section class="selfintro"><div class="wrap row-flex row-flex-row limit-width"><div class="sign"><img src="img/github.png" alt=""></div><div class="intro"><h3 class="title">PING4GOD</h3><p class="content"> 有朋之远方来 不亦乐乎</p><ul class="contact"><li><a href="https://github.com/runlijs" class="social-link">github</a></li><li><a href="http://weibo.com/runlijs" class="social-link">weibo</a></li></ul></div></div></section></div><footer class="footer"><div class="row-flex-row limit-width vh-center"><div class="copyright"><P>© 2016 <a href="/">John Doe</P></div><div class="power"><p><a href="https://hexo.io">Hexo</a>, 
-<a href="https://github.com/">GitHub</a>, </p></div></div></footer><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?a36e15d9e2adec9a21fcdd9f686b1ed2";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script></body></html>
+<!DOCTYPE html>
+<html >
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="John Doe" />
+
+
+    
+    
+
+
+<meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css" type="text/css">
+
+
+    <style> .article { opacity: 0;} </style>
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Hexo</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: true,
+        isPost: false,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">John Doe</a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜單</li>
+                        <li>標籤</li>
+                        
+                        <li>友情鏈接</li>
+                        
+                        
+                        <li>關於我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="/#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/积分商城/">积分商城</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">John Doe</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">John Doe</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="/#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-2016-07-13商品搜索与订单商品评论" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/13/2016-07-13商品搜索与订单商品评论/" class="article-date">
+      <time datetime="2016-07-13T08:57:33.000Z" itemprop="datePublished">2016-07-13</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/13/2016-07-13商品搜索与订单商品评论/">2016-07-13商品搜索与订单商品评论</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="u529F_u80FD_u5546_u54C1_u641C_u7D22_u53C2_u6570"><a href="#u529F_u80FD_u5546_u54C1_u641C_u7D22_u53C2_u6570" class="headerlink" title="功能商品搜索参数"></a>功能商品搜索参数</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line">  type  搜索类型 0：V币热兑,1：热卖商品</span><br><span class="line">*/</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line">  sortType</span><br><span class="line">  descPrice 价格降序</span><br><span class="line">  ascPrice   价格升序</span><br><span class="line">  cost 销售</span><br><span class="line">*/</span></span><br><span class="line">&#123;</span><br><span class="line">  pageNow : <span class="number">1</span>,</span><br><span class="line">  pageSize : <span class="number">10</span>,</span><br><span class="line">  platform : <span class="number">1</span>,</span><br><span class="line">  keyword : <span class="string">''</span>,</span><br><span class="line">  type : type,</span><br><span class="line">  sortType : sortType,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="u8BA2_u5355_u8BC4_u8BBA"><a href="#u8BA2_u5355_u8BC4_u8BBA" class="headerlink" title="订单评论"></a>订单评论</h2><blockquote>
+<p>从订单列表进来时,查看订单是否已经评论<br>根据订单ID获取待评论产品列表【订单id】 //产品列表<br>/impcomment/comments/{orderid}</p>
+<p>订单评论详情【订单id】  // 如果有数据就已经评论过了，这时不能在评论了，没数据就可以评论<br>/imordercomment/get/{orderid}</p>
+<p>添加订单评论 // 订单没有评论过就可以添加评论<br>/imordercomment/add<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  orderId:orderId</span><br><span class="line">  wuliuGrade : <span class="number">1</span> <span class="comment">//商品包装满意度</span></span><br><span class="line">  speedGrade : <span class="number">1</span> <span class="comment">// 送货速度</span></span><br><span class="line">  distributionGrade : <span class="number">1</span> <span class="comment">//配送员服务态度</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="u8BA2_u5355_u4E2D_u7684_u5355_u4E2A_u5546_u54C1_u8BC4_u8BBA"><a href="#u8BA2_u5355_u4E2D_u7684_u5355_u4E2A_u5546_u54C1_u8BC4_u8BBA" class="headerlink" title="订单中的单个商品评论"></a>订单中的单个商品评论</h2><blockquote>
+<p>获取待评价产品详情【子订单id】<br>/impcomment/order1sDetail/{order1Id}<br>添加产品评论<br>/impcomment/add<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  orderId:orderId</span><br><span class="line">  wuliuGrade : <span class="number">1</span> <span class="comment">//商品包装满意度</span></span><br><span class="line">  speedGrade : <span class="number">1</span> <span class="comment">// 送货速度</span></span><br><span class="line">  distributionGrade : <span class="number">1</span> <span class="comment">//配送员服务态度</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="u67E5_u770B_u8BA2_u5355_u4E2D_u5355_u4E2A_u5546_u54C1_u8BC4_u8BBA_u8BE6_u60C5"><a href="#u67E5_u770B_u8BA2_u5355_u4E2D_u5355_u4E2A_u5546_u54C1_u8BC4_u8BBA_u8BE6_u60C5" class="headerlink" title="查看订单中单个商品评论详情"></a>查看订单中单个商品评论详情</h2><blockquote>
+<p>获取待评价产品详情【子订单id】<br>/impcomment/order1sDetail/{order1Id}<br>产品评论详情【产品ID】【子订单id】<br>/impcomment/detail/{orderId}/{order1Id}<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  imProductId : imProductId,  <span class="comment">// 商品ID</span></span><br><span class="line">  orderId     : orderId ,     <span class="comment">// 订单ID</span></span><br><span class="line">  order1Id    : order1Id,     <span class="comment">// 子订单ID</span></span><br><span class="line">  content     : <span class="string">'评论内容'</span>,    <span class="comment">//  评论内容</span></span><br><span class="line">  grade       : <span class="number">1</span>,            <span class="comment">// 星级1-5</span></span><br><span class="line">  commentImg  : <span class="string">''</span>,           <span class="comment">// 三张评论图片</span></span><br><span class="line">  commentImg1 : <span class="string">''</span>,</span><br><span class="line">  commentImg2 : <span class="string">''</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="u5546_u54C1_u8BE6_u60C5_u7684_u8BC4_u8BBA_u5217_u8868"><a href="#u5546_u54C1_u8BE6_u60C5_u7684_u8BC4_u8BBA_u5217_u8868" class="headerlink" title="商品详情的评论列表"></a>商品详情的评论列表</h2><blockquote>
+<p>产品评论列表【产品id】<br>/impcomment/list/{productId}?pageSize=10&amp;pageNow=1</p>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/积分商城/">积分商城</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/13/hello-world/" class="article-date">
+      <time datetime="2016-07-13T08:56:28.000Z" itemprop="datePublished">2016-07-13</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/07/13/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Centos安装Nodejs" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/07/Centos安装Nodejs/" class="article-date">
+      <time datetime="2016-03-07T02:57:28.000Z" itemprop="datePublished">2016-03-07</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/07/Centos安装Nodejs/">Centos安装Nodejs</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>安装nodejs前，先安装以下命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y gcc make gcc-c++ openssl-devel wget</span><br></pre></td></tr></table></figure></p>
+<p>然后下载源码安装</p>
+<p>在这里选择你要下载的版本源码<a href="https://nodejs.org/dist/" target="_blank" rel="external">!https://nodejs.org/dist/</a></p>
+<p>下载好源码后解压,然后安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget http://nodejs.org/dist/v4.<span class="number">3.2</span>/node-v4.<span class="number">3.2</span>.tar.gz</span><br><span class="line">tar -zvxf node-v4.<span class="number">3.2</span>t.tar.gz</span><br><span class="line"><span class="built_in">cd</span> node-v4.<span class="number">3.2</span></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-html-input-number-移位小箭头" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/03/html-input-number-移位小箭头/" class="article-date">
+      <time datetime="2016-03-03T03:29:17.000Z" itemprop="datePublished">2016-03-03</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/03/html-input-number-移位小箭头/">html input number 移位小箭头</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>我们在手机端开发的时候，一些input类型会带一些小的图标，</p>
+<p>隐藏input=’number’的小箭头，添加一个伪类<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="pseudo">::-webkit-inner-spin-button</span><span class="rules">&#123; </span><br><span class="line">	<span class="rule"><span class="attribute">visibility</span>:<span class="value">hidden </span><br><span class="line"></span></span></span>&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-掌握Node-js的文件系统-File-System-基础" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/18/掌握Node-js的文件系统-File-System-基础/" class="article-date">
+      <time datetime="2016-01-18T01:20:01.000Z" itemprop="datePublished">2016-01-18</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/18/掌握Node-js的文件系统-File-System-基础/">掌握Node.js的文件系统[File System 基础]</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>Node最引以为傲的就是它有一个非常小的核心，有一些语言绑定了完整的POSIX API,而Node实现了尽可能少的绑定，并通过同步，异步或流API形式暴露他们。</p>
+<p>这种方法意味着，操作系统中有一些非常方便的功能，需要在Node中重建。这是一个教你如何使用文件系统软件包的实用教程。</p>
+<h1 id="u5F15_u7528_u6587_u4EF6"><a href="#u5F15_u7528_u6587_u4EF6" class="headerlink" title="引用文件"></a>引用文件</h1><p>与文件系统的交互很重要的一点是要指向正确的文件。由于NPM的包使用相对路径引用，所以你不能把路径写死在代码。有两个主要方式来以确保包能引用到正确的文件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//使用'path.join()'而不是'+'确保Windows也能正常工作</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 找到基于调用点的相对路径，对于命令行程序(CLI applications)非常实用</span></span><br><span class="line">path.join(process.cwd(),<span class="string">'my-dynamic-file'</span>);</span><br><span class="line"><span class="comment">//或者</span></span><br><span class="line">path.resolve(<span class="string">'my-dynamic-file'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 基于一个文件找到别一个文件</span></span><br><span class="line">path.join(__dirname,<span class="string">'my-dynamic-file'</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="u8BFB_u53D6_u6587_u4EF6"><a href="#u8BFB_u53D6_u6587_u4EF6" class="headerlink" title="读取文件"></a>读取文件</h1><p>在节点中的异步读取文件是最简单方法就是使用流！下面是一个例子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">const</span> fs   = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line">fs.createReadStream(path.join(__dirname,<span class="string">'my-file'</span>))</span><br><span class="line">.pipe(process.stdout);</span><br></pre></td></tr></table></figure>
+<h1 id="u521B_u5EFA_u6587_u4EF6"><a href="#u521B_u5EFA_u6587_u4EF6" class="headerlink" title="创建文件"></a>创建文件</h1><p>创建文件也并不是很难，这时在有一个用node实现的cat命令</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line">fs.createReadStream(path.join(__dirname,<span class="string">'my-file'</span>))</span><br><span class="line">.pipe(fs.createWriteStream(path.join(__dirname,<span class="string">'my-other-file'</span>)))</span><br></pre></td></tr></table></figure>
+<h1 id="u5220_u9664_u6587_u4EF6"><a href="#u5220_u9664_u6587_u4EF6" class="headerlink" title="删除文件"></a>删除文件</h1><p>要Shell脚本中删除的文件和目录通常使用 rm -rf命令。NodeJS中有一个的rimraf也实现了相同的功能</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> rimraf = <span class="built_in">require</span>(<span class="string">'rimraf'</span>);</span><br><span class="line"><span class="keyword">const</span> path   = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line">rimraf(path.join(__dirname,<span class="string">'./my-directory'</span>),err =&gt; &#123;</span><br><span class="line">	<span class="keyword">if</span>(err) <span class="keyword">throw</span> err</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h1 id="u521B_u5EFA_u76EE_u5F55"><a href="#u521B_u5EFA_u76EE_u5F55" class="headerlink" title="创建目录"></a>创建目录</h1><p>创建跟删除文件很相似，使用mkdirp包</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> mkdirp = <span class="built_in">require</span>(<span class="string">'mkdirp'</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"></span><br><span class="line">mkdirp(path.join(__dirname,<span class="string">'foo/bar'</span>),err=&gt;&#123;</span><br><span class="line">	<span class="keyword">if</span>(err) <span class="keyword">throw</span> err</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h1 id="u67E5_u627E_u6587_u4EF6"><a href="#u67E5_u627E_u6587_u4EF6" class="headerlink" title="查找文件"></a>查找文件</h1><p>使用readdirp查找当前目录下的文件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> readdirp = <span class="built_in">require</span>(<span class="string">'readdirp'</span>);</span><br><span class="line"><span class="keyword">const</span> json = <span class="built_in">require</span>(<span class="string">'JSONStream'</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// recursively print out all files in all subdirectories</span></span><br><span class="line"><span class="comment">// to the command line. The object stream must be</span></span><br><span class="line"><span class="comment">// stringified before being passed to `stdout`.</span></span><br><span class="line">readdirp(&#123;root:path.join(__dirname)&#125;)</span><br><span class="line">	.pipe(json.stringify())</span><br><span class="line">	.pipe(process.stdout)</span><br></pre></td></tr></table></figure>
+<p>使用findup查找当前父级目录中的文件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">const</span> findup = <span class="built_in">require</span>(<span class="string">'findup'</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// recurse up all files relative to __dirname and find</span></span><br><span class="line"><span class="comment">// all `package.json` files.</span></span><br><span class="line">findup(path.join(__dirname),<span class="string">'package.json'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">err,res</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(err) <span class="keyword">throw</span> err;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'dir is:'</span> + res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>注* 稳健性</p>
+<p>虽然我从来没有用过，但我听说有个 <a href="https://node-graceful-fs" target="_blank" rel="external">node-graceful-fs</a>的包也很不错。它有重试，队列和其他一些好东西。</p>
+<p>注* 关于管道(pipes)</p>
+<p>在管道中对整个数据流的错误进行一次处理非常。而不用对每个单独的数据流使用 .on(‘error’, cb) :</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> pump = <span class="built_in">require</span>(<span class="string">'pump'</span>);</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// oh no,no errors add handled!</span></span><br><span class="line">fs.createReadStream(<span class="string">'./in.file'</span>).pipe(fs.createWriteStream(<span class="string">'./out.file'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">// that`s better,we`re handing errors now</span></span><br><span class="line"><span class="keyword">const</span> rs = fs.creatsReadStream(<span class="string">'./in.file'</span>);</span><br><span class="line"><span class="keyword">const</span> ws = fs.creatsWriteStream(<span class="string">'./out.file'</span>);</span><br><span class="line">pump(rs,ws,err=&gt;&#123;</span><br><span class="line">	<span class="keyword">if</span>(err) <span class="keyword">throw</span> err;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><a href="http://ourjs.com/detail/56162a63e3312b046d27f53e" target="_blank" rel="external">转载自</a>;</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-mac的nginx安装和配置" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/17/mac的nginx安装和配置/" class="article-date">
+      <time datetime="2016-01-17T09:27:46.000Z" itemprop="datePublished">2016-01-17</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/17/mac的nginx安装和配置/">mac的nginx安装和配置</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="mac_u4E2D_u4F7F_u7528homebrew_u5B89_u88C5nginx"><a href="#mac_u4E2D_u4F7F_u7528homebrew_u5B89_u88C5nginx" class="headerlink" title="mac中使用homebrew安装nginx"></a>mac中使用homebrew安装nginx</h1><p>先用命令安装 homebrew<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -LsSf http://github.com/mxcl/homebrew/tarball/master | sudo tar xvz -C/usr/<span class="built_in">local</span> --strip <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>安装好brew后在安装nginx</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo brew install nginx&#10;==&#62; Installing dependencies for nginx: pcre, openssl&#10;==&#62; Installing nginx dependency: pcre&#10;==&#62; Downloading https://homebrew.bintray.com/bottles/pcre-8.38.el_capitan.bottle.tar.gz</span><br></pre></td></tr></table></figure>
+<p>安装nginx前，要先安装 pcre,openssl，<br>这个过程十几分钟，耐心等待</p>
+<p>安装好后<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Docroot is: /usr/<span class="built_in">local</span>/var/www</span><br><span class="line"></span><br><span class="line">The default port has been <span class="built_in">set</span> <span class="keyword">in</span> /usr/<span class="built_in">local</span>/etc/nginx/nginx.conf to <span class="number">8080</span> so that</span><br><span class="line">nginx can run without sudo.</span><br><span class="line"></span><br><span class="line">nginx will load all files <span class="keyword">in</span> /usr/<span class="built_in">local</span>/etc/nginx/servers/.</span><br><span class="line"></span><br><span class="line">To have launchd start nginx at login:</span><br><span class="line">  ln -sfv /usr/<span class="built_in">local</span>/opt/nginx/*.plist ~/Library/LaunchAgents</span><br><span class="line">Then to load nginx now:</span><br><span class="line">  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist</span><br><span class="line">Or, <span class="keyword">if</span> you don<span class="string">'t want/need launchctl, you can just run:</span><br><span class="line">  nginx</span></span><br></pre></td></tr></table></figure></p>
+<p>安装好后nginx.conf的配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/etc/nginx</span><br></pre></td></tr></table></figure></p>
+<p>常用命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo nginx <span class="operator">-s</span> stop // 停止</span><br><span class="line">sudo nginx <span class="operator">-s</span> reload // 重启</span><br><span class="line">sudo nginx // 启动</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-ES6中isMounted-不支持，如何判断组件是否存在" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/01/08/ES6中isMounted-不支持，如何判断组件是否存在/" class="article-date">
+      <time datetime="2016-01-08T02:44:10.000Z" itemprop="datePublished">2016-01-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/08/ES6中isMounted-不支持，如何判断组件是否存在/">ES6中isMounted()不支持，如何判断组件是否存在</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>先上代码<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//app.js</span></span><br><span class="line">render((</span><br><span class="line">	<span class="xml"><span class="tag">&lt;<span class="title">Router</span> <span class="attribute">history</span>=<span class="value">&#123;browserHistory&#125;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">'/main'</span> <span class="attribute">component</span>=<span class="value">&#123;</span> <span class="attribute">MainMenu</span> &#125;&gt;</span><span class="tag">&lt;/<span class="title">Route</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">Route</span> <span class="attribute">path</span>=<span class="value">"/hot"</span> <span class="attribute">component</span>=<span class="value">&#123;</span> <span class="attribute">HotComponent</span> &#125;&gt;</span><span class="tag">&lt;/<span class="title">Route</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="title">Router</span>&gt;</span></span><br><span class="line">)</span>,<span class="built_in">document</span>.getElementById(<span class="string">'container'</span>))</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//MainMenu.js</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainMenu</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	constructor(props)&#123;</span><br><span class="line">		<span class="keyword">super</span>(props)</span><br><span class="line">		<span class="keyword">this</span>.state = &#123;</span><br><span class="line">			list : [GoodsStore.CategoryList],</span><br><span class="line">			categoryIndex : GoodsStore.categoryIndex</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	componentDidMount()&#123;</span><br><span class="line">		GoodsStore.addChangeCategory(<span class="keyword">this</span>.changeCategory.bind(<span class="keyword">this</span>));</span><br><span class="line">		GoodsStore.getCategoryList();</span><br><span class="line">	&#125;</span><br><span class="line">	componentWillUnmount()&#123;</span><br><span class="line">		GoodsStore.removeChangeCategory(<span class="keyword">this</span>.changeCategory.bind(<span class="keyword">this</span>))</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line">	changeCategory()&#123;</span><br><span class="line">		<span class="keyword">this</span>.setState(&#123;</span><br><span class="line">			categoryIndex:GoodsStore.categoryIndex</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	handleClick(index,e)&#123;</span><br><span class="line">		GoodsAction.changeCategory(index);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	render()&#123;</span><br><span class="line">		<span class="keyword">let</span> list = <span class="keyword">this</span>.state.list;</span><br><span class="line">		<span class="keyword">let</span> categoryIndex = <span class="keyword">this</span>.state.categoryIndex;</span><br><span class="line">		list = list.map((items,i)=&gt;&#123;</span><br><span class="line">			<span class="keyword">let</span> &#123; name, categoryId &#125; = items</span><br><span class="line">			<span class="keyword">let</span> active = categoryIndex == i ? <span class="string">'active'</span> : <span class="string">''</span>;</span><br><span class="line">			<span class="keyword">return</span>(</span><br><span class="line">				<span class="xml"><span class="tag">&lt;<span class="title">li</span> <span class="attribute">key</span>=<span class="value">&#123;i&#125;</span> <span class="attribute">className</span>=<span class="value">&#123;active&#125;</span> <span class="attribute">onClick</span>=<span class="value">&#123;</span> <span class="attribute">this.handleClick.bind</span>(<span class="attribute">this</span>,<span class="attribute">i</span>) &#125;&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="title">a</span>&gt;</span>&#123; name &#125;<span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">			)</span></span><br><span class="line">		&#125;)</span><br><span class="line">		<span class="keyword">return</span>(</span><br><span class="line">			<span class="xml"><span class="tag">&lt;<span class="title">div</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"main-classes-list"</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="title">div</span> <span class="attribute">className</span>=<span class="value">"main-left"</span> <span class="attribute">id</span>=<span class="value">'main-left'</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">'scroller'</span>&gt;</span></span><br><span class="line">							<span class="tag">&lt;<span class="title">ul</span> <span class="attribute">className</span>=<span class="value">"main-left-ul"</span>&gt;</span></span><br><span class="line">								&#123; list &#125;</span><br><span class="line">							<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line">						<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">		)</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其它部分上传到<a href="https://github.com/runlijs/react-flux-demo" target="_blank" rel="external">github</a>上</p>
+<p>当路由在/main和/hot之间切换的时候，MainMenu组件会报如下错误 </p>
+<blockquote>
+<p>Warning: setState(…): Can only update a mounted or mounting component. This usually means you called setState() on an unmounted component. This is a no-op. Please check the code for the undefined component.</p>
+</blockquote>
+<p>上面的代码中，由于ES6不支持自动绑定，所以需要使用.bind(this)，这就造成了add 和 remove事件监听的时候，上下两个 changeCategory 函数返回了两个不同的函数对象。</p>
+<p>于是组件销毁时GoodsStore.removeChangeCategory方法还是监听了change事件，没有移除事件成功。<br>于时在组件在次创建时，GoodsStore.addChangeCategory方法监听的change事件触发 ，但是component组件的状态还是unmounted，所以这时不会出现以上错误 ，</p>
+<p>这时我们就需要使用isMounted()来判断一下组件是否存在，<br>但是isMounted()方法在ES6中暂时还不支持，</p>
+<p>这时我们就需要在.bind(this)上做手脚，<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">constructor(props)&#123;</span><br><span class="line">	<span class="keyword">super</span>(props)</span><br><span class="line">	<span class="keyword">this</span>.state = &#123;</span><br><span class="line">		list : [GoodsStore.CategoryList],</span><br><span class="line">		categoryIndex : GoodsStore.categoryIndex</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">this</span>.changeCategory = <span class="keyword">this</span>.changeCategory.bind(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line">componentDidMount()&#123;</span><br><span class="line">	GoodsStore.addChangeCategory(<span class="keyword">this</span>.changeCategory);</span><br><span class="line">	GoodsStore.getCategoryList();</span><br><span class="line">&#125;</span><br><span class="line">componentWillUnmount()&#123;</span><br><span class="line">	GoodsStore.removeChangeCategory(<span class="keyword">this</span>.changeCategory)</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样我们就可以解决这个问题了</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/">React</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-从网易与淘宝的font-size思考前端设计稿与工作流" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/28/从网易与淘宝的font-size思考前端设计稿与工作流/" class="article-date">
+      <time datetime="2015-12-28T01:49:47.000Z" itemprop="datePublished">2015-12-28</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/28/从网易与淘宝的font-size思考前端设计稿与工作流/">从网易与淘宝的font-size思考前端设计稿与工作流</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>本文结合自己对网易与淘宝移动端首页html元素上的font-size这个属性的思考与学习，讨论html5设计稿尺寸以及前端与设计之间协作流程的问题，内容较多，但对你的技术和工作一定有价值，欢迎阅读与点评 </p>
+<h1 id="1-__u95EE_u9898_u7684_u5F15_u51FA"><a href="#1-__u95EE_u9898_u7684_u5F15_u51FA" class="headerlink" title="1. 问题的引出"></a>1. 问题的引出</h1><p>最近阅读白树的的博文《<a href="http://www.cnblogs.com/PeunZhang/p/3407453.html" target="_blank" rel="external">移动web资源的整理</a>》时，他在博文中有一段指出，如果html5要适应各种分辨率的移动设备，应该使用rem这样的尺寸单位，同时给出了一段针对各个分辨率范围在html上设置font-size的代码：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">html</span><span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">10px</span></span></span></span>&#125;</span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (min-width:<span class="number">321px</span>) and (max-width:<span class="number">375px</span>)</span>&#123; </span><br><span class="line">	<span class="tag">html</span> <span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">11px</span></span></span>;&#125;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (min-width:<span class="number">376px</span>) and (max-width:<span class="number">414px</span>) </span>&#123;</span><br><span class="line">	<span class="tag">html</span> <span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">13px</span></span></span></span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (min-width:<span class="number">415px</span>) and (max-width:<span class="number">639px</span>)</span><br><span class="line">	html</span>&#123;<span class="tag">font-size</span><span class="pseudo">:15px</span>&#125;</span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (min-width:<span class="number">640px</span>) and (max-width:<span class="number">719px</span>)</span>&#123;</span><br><span class="line">	<span class="tag">html</span><span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">20px</span></span></span></span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (min-width:<span class="number">720px</span>) and (max-width:<span class="number">749px</span>)</span>&#123;</span><br><span class="line">	<span class="tag">html</span><span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">22.5px</span></span></span></span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (min-width:<span class="number">750px</span>) and (max-width:<span class="number">799px</span>)</span>&#123;</span><br><span class="line">	<span class="tag">html</span><span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">23.5px</span></span></span></span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (min-width:<span class="number">800px</span>)</span>&#123;</span><br><span class="line">	<span class="tag">html</span><span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">25px</span></span></span></span>&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在实际项目中，把与元素尺寸有关的css,如width,height,line-height,margin,padding等都以rem作为单位，这样页面在不同设备下就保持一致的网页的布局，举例来说，网页有一个.item类，设置了width为3.4rem，该类在不同的分辨率下对应的实际宽度如下：</p>
+<blockquote>
+<p>321px &lt;= device-width &lt;= 375px，font-size:11px        —&gt;  .item的width：34px<br>376px &lt;= device-width &lt;= 414px，font-size:12px        —&gt;  .item的width：37.4px<br>415px &lt;= device-width &lt;= 639px，font-size:15px        —&gt;  .item的width：40.8px<br>640px &lt;= device-width &lt;= 719px，font-size:20px        —&gt;  .item的width：51px<br>720px &lt;= device-width &lt;= 749px，font-size:22.5px      —&gt;  .item的width：76.5px<br>750px &lt;= device-width &lt;= 799px，font-size:23.5px      —&gt;  .item的width：79.8999999px<br>800px &lt;= device-width         ，font-size:25px        —&gt;  .item的width：85px</p>
+</blockquote>
+<p>以上代码乍看没啥问题，响应式设计不就应该是这么干的吗？但是从工作量和复杂度方面来考虑，它有以下几个不足：</p>
+<p>（1）.item类在所有设备下的width都是3.4rem，但是不同分辨率下的实际像素是不一样的，所以在有些分辨率下，width的界面效果不一定合适，有可能太宽，有可能太窄，这时候就要对width进行调整，那么就需要针对.item写媒介查询的代码，为该分辨率重新设计一个rem值。然而，这里有7种媒介查询的情况，css又有很多跟尺寸相关的属性，哪个属性的哪个分辨率范围不合适都是不定的，最后会导致要写很多媒介查询才能适配所有设备，而且在写的时候rem都得根据某个分辨率html的font-size去算，这个计算可不见得每次都那么容易，比如40px/23.5px,这个rem值口算不出来吧！由此可见这其中的麻烦有多少。</p>
+<p>（2）以上代码中给出的7个范围下的font-size不一定是合适的，这7个范围也不一定合适，实际有可能不需要这么多，所以找出这个些个范围，以及第个范围最合适的font-size也很麻烦。</p>
+<p>（3）设计稿都是以分辨率来标明尺寸的，前端在根据设计稿里各个元素的像素尺寸转换为rem时，该以哪个font-size为准呢？这需要去写才能知道。</p>
+<p>正是因为以上担到的一些不足，我觉得这种适配方式不是特别好，写起来太麻烦。这了完成工作，我们需要找寻更简单更有效率的方法。那么html5该如何去做众多移动设备的适配呢？我目前已知的有3种解决方法，将会在下文的第2，3，4部分阐述。</p>
+<h1 id="2-__u7B80_u5355_u95EE_u9898_u7B80_u5355_u89E3_u51B3"><a href="#2-__u7B80_u5355_u95EE_u9898_u7B80_u5355_u89E3_u51B3" class="headerlink" title="2. 简单问题简单解决"></a>2. 简单问题简单解决</h1><p>我觉得有些web app不一定很复杂,比如拉勾网，你看看它的页面在iphone4,iphone6,ipad下的样子就知道了：</p>
+<div class="img-center"><br><img src="http://7xo19o.com1.z0.glb.clouddn.com/640.jpeg" alt="拉勾iphone4"><br> </div>
+
+<div class="img-center"><br><img src="http://7xo19o.com1.z0.glb.clouddn.com/640-2.jpeg" alt="iphone6"><br> </div>
+
+<div class="img-center"><br><img src="http://7xo19o.com1.z0.glb.clouddn.com/640-3.jpeg" alt="ipad"><br> </div>
+
+<p>它的页面有一个特点，就是：</p>
+<blockquote>
+<p><em>. 顶部与底部的bar不管分辨率怎么变，它的高度和位置都不变
+</em>. 中间每条招聘信息不管分辨率怎么变，招聘公司的图标等信息都位于条目的左边，薪资都位于右边</p>
+</blockquote>
+<p>这种app是一种典型的弹性布局：关键元素高宽和位置都不变，只有容器元素在做伸缩变换。对于这类app，记住一个开发原则就好：文字流式，控件弹性，图片等比缩放。以图描述：</p>
+<div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-4.jpeg" alt=""><br></div>
+
+<p>这个规则是一套基本的适配规则，对于这种简单app来说已经足够，同时它也是后面要说的rem布局的基础。另外对于拉勾这种app可能需要额外媒介查询对而已进行调整的就是小屏幕设备。举例来说，因为现在很多设计稿是根据iphone6的尺寸来说，而iphone6设备宽的逻辑的像素是375px，而iphone4的逻辑像素是320px，所以如果你根据设计稿做出来的东西，在iphone4里面可能显示不下，比如说拉勾网底部那个下载框，你对比看下就知道了，这是4：</p>
+<div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-5.png" alt=""><br></div><br>这是6：<br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-6.png" alt=""><br></div>
+
+<p>6下面两边的间距比4多很多，说明拉勾对4肯定是做过适配的，从代码也可以证实这一点：</p>
+<div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-7.jpeg" alt=""><br></div>
+
+<p>不过如果你拿到的是根据4的设计稿，那就没有问题，比4分辨率大的设备肯定能显示根据4的尺寸做出来的东西</p>
+<p>还有一点，这种情况css尺寸单位用px就好，不要用rem，避免增加复杂度。</p>
+<h1 id="3-__u7F51_u6613_u7684_u505A_u6CD5"><a href="#3-__u7F51_u6613_u7684_u505A_u6CD5" class="headerlink" title="3. 网易的做法"></a>3. 网易的做法</h1><p>先来看看网易在不同分辨率下，呈现的效果：</p>
+<div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-8.jpeg" alt=""><br></div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-9.jpeg" alt=""><br></div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-10.jpeg" alt=""><br></div>
+
+<p>从上面几张图可以看出，随着分辨率的增大，页面的效果会发生明显变化，主要体现在各个元素的宽高与间距。375*680的比320*680的导航栏明显要高。能够达到这种效果的根本原因就是因为网易页面里除了font-size之外的其它css尺寸都使用了rem作为单位，比如你看导航栏的高度设置代码：</p>
+<div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-11.png" alt=""><br></div><br>可是在文本第1部分提到，使用rem布局结合在html上根据不同分辨率设置不同font-size在很多不好解决的麻烦，网易是如何解决的呢？<b>最根本的原因在于，网易页面上html的font-size不是预先通过媒介查询在css里定义好的，页是通过js计算出来的。</b>所以当分辨率发生变化时，html的font-size就会变，不过这得在你调整分辨率后，刷新页面才能看到效果。你看代码就知道为啥font-size是直接写到html的style上面的了(js设置的原因)<br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-12.png" alt=""><br></div><br>它是根据什么计算的，这就跟设计稿有关了，拿网易来说，它的设计稿应该是基于iphone4或者iphone5来的，所以它的设计稿竖直放时的横向分辨率为640px，为了计算方便，取一个100px的font-size为参照，那么body元素的宽度就可以设置为width:6.4rem，于是html的font-size=deviceWidth/6.4。这个deviceWidth就是viewport设置中的那个deviceWidth。根据这个计算规则，可得出本部分开始的四张截图中html的font-size大小如下：<br><br><br><br>&gt; deviceWidth = 320，font-size = 320 / 6.4 = 50px<br>&gt; deviceWidth = 375，font-size = 375 / 6.4 = 58.59375px<br>&gt; deviceWidth = 414，font-size = 414 / 6.4 = 64.6875px<br>&gt; deviceWidth = 500，font-size = 500 / 6.4 = 78.125px<br>事实上网易就是这么干的，你看它的代码就知道，body元素的完是<br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-13.png" alt=""><br></div><br>根据这个可以肯定它的设计稿竖着时的横向分辨率为640。然后你再看看网易在分辨率为320*680，375*680，414*680，500*680时，html的font-size是不是与上面计算的一致：<br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-14.jpeg" alt=""><br></div><br><div class="center"><br>    320*680<br></div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-15.jpeg" alt=""><br></div><br><div class="center">375*680</div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-16.png" alt=""><br></div><br><div class="center">414*680</div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-17.jpeg" alt=""><br></div><br><div class="center">500*680</div>
+
+<p>这个deviceWidth通过document.documentElement.clientWidth就能取到了，所以当页面的dom ready后，做的第一件事情就是：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.documentElement.style.fontSize = <span class="built_in">document</span>.documentElement.clientWidth / <span class="number">6.4</span> + <span class="string">'px'</span>;</span><br></pre></td></tr></table></figure>
+<p>这个6.4怎么来的，当然是根据设计稿的横向分辨率/100得来的。下面总结下网易的这种做法：<br>(1)先拿设计稿竖着的横向分辨率除以100得到body元素的宽度：</p>
+<blockquote>
+<p>  如果设计稿基于iphone6，横向分辨率为750，body的width为750 / 100 = 7.5rem<br>  如果设计稿基于iphone4/5，横向分辨率为640，body的width为640 / 100 = 6.4rem<br>(2)布局时，设计图标注的尺寸除以100得到css中的尺寸，比如下图：</p>
+</blockquote>
+<div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-18.jpeg" alt=""><br></div>
+
+<p>播放器高度为210px，写样式的时候css应该这么写：height: 2.1rem。之所以取一个100作为参照，就是为了这里计算rem的方便!</p>
+<p>(3)在dom ready以后，通过以下代码设置html的font-size:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.documentElement.style.fontSize = <span class="built_in">document</span>.documentElement.clientWidth / <span class="number">6.4</span> + <span class="string">'px'</span>;</span><br></pre></td></tr></table></figure>
+<p>6.4只是举个例子，如果是750的设计稿，应该除以7.5。</p>
+<p>(4)font-size可能需要额外的媒介查询，并且font-size不能使用rem，如网易的设置：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (max-width:<span class="number">321px</span>)</span>&#123;</span><br><span class="line">    <span class="class">.m-navlist</span><span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">15px</span></span></span></span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (min-width:<span class="number">321px</span>) and (max-width:<span class="number">400px</span>)</span>&#123;</span><br><span class="line">    <span class="class">.m-navlist</span><span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">16px</span></span></span></span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (min-width:<span class="number">400px</span>)</span>&#123;</span><br><span class="line">    <span class="class">.m-navlist</span><span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">18px</span></span></span></span>&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>最后还有2个情况要说明：</p>
+<p>第一，如果采用网易这种做法，视口要如下设置：</p>
+<blockquote>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1, minimum-scale=1">
+
+</blockquote>
+<p>第二，当deviceWidth大于设计稿的横向分辨率时，html的font-size始终等于横向分辨率/body元素宽：</p>
+<div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-19.jpeg" alt=""><br></div><br><div class="center">640*680</div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-20.jpeg" alt=""><br></div><br><div class="center">641*680</div>
+
+<p>之所以这么干，是因为当deviceWidth大于640时，则物理分辨率大于1280(这就看设备的devicePixelRatio这个值了)，应该去访问pc网站了。事实就是这样，你从手机访问网易，看到的是触屏版的页面，如果从pad访问，看到的就是电脑版的页面。如果你也想这么干，只要把总结中第三步的代码稍微改一下就行了：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> deviceWidth = <span class="built_in">document</span>.documentElement.clientWidth;</span><br><span class="line"><span class="keyword">if</span>(deviceWidth &gt; <span class="number">640</span>) deviceWidth = <span class="number">640</span>;</span><br><span class="line"><span class="built_in">document</span>.documentElement.style.fontSize = deviceWidth / <span class="number">6.4</span> + <span class="string">'px'</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="4-_u6DD8_u5B9D_u7684_u505A_u6CD5"><a href="#4-_u6DD8_u5B9D_u7684_u505A_u6CD5" class="headerlink" title="4.淘宝的做法"></a>4.淘宝的做法</h1><p>看看淘宝在不同分辨率下，呈现的效果：</p>
+<div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-21.jpeg" alt=""><br></div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-22.jpeg" alt=""><br></div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-23.jpeg" alt=""><br></div><br>淘宝的效果跟网易的效果其实是类似的，随着分辨率的变化，页面元素的尺寸和间距都相应变化，这是因为淘宝的尺寸也是使用了rem的原因。在介绍它的做法之前，先来了解一点关于viewport的知识，通常我们采用如下代码设置viewport:<br><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"viewport"</span>   <span class="attribute">content</span>=<span class="value">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span>&gt;</span></span><br></pre></td></tr></table></figure><br><br>这样整个网页在设备内显示时的页面宽度就会等于设备逻辑像素大小，也就是device-width。这个device-width的计算公式为：<br><br>设备的物理分辨率/(devicePixelRatio*scale)，在scale为1的情况下，device-width=设备的物理分辨率/devicePixelRatio 。<br><br>devicePixelRatio称为设备像素比，每款设备的devicePixelRatio都是已知，并且不变的，目前高清屏，普遍都是2，不过还有更高的，比如2.5,3等，我魅族note的手机的devicePixelRatio就是3。淘宝触屏版布局的前提就是viewport的scale根据devicePixelRatio动态设置：<br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-24.jpeg" alt=""><br></div><br><div class="center"><br>    在devicePixelRatio为2的时候，scale为0.5<br></div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-25.jpeg" alt=""><br></div><br><div class="center"><br>    在devicePixelRatio为3的时候，scale为0.3333<br></div><br>这么做目的当然是为了保证页面的大小与设计稿保持一致了，比如设计稿如果是750的横向分辨率，那么实际页面的device-width，以iphone6来说，也等于750，这样的话设计稿上标注的尺寸只要除以某一个值就能够转换为rem了。通过js设置viewport的方法如下：<br><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scale = <span class="number">1</span> / devicePixelRatio;</span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">'meta[name="viewport"]'</span>).setAttribute(<span class="string">'content'</span>,<span class="string">'initial-scale='</span> + scale + <span class="string">', maximum-scale='</span> + scale + <span class="string">', minimum-scale='</span> + scale + <span class="string">', user-scalable=no'</span>);</span><br></pre></td></tr></table></figure><br><br>淘宝布局的第二个要点，就是html元素的font-size的计算公式，font-size = deviceWidth / 10：<br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-26.jpeg" alt=""><br></div>
+
+<p>接下来要解决的问题是，元素的尺寸该如何计算，比如说设计稿上某一个元素的宽为150px，换算成rem应该怎么算呢?这个值等于设计稿标注尺寸/该设计稿对应的html的font-size。拿淘宝来说的，他们用的设计稿是750的，所以html的font-size就是75，如果某个元素时150px的宽，换算成rem就是150/75=2rem。总结下淘宝的这些做法：</p>
+<p>(1)动态设置viewport的scale<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> scale = <span class="number">1</span> / devicePixelRatio;</span><br><span class="line"><span class="built_in">document</span>.querySelector(<span class="string">'meta[name="viewport"]'</span>).setAttribute(<span class="string">'content'</span>,<span class="string">'initial-scale='</span> + scale + <span class="string">', maximum-scale='</span> + scale + <span class="string">', minimum-scale='</span> + scale + <span class="string">', user-scalable=no'</span>);</span><br></pre></td></tr></table></figure></p>
+<p>(2)动态计算html的font-size<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.documentElement.style.fontSize = <span class="built_in">document</span>.documentElement.clientWidth / <span class="number">10</span> + <span class="string">'px'</span>;</span><br></pre></td></tr></table></figure></p>
+<p>(3)布局的时候，各元素的css尺寸=设计稿标注尺寸/设计稿横向分辨率/10<br>(4)font-size可能需要额外的媒介查询，并且font-size不使用rem，这一点跟网易是一样的。</p>
+<p>最后还有一个情况要说明，跟网易一样，淘宝也设置了一个临界点，当设备竖着时横向物理分辨率大于1080时，html的font-size就不会变化了，原因也是一样的，分辨率已经可以去访问电脑版页面了。</p>
+<div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-27.jpeg" alt=""><br></div><br><div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-28.jpeg" alt=""><br></div>
+
+<p>关于这种做法的具体实现，淘宝已经给我们提供了一个开源的解决方案，具体请查看：<br><a href="https://github.com/amfe/lib-flexible" target="_blank" rel="external">https://github.com/amfe/lib-flexible</a></p>
+<h1 id="5-__u6BD4_u8F83_u7F51_u6613_u4E0E_u6DD8_u5B9D_u7684_u505A_u6CD5"><a href="#5-__u6BD4_u8F83_u7F51_u6613_u4E0E_u6DD8_u5B9D_u7684_u505A_u6CD5" class="headerlink" title="5. 比较网易与淘宝的做法"></a>5. 比较网易与淘宝的做法</h1><h3 id="u5171_u540C_u70B9"><a href="#u5171_u540C_u70B9" class="headerlink" title="共同点"></a>共同点</h3><blockquote>
+<p><em>都能适配所有的手机设备，对于pad，网易与淘宝都会跳转到pc页面，不再使用触屏版的页面
+</em>都需要动态设置html的font-size<br>*布局时各元素的尺寸值都是根据设计稿标注的尺寸计算出来，由于html的font-size是动态调整的，所以能够做到不同分辨率下页面布局呈现等比变化</p>
+<ul>
+<li>容器元素的font-size都不用rem，需要额外地外font-size做媒介查询</li>
+<li>都能应用于尺寸不同的设计稿，只要按以上总结的方法去用就可以了</li>
+</ul>
+</blockquote>
+<h3 id="u4E0D_u540C_u70B9"><a href="#u4E0D_u540C_u70B9" class="headerlink" title="不同点"></a>不同点</h3><blockquote>
+<ul>
+<li>淘宝的设计稿是基于750的横向分辨率，网易的设计稿是基于640的横向分辨率，还要强调的是，虽然设计稿不同，但是最终的结果是一致的，设计稿的尺寸一个公司的设计人员的工作标准，每个公司不一样而已</li>
+<li>淘宝还需要动态设置viewport的scale，网易不用</li>
+<li>最重要的区别就是，网易的做法，rem值很好计算，淘宝的做法肯定得用计算器才能用好了，不过要是你使用less和sass这样的css处理器，就好办多了，以淘宝跟less举例，我们可以这样编写less</li>
+</ul>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//定义一个变量和一个mixin</span><br><span class="line">@baseFontSize:75;</span><br><span class="line">.px2rem(@name,@px)&#123;</span><br><span class="line">	@&#123;name&#125;:@px/@baseFontSize\*1rem;</span><br><span class="line">&#125;</span><br><span class="line">//使用示例</span><br><span class="line">.container&#123;</span><br><span class="line">	.px2rem(height,240)</span><br><span class="line">&#125;</span><br><span class="line">//less翻译结果</span><br><span class="line">.container&#123;</span><br><span class="line">	height:3.2rem</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="6-_u5982_u4F55_u4E0E_u8BBE_u8BA1_u534F_u4F5C"><a href="#6-_u5982_u4F55_u4E0E_u8BBE_u8BA1_u534F_u4F5C" class="headerlink" title="6.如何与设计协作"></a>6.如何与设计协作</h1><p>前端与设计师的协作应该是比较简单的，最重要的是要规范设计提供给你的产物，通常对于前端来说，我们需要设计师提供标尺寸后的设计稿以及各种元素的切图文件，有了这些就可以开始布局了。考虑到Retina显示屏以及这么多移动设备分辨率却不一样的问题，那么设计师应该提供多套设计稿吗？从网易和淘宝的做法来看，应该不用了，我们可以按设计稿，先做出一套布局，按照以上方法做适配，由于是等比适配，所以各个设备的视觉效果差异应该会很小，当然也排除不了一些需要媒介查询特殊处理的情况，这肯定避免不了的。下面这张图的淘宝设计师分享的他们的工作流程：</p>
+<div class="img-center"><br>    <img src="http://7xo19o.com1.z0.glb.clouddn.com/640-29.jpeg" alt=""><br></div>
+
+<p>解释一下就是：</p>
+<p>第一步，视觉设计阶段，设计师按宽度750px(iphone6)做设计稿，除图片外所有设计元素矢量路径来做。设计定稿后在750px的设计稿做标注，输出标注图。同时等比放大1.5倍生成宽度1125px的设计稿，在1125px的稿子里切图。</p>
+<p>第二步，输出两个交付物给开发工程师：一个是程序用到@3x切图资源，另一个是宽度750px的设计标注图。</p>
+<p>第三步，开发工程师拿到750px标注图和@3x切图资源，完成iphone6(375pt)的界面开发。此阶段不有用固定宽度的方式开发界面，得用自动布局(auto layout), 方便后续适配到其它尺寸。</p>
+<p>第四步，适配调试阶段，基于iphone6的界面效果，分别向上向下调试iphone6plus(414pt)和iphone5s及以上(320pt)的界面效果，由此完成大中小三屏适配。</p>
+<p>注意第三步，就要使用我们以上介绍的网易跟淘宝的适配方法了。假如公司设计稿不是基于750的怎么办，其实很简单，按上图做一些相应替换即可，但是流程和方法还是一样的。解释一下为什么要在@3x的图里切，这是因为现在市面上也有不少像魅蓝note这种超高清屏幕，devicePixelRatio已经达到3了，这个切图保证在所有设备都清晰显示。</p>
+<h1 id="7-_u603B_u7ED3"><a href="#7-_u603B_u7ED3" class="headerlink" title="7.总结"></a>7.总结</h1><p>总算是罗里吧嗦地把文章写完了，希望你还觉得满意，这篇文章对我来说价值也很大，今后做html5的项目就有思路了，本文提到的三种方法将来肯定都有用武之地。</p>
+<blockquote>
+<p>作者：流云诸葛<br>原文链接：<a href="http://www.cnblogs.com/lyzg/p/4877277.html" target="_blank" rel="external">http://www.cnblogs.com/lyzg/p/4877277.html</a></p>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-javascript中的正则表达学习" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/23/javascript中的正则表达学习/" class="article-date">
+      <time datetime="2015-12-23T01:30:18.000Z" itemprop="datePublished">2015-12-23</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/23/javascript中的正则表达学习/">javascript中的正则表达学习</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a>定义</h1><p>###在javascript中我们可以通过内建的类定义一个正则表达式</p>
+<blockquote>
+<p>var re = new RegExp(‘[0-9]’);</p>
+</blockquote>
+<p>###实际上RegExp类可以接收两个参数，除了本身的需要匹配的模式字符串外，还可以定义额外处理方式的第二个参数</p>
+<blockquote>
+<p>var re = new RegExp(‘[0-9]’,’g’);</p>
+</blockquote>
+<p>###我们可以打印看下re的值</p>
+<blockquote>
+<p>console.log(re)// /[0-9]/g</p>
+</blockquote>
+<p>###所以我们可以用第二种方式定义正则表达式</p>
+<blockquote>
+<p>var re = /[0-9]/g</p>
+</blockquote>
+<p>###如果我们需要匹配’\’<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第一种方式</span></span><br><span class="line"><span class="keyword">var</span> re = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'\\\\'</span>);</span><br><span class="line"><span class="comment">//第二种方式</span></span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/\\/</span></span><br></pre></td></tr></table></figure></p>
+<p>####记住，一个完整的正则表达式里’\’后面一定会有会另外一个字符</p>
+<p>#javascript中的正则表达式<br>其实上面我们已经简单的介绍了正则表达式的定义，但是要如何的使用呢？在javascript中RegRxp和String中都有方式处理这些正则表达式</p>
+<blockquote>
+<ul>
+<li>test – RegRxp中的test方法用来检查字符串是否匹配正则表达式，返回布尔值</li>
+<li>exec – RegRxp中的exec方法返回包含第一个匹配的的数组或null；</li>
+<li>match – String中的match方法返回包含所有匹配子字符串的数组</li>
+<li>replace – String中的replace方法用来替换匹配的字符串，支持正则匹配</li>
+<li>split – String中的split匹配指定符号来分割字符串，支持正则匹配，返回数组</li>
+</ul>
+</blockquote>
+<p>一个实例对象除了方法当然还有属性，一个正则表达式有以下属性：</p>
+<blockquote>
+<ul>
+<li>global – 布尔值，若全局选项g已设置则返回true，否则返回false；</li>
+<li>ignoreCase – 布尔值，若忽略大小写选项i已设置则返回true，否则返回false；</li>
+</ul>
+</blockquote>
+<p>#元字符</p>
+<h4 id="u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u4E00_u4E9B_u7279_u6B8A_u5B57_u7B26_u662F_u4E0D_u80FD_u76F4_u63A5_u4F7F_u7528_u7684_uFF0C_u5FC5_u987B_u5BF9_u5B83_u8FDB_u884C_u8F6C_u4E49_u540E_u624D_u53EF_u4EE5_uFF0C_u6BD4_u5982_u2019_5C_u2019_uFF0C_u56E0_u4E3A_u8FD9_u4E9B_u5B57_u7B26_u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u7279_u6B8A_u7684_u8BED_u6CD5_u542B_u4E49_uFF0C_u8FD9_u7C7B_u5B57_u7B26_u88AB_u79F0_u4E3A_u5143_u5B57_u7B26_uFF0C_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u7684_u5143_u5B57_u7B26_u6709"><a href="#u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u4E00_u4E9B_u7279_u6B8A_u5B57_u7B26_u662F_u4E0D_u80FD_u76F4_u63A5_u4F7F_u7528_u7684_uFF0C_u5FC5_u987B_u5BF9_u5B83_u8FDB_u884C_u8F6C_u4E49_u540E_u624D_u53EF_u4EE5_uFF0C_u6BD4_u5982_u2019_5C_u2019_uFF0C_u56E0_u4E3A_u8FD9_u4E9B_u5B57_u7B26_u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u7279_u6B8A_u7684_u8BED_u6CD5_u542B_u4E49_uFF0C_u8FD9_u7C7B_u5B57_u7B26_u88AB_u79F0_u4E3A_u5143_u5B57_u7B26_uFF0C_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u7684_u5143_u5B57_u7B26_u6709" class="headerlink" title="在正则表达式中有一些特殊字符是不能直接使用的，必须对它进行转义后才可以，比如’\’，因为这些字符在正则表达式中有特殊的语法含义，这类字符被称为元字符，正则表达式中的元字符有"></a>在正则表达式中有一些特殊字符是不能直接使用的，必须对它进行转义后才可以，比如’\’，因为这些字符在正则表达式中有特殊的语法含义，这类字符被称为元字符，正则表达式中的元字符有</h4><blockquote>
+<p>. \ / ? * + { } [ ( ) ] ^ $ |</p>
+</blockquote>
+<p>#范围匹配</p>
+<h4 id="u4E00_u4E2A_u7B80_u5355_u7684_u5B57_u7B26_u5C31_u53EF_u4EE5_u662F_u4E00_u4E2A_u5339_u914D_u6A21_u5F0F_uFF0C_u4F46_u662F_u73B0_u5B9E_u60C5_u51B5_u4E0D_u4F1A_u8FD9_u4E48_u7B80_u5355_uFF0C_u6BD4_u5982_u6211_u4EEC_u9700_u8981_u5339_u914D0-9_u7684_u6570_u5B57"><a href="#u4E00_u4E2A_u7B80_u5355_u7684_u5B57_u7B26_u5C31_u53EF_u4EE5_u662F_u4E00_u4E2A_u5339_u914D_u6A21_u5F0F_uFF0C_u4F46_u662F_u73B0_u5B9E_u60C5_u51B5_u4E0D_u4F1A_u8FD9_u4E48_u7B80_u5355_uFF0C_u6BD4_u5982_u6211_u4EEC_u9700_u8981_u5339_u914D0-9_u7684_u6570_u5B57" class="headerlink" title="一个简单的字符就可以是一个匹配模式，但是现实情况不会这么简单，比如我们需要匹配0-9的数字"></a>一个简单的字符就可以是一个匹配模式，但是现实情况不会这么简单，比如我们需要匹配0-9的数字</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">6</span>;</span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/^[0123456789]$/</span></span><br><span class="line"><span class="built_in">console</span>.log(re.test(a)) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(re.test(b)) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h4 id="u5982_u679C_u6211_u4EEC_u8981_u5339_u914D26_u4E2A_u5927_u5C0F_u5199_u5B57_u6BCD_uFF0C_u5982_u4E0B_uFF0C_u4EE3_u7801_u4F1A_u5F88_u4E0D_u7F8E_u89C2_2C_u4E5F_u4E0D_u7B80_u6D01"><a href="#u5982_u679C_u6211_u4EEC_u8981_u5339_u914D26_u4E2A_u5927_u5C0F_u5199_u5B57_u6BCD_uFF0C_u5982_u4E0B_uFF0C_u4EE3_u7801_u4F1A_u5F88_u4E0D_u7F8E_u89C2_2C_u4E5F_u4E0D_u7B80_u6D01" class="headerlink" title="如果我们要匹配26个大小写字母，如下，代码会很不美观,也不简洁"></a>如果我们要匹配26个大小写字母，如下，代码会很不美观,也不简洁</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> re = <span class="regexp">/^[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]$/</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="u8FD9_u6837_u6211_u4EEC_u53EF_u4EE5_u7528_u8303_u56F4_u5339_u914D_u8868_u8FBE_u5F0F_u2019-_u2018_uFF0C_u8FD9_u6837_u5C31_u53EF_u4EE5_u4E86_uFF0C_u201C-_u201D_u7528_u6765_u5B9A_u4E49_u4E00_u4E2A_u5339_u914D_u533A_u95F4_uFF0C_u5B57_u7B26_u7684_u5177_u4F53_u987A_u5E8F_u7531ASCII_u5B57_u7B26_u8868_u786E_u5B9A_uFF0C_u6240_u4EE5_u4E0D_u80FD_u5199_u6210/A-z/_uFF0C_u56E0_u4E3AZ-a_u4E4B_u95F4_u8FD8_u5305_u542B_u7740_u5176_u4ED6_u5B57_u7B26_u3002"><a href="#u8FD9_u6837_u6211_u4EEC_u53EF_u4EE5_u7528_u8303_u56F4_u5339_u914D_u8868_u8FBE_u5F0F_u2019-_u2018_uFF0C_u8FD9_u6837_u5C31_u53EF_u4EE5_u4E86_uFF0C_u201C-_u201D_u7528_u6765_u5B9A_u4E49_u4E00_u4E2A_u5339_u914D_u533A_u95F4_uFF0C_u5B57_u7B26_u7684_u5177_u4F53_u987A_u5E8F_u7531ASCII_u5B57_u7B26_u8868_u786E_u5B9A_uFF0C_u6240_u4EE5_u4E0D_u80FD_u5199_u6210/A-z/_uFF0C_u56E0_u4E3AZ-a_u4E4B_u95F4_u8FD8_u5305_u542B_u7740_u5176_u4ED6_u5B57_u7B26_u3002" class="headerlink" title="这样我们可以用范围匹配表达式’-‘，这样就可以了，“-”用来定义一个匹配区间，字符的具体顺序由ASCII字符表确定，所以不能写成/A-z/，因为Z-a之间还包含着其他字符。"></a>这样我们可以用范围匹配表达式’-‘，这样就可以了，“-”用来定义一个匹配区间，字符的具体顺序由ASCII字符表确定，所以不能写成/A-z/，因为Z-a之间还包含着其他字符。</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> reNum = <span class="regexp">/^[0-9]$/</span></span><br><span class="line"><span class="keyword">var</span> reStr = <span class="regexp">/^[a-zA-Z]$/</span></span><br></pre></td></tr></table></figure>
+<p>#取非匹配</p>
+<p>####很多编程语言中都使用“!”取非操作，包括javascript。正则表达式中也有取非操作，比如/[^0-9]/就是一个取非操作的正则表达式了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">var</span> s = <span class="string">"o"</span>;</span><br><span class="line"><span class="keyword">var</span> rec = <span class="regexp">/[^0-9]/</span>;<span class="comment">//取非数字</span></span><br><span class="line"><span class="built_in">console</span>.log(rec.test(i));<span class="comment">//false</span></span><br><span class="line"><span class="built_in">console</span>.log(rec.test(s));<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<h1 id="u7279_u6B8A_u5B57_u7B26"><a href="#u7279_u6B8A_u5B57_u7B26" class="headerlink" title="特殊字符"></a>特殊字符</h1><h4 id="u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u4E00_u4E9B_u7279_u5B9A_u7684_u5B57_u7B26_u96C6_u5408_u53EF_u4EE5_u7528_u7279_u6B8A_u5B57_u7B26_u6765_u66FF_u4EE3_uFF0C_u8FD9_u4E9B_u7279_u6B8A_u7684_u5B57_u7B26_u5E76_u4E0D_u662F_u5FC5_u4E0D_u53EF_u5C11_u7684_uFF0C_u4F46_u662F_u5374_u53EF_u4EE5_u7ED9_u6211_u4EEC_u5E26_u6765_u4E0D_u5C11_u65B9_u4FBF_u3002/_5B0-9_5D/_u5C31_u5B8C_u5168_u53EF_u4EE5_u5199_u6210_u8FD9_u6837"><a href="#u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u4E00_u4E9B_u7279_u5B9A_u7684_u5B57_u7B26_u96C6_u5408_u53EF_u4EE5_u7528_u7279_u6B8A_u5B57_u7B26_u6765_u66FF_u4EE3_uFF0C_u8FD9_u4E9B_u7279_u6B8A_u7684_u5B57_u7B26_u5E76_u4E0D_u662F_u5FC5_u4E0D_u53EF_u5C11_u7684_uFF0C_u4F46_u662F_u5374_u53EF_u4EE5_u7ED9_u6211_u4EEC_u5E26_u6765_u4E0D_u5C11_u65B9_u4FBF_u3002/_5B0-9_5D/_u5C31_u5B8C_u5168_u53EF_u4EE5_u5199_u6210_u8FD9_u6837" class="headerlink" title="在正则表达式中有一些特定的字符集合可以用特殊字符来替代，这些特殊的字符并不是必不可少的，但是却可以给我们带来不少方便。/[0-9]/就完全可以写成这样"></a>在正则表达式中有一些特定的字符集合可以用特殊字符来替代，这些特殊的字符并不是必不可少的，但是却可以给我们带来不少方便。/[0-9]/就完全可以写成这样</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reNum = <span class="regexp">/\d/</span></span><br></pre></td></tr></table></figure>
+<p>常见的特殊字符有</p>
+<blockquote>
+<ul>
+<li>/\d/ 任何一个数字字符，等价于/[0-9]/</li>
+<li>/\D/ 任何一个非数字字符，等价于/[^0-9]/</li>
+<li>/\w/ 任何一个数字字母下划线，等价于/[a-zA-Z0-9_]/</li>
+<li>/\W/ 任何一个非数字字母下划线，等价于/[^a-zA-Z0-9_]/</li>
+<li>/\s/ 任何一个空白字符，包括换页符、换行符、回车符、制表符和垂直制表符，等价于[\f\n\r\t\v]</li>
+<li>/\S/ 任何一个非空白字符，等价于[^\f\n\r\t\v]</li>
+<li>/./  任何一个非空格回车，等价于[^\n\r]<br>相同字母大小写总是进行取非操作的</li>
+</ul>
+</blockquote>
+<p>#贪婪模式(重复模式)<br>以匹配一个邮箱username@email.com为例，邮箱包括一个用户名，@符号与一个域名，用户名与域名的的个数无法判断，但是可以肯定的是用户名与域名至少有一个字符<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// \w 写特殊字符</span></span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/^\w+@\w+.\w+$/</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">'user_name@email.com'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(re.test(str)) <span class="comment">// true</span></span><br></pre></td></tr></table></figure></p>
+<p>贪婪模式有几个符号我们需要了解</p>
+<blockquote>
+<p>1、 + 表示出现一次或多次，至少一次<br>2、 * 表示出现任意次数，零次，一次，或多次<br>3、 ? 表示出来零次或一次，最多一次<br>4、 {n}   能且只能出现n次<br>5、 {n,}  最少出现n次，最多不限<br>6、 {n,m} 最少出现n次，最多出现m次</p>
+</blockquote>
+<p>#防止过度匹配</p>
+<p>有这样一段HTML文本：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> html = <span class="string">"&lt;em&gt;nowamagic&lt;/em&gt;for a simple life&lt;em&gt;http://nowamagic.net/&lt;/em&gt;"</span>;</span><br></pre></td></tr></table></figure></p>
+<p>如果现在要将<em></em>及其中间的文本匹配出来，正则表达式可以这样写：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> re = <span class="regexp">/&lt;em&gt;.*&lt;\/em&gt;/gi</span>;</span><br><span class="line"><span class="built_in">console</span>.log(html.match(re))<span class="comment">//[ '&lt;em&gt;nowamagic&lt;/em&gt;for a simple life&lt;em&gt;http://nowamagic.net/&lt;/em&gt;' ]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/&lt;em&gt;.*?&lt;\/em&gt;/gi</span>;</span><br><span class="line"><span class="built_in">console</span>.log(html.match(re)) <span class="comment">// '&lt;em&gt;nowamagic&lt;/em&gt;'</span></span><br></pre></td></tr></table></figure>
+<p>当使用贪婪模式的时候，”.<em>”会最大程度地进行字符匹配，所以输出了整个字符串。而在惰性模式中，”.</em>?”只进行最小限度的匹配，所以完整的输出了我们需要的字符串。</p>
+<p>惰性模式的语法很简单，即是在贪婪模式后面加上一个“?”即可。</p>
+<blockquote>
+<p>1、<em> –&gt; </em>?<br>2、+ –&gt; +?<br>3、{n,} –&gt; {n,}?</p>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-JavaScript正则表达式" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/21/JavaScript正则表达式/" class="article-date">
+      <time datetime="2015-12-21T09:20:29.000Z" itemprop="datePublished">2015-12-21</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/21/JavaScript正则表达式/">JavaScript常用正则表达式</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="u5728_u524D_u7AEF_u9879_u76EE_u4E2D_u7ECF_u5E38_u4F1A_u7528_u5230_u4E00_u4E2A_u4E9B_u6B63_u5219_u8868_u8FBE_uFF0C_u6240_u4EE5_u5C31_u5728_u7F51_u4E0A_u6574_u7406_u4E00_u4E9B_u5E38_u7528_u7684_u6B63_u5219_u8868_u8FBE_u5F0F_uFF0C_u5982_u6709_u5199_u7684_u4E0D_u5BF9_u7684_u5730_u65B9_uFF0C_u53EF_u4EE5_u591A_u591A_u4EA4_u6D41"><a href="#u5728_u524D_u7AEF_u9879_u76EE_u4E2D_u7ECF_u5E38_u4F1A_u7528_u5230_u4E00_u4E2A_u4E9B_u6B63_u5219_u8868_u8FBE_uFF0C_u6240_u4EE5_u5C31_u5728_u7F51_u4E0A_u6574_u7406_u4E00_u4E9B_u5E38_u7528_u7684_u6B63_u5219_u8868_u8FBE_u5F0F_uFF0C_u5982_u6709_u5199_u7684_u4E0D_u5BF9_u7684_u5730_u65B9_uFF0C_u53EF_u4EE5_u591A_u591A_u4EA4_u6D41" class="headerlink" title="在前端项目中经常会用到一个些正则表达，所以就在网上整理一些常用的正则表达式，如有写的不对的地方，可以多多交流"></a>在前端项目中经常会用到一个些正则表达，所以就在网上整理一些常用的正则表达式，如有写的不对的地方，可以多多交流</h1><h2 id="u6570_u5B57_u7C7B_u8868_u8FBE_u5F0F"><a href="#u6570_u5B57_u7C7B_u8868_u8FBE_u5F0F" class="headerlink" title="数字类表达式"></a>数字类表达式</h2><blockquote>
+<ol>
+<li>数字 /^[0-9]*$/ 或者 /^\d$/</li>
+<li>n位数字 /^[0-9]{n}$/ 或者 /^\d{n}$/</li>
+<li>到少n位数字  /^[0-9]{n,}$/ 或者 /^\d{n,}$/</li>
+<li>n-m位数字   /^[0-9]{n,m}$/ 或者 /^\d{n,m}$/</li>
+<li>正负整数    /^(-|+)?\d+$/</li>
+<li>正负小数      /^(-|+)?\d*(.\d+)$/</li>
+<li>2位小数的正实数  /^[1-9]\d+(.\d{2})$/</li>
+<li>大于0的正整数   /^+?[1-9]\d*$/</li>
+<li>1-99的正整数 /^[1-9]{1,2}$/</li>
+<li>非正整数    /^-[0-9]<em>$/ 或者 /^-[0-9]\d</em>$/</li>
+<li>正负浮点数  /^(-?\d+)(.\d+)$/</li>
+</ol>
+</blockquote>
+<h2 id="u6821_u9A8C_u5B57_u7B26_u4E32_u8868_u8FBE_u5F0F"><a href="#u6821_u9A8C_u5B57_u7B26_u4E32_u8868_u8FBE_u5F0F" class="headerlink" title="校验字符串表达式"></a>校验字符串表达式</h2><blockquote>
+<ol>
+<li>汉字   /^[\u4e00-\u9fa5]{0,}$/</li>
+<li>大小写字母  /^[a-zA-Z]+$/</li>
+<li>大小字字母数字  /^[a-zA-Z0-9]+$/</li>
+<li>26位大写字母 /^[A-Z]+$/</li>
+<li>26位小写字母 /^[a-z]+$/</li>
+<li>字母数字下划线 /^[a-zA-Z0-9_]+$/</li>
+</ol>
+</blockquote>
+<h2 id="u5176_u5B9E_u7C7B_u9700_u6C42_u8868_u8FBE_u5F0F"><a href="#u5176_u5B9E_u7C7B_u9700_u6C42_u8868_u8FBE_u5F0F" class="headerlink" title="其实类需求表达式"></a>其实类需求表达式</h2><blockquote>
+<ol>
+<li>11号手机号码 /^(13|14|15|18|19)[0-9]{9}$/</li>
+<li>邮箱表达式   /^^\w+([-+.]\w+)<em>@\w+([-.]\w+)</em>.\w+([-.]\w+)*$$/</li>
+<li>2位小数价格  /^[0-9]+(.[0-9]{1,2})$/</li>
+</ol>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
+  
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016 John Doe
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、簡單且強大的網誌框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄網誌主題  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到訪數: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本頁閱讀量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

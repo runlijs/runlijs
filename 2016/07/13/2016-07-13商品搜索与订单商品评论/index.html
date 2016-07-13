@@ -1,7 +1,302 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> 2016-07-13商品搜索与订单商品评论 · Hexo</title><meta name="description" content="A Blog Powered By Hexo"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/jekyll.css"><!--[if lt IE 9]>
-<script src="js/html5shiv.min.js"></script>
-<script src="js/respond.min.js"></script>
-<![endif]--></head><body><header class="row-flex-row limit-width vh-center"><a href="/" class="logo"><img src="/favicon.png"></a><nav><ul class="nav-list"><li class="nav-list-item"><a href="/" class="nav-link">主页</a></li><li class="nav-list-item"><a href="/archives/" class="nav-link active">   博客</a></li><li class="nav-list-item"><a href="https://github.com/runlijs" target="_blank" class="nav-link">   github</a></li></ul></nav></header><div class="container limit-width"><section class="row-flex-row"><div class="post"><article class="post-block"><h2 class="post-title"><a href="/2016/07/13/2016-07-13商品搜索与订单商品评论/" class="post-title-link">2016-07-13商品搜索与订单商品评论</a></h2><div class="post-meta"><ul class="post-tag-list"><li class="post-tag-item"><a href="/tags/积分商城/" class="post-tag-link">积分商城</a></li></ul><div class="post-time">Wednesday, July 13th 2016</div></div><div class="post-content"><h1 id="u529F_u80FD_u5546_u54C1_u641C_u7D22_u53C2_u6570"><a href="#u529F_u80FD_u5546_u54C1_u641C_u7D22_u53C2_u6570" class="headerlink" title="功能商品搜索参数"></a>功能商品搜索参数</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line">  type  搜索类型 0：V币热兑,1：热卖商品</span><br><span class="line">*/</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line">  sortType</span><br><span class="line">  descPrice 价格降序</span><br><span class="line">  ascPrice   价格升序</span><br><span class="line">  cost 销售</span><br><span class="line">*/</span></span><br><span class="line">&#123;</span><br><span class="line">  pageNow : <span class="number">1</span>,</span><br><span class="line">  pageSize : <span class="number">10</span>,</span><br><span class="line">  platform : <span class="number">1</span>,</span><br><span class="line">  keyword : <span class="string">''</span>,</span><br><span class="line">  type : type,</span><br><span class="line">  sortType : sortType,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<!DOCTYPE html>
+<html >
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="John Doe" />
+
+
+
+<meta name="description" content="功能商品搜索参数1234567891011121314151617/**  type  搜索类型 0：V币热兑,1：热卖商品*//**  sortType  descPrice 价格降序  ascPrice   价格升序  cost 销售*/&amp;#123;  pageNow : 1,  pageSize : 10,  platform : 1,  keyword : &apos;&apos;,  type : type">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2016-07-13商品搜索与订单商品评论">
+<meta property="og:url" content="http://yoursite.com/2016/07/13/2016-07-13商品搜索与订单商品评论/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="功能商品搜索参数1234567891011121314151617/**  type  搜索类型 0：V币热兑,1：热卖商品*//**  sortType  descPrice 价格降序  ascPrice   价格升序  cost 销售*/&amp;#123;  pageNow : 1,  pageSize : 10,  platform : 1,  keyword : &apos;&apos;,  type : type">
+<meta property="og:updated_time" content="2016-07-13T09:34:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="2016-07-13商品搜索与订单商品评论">
+<meta name="twitter:description" content="功能商品搜索参数1234567891011121314151617/**  type  搜索类型 0：V币热兑,1：热卖商品*//**  sortType  descPrice 价格降序  ascPrice   价格升序  cost 销售*/&amp;#123;  pageNow : 1,  pageSize : 10,  platform : 1,  keyword : &apos;&apos;,  type : type">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css" type="text/css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>2016-07-13商品搜索与订单商品评论 | Hexo</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">John Doe</a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜單</li>
+                        <li>標籤</li>
+                        
+                        <li>友情鏈接</li>
+                        
+                        
+                        <li>關於我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="/#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/积分商城/">积分商城</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">John Doe</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">John Doe</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="/#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
+</nav>
+      <div class="body-wrap"><article id="post-2016-07-13商品搜索与订单商品评论" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/13/2016-07-13商品搜索与订单商品评论/" class="article-date">
+      <time datetime="2016-07-13T08:57:33.000Z" itemprop="datePublished">2016-07-13</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      2016-07-13商品搜索与订单商品评论
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/积分商城/">积分商城</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="u529F_u80FD_u5546_u54C1_u641C_u7D22_u53C2_u6570"><a href="#u529F_u80FD_u5546_u54C1_u641C_u7D22_u53C2_u6570" class="headerlink" title="功能商品搜索参数"></a>功能商品搜索参数</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line">  type  搜索类型 0：V币热兑,1：热卖商品</span><br><span class="line">*/</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line">  sortType</span><br><span class="line">  descPrice 价格降序</span><br><span class="line">  ascPrice   价格升序</span><br><span class="line">  cost 销售</span><br><span class="line">*/</span></span><br><span class="line">&#123;</span><br><span class="line">  pageNow : <span class="number">1</span>,</span><br><span class="line">  pageSize : <span class="number">10</span>,</span><br><span class="line">  platform : <span class="number">1</span>,</span><br><span class="line">  keyword : <span class="string">''</span>,</span><br><span class="line">  type : type,</span><br><span class="line">  sortType : sortType,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="u8BA2_u5355_u8BC4_u8BBA"><a href="#u8BA2_u5355_u8BC4_u8BBA" class="headerlink" title="订单评论"></a>订单评论</h2><blockquote>
 <p>从订单列表进来时,查看订单是否已经评论<br>根据订单ID获取待评论产品列表【订单id】 //产品列表<br>/impcomment/comments/{orderid}</p>
 <p>订单评论详情【订单id】  // 如果有数据就已经评论过了，这时不能在评论了，没数据就可以评论<br>/imordercomment/get/{orderid}</p>
@@ -16,5 +311,211 @@
 <h2 id="u5546_u54C1_u8BE6_u60C5_u7684_u8BC4_u8BBA_u5217_u8868"><a href="#u5546_u54C1_u8BE6_u60C5_u7684_u8BC4_u8BBA_u5217_u8868" class="headerlink" title="商品详情的评论列表"></a>商品详情的评论列表</h2><blockquote>
 <p>产品评论列表【产品id】<br>/impcomment/list/{productId}?pageSize=10&amp;pageNow=1</p>
 </blockquote>
-</div></article><div class="pagination"><span class="pagination-prev">PREV</span><a href="/2016/07/13/hello-world/" class="pagination-next">NEXT</a></div></div><aside class="sidebar"><h3>分类标签</h3><ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nodejs/">nodejs</a></li></ul><h3>最新文章</h3><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/07/13/2016-07-13商品搜索与订单商品评论/">2016-07-13商品搜索与订单商品评论</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/13/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/07/Centos安装Nodejs/">Centos安装Nodejs</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/03/html-input-number-移位小箭头/">html input number 移位小箭头</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/18/掌握Node-js的文件系统-File-System-基础/">掌握Node.js的文件系统[File System 基础]</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/17/mac的nginx安装和配置/">mac的nginx安装和配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/08/ES6中isMounted-不支持，如何判断组件是否存在/">ES6中isMounted()不支持，如何判断组件是否存在</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/28/从网易与淘宝的font-size思考前端设计稿与工作流/">从网易与淘宝的font-size思考前端设计稿与工作流</a></li></ul></aside></section></div><div class="extra"></div><footer class="footer"><div class="row-flex-row limit-width vh-center"><div class="copyright"><P>© 2016 <a href="/">John Doe</P></div><div class="power"><p><a href="https://hexo.io">Hexo</a>, 
-<a href="https://github.com/">GitHub</a>, </p></div></div></footer><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?a36e15d9e2adec9a21fcdd9f686b1ed2";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script></body></html>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文標題:</span><a href="/2016/07/13/2016-07-13商品搜索与订单商品评论/">2016-07-13商品搜索与订单商品评论</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主頁">John Doe</a></p>
+        <p><span>發布時間:</span>2016-07-13, 16:57:33</p>
+        <p><span>最後更新:</span>2016-07-13, 17:34:37</p>
+        <p>
+            <span>原始鏈接:</span><a class="post-url" href="/2016/07/13/2016-07-13商品搜索与订单商品评论/" title="2016-07-13商品搜索与订单商品评论">http://yoursite.com/2016/07/13/2016-07-13商品搜索与订单商品评论/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/07/13/2016-07-13商品搜索与订单商品评论/　　作者: John Doe" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文鏈接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/07/13/hello-world/">
+                    Hello World
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目錄</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u529F_u80FD_u5546_u54C1_u641C_u7D22_u53C2_u6570"><span class="toc-number">1.</span> <span class="toc-text">功能商品搜索参数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BA2_u5355_u8BC4_u8BBA"><span class="toc-number">1.1.</span> <span class="toc-text">订单评论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BA2_u5355_u4E2D_u7684_u5355_u4E2A_u5546_u54C1_u8BC4_u8BBA"><span class="toc-number">1.2.</span> <span class="toc-text">订单中的单个商品评论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u67E5_u770B_u8BA2_u5355_u4E2D_u5355_u4E2A_u5546_u54C1_u8BC4_u8BBA_u8BE6_u60C5"><span class="toc-number">1.3.</span> <span class="toc-text">查看订单中单个商品评论详情</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5546_u54C1_u8BE6_u60C5_u7684_u8BC4_u8BBA_u5217_u8868"><span class="toc-number">1.4.</span> <span class="toc-text">商品详情的评论列表</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
+
+    <script>
+        yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"2016-07-13商品搜索与订单商品评论　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主頁"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/07/13/hello-world/" title="下一篇: Hello World">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/07/13/2016-07-13商品搜索与订单商品评论/">2016-07-13商品搜索与订单商品评论</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/13/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/07/Centos安装Nodejs/">Centos安装Nodejs</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/03/html-input-number-移位小箭头/">html input number 移位小箭头</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/18/掌握Node-js的文件系统-File-System-基础/">掌握Node.js的文件系统[File System 基础]</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/17/mac的nginx安装和配置/">mac的nginx安装和配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/08/ES6中isMounted-不支持，如何判断组件是否存在/">ES6中isMounted()不支持，如何判断组件是否存在</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/28/从网易与淘宝的font-size思考前端设计稿与工作流/">从网易与淘宝的font-size思考前端设计稿与工作流</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/23/javascript中的正则表达学习/">javascript中的正则表达学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/21/JavaScript正则表达式/">JavaScript常用正则表达式</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/18/mac-sublime-text-3-安装插件/">mac sublime text 3 安装插件</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016 John Doe
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、簡單且強大的網誌框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄網誌主題  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到訪數: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本頁閱讀量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
