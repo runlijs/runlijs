@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-07-13T09:02:29.000Z</updated>
+  <updated>2016-07-13T09:34:37.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2016/07/13/2016-07-13%E5%95%86%E5%93%81%E6%90%9C%E7%B4%A2%E4%B8%8E%E8%AE%A2%E5%8D%95%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA/"/>
     <id>http://yoursite.com/2016/07/13/2016-07-13商品搜索与订单商品评论/</id>
     <published>2016-07-13T08:57:33.000Z</published>
-    <updated>2016-07-13T09:02:29.000Z</updated>
+    <updated>2016-07-13T09:34:37.000Z</updated>
     <content type="html"><![CDATA[<h1 id="u529F_u80FD_u5546_u54C1_u641C_u7D22_u53C2_u6570"><a href="#u529F_u80FD_u5546_u54C1_u641C_u7D22_u53C2_u6570" class="headerlink" title="功能商品搜索参数"></a>功能商品搜索参数</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line">  type  搜索类型 0：V币热兑,1：热卖商品</span><br><span class="line">*/</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line">  sortType</span><br><span class="line">  descPrice 价格降序</span><br><span class="line">  ascPrice   价格升序</span><br><span class="line">  cost 销售</span><br><span class="line">*/</span></span><br><span class="line">&#123;</span><br><span class="line">  pageNow : <span class="number">1</span>,</span><br><span class="line">  pageSize : <span class="number">10</span>,</span><br><span class="line">  platform : <span class="number">1</span>,</span><br><span class="line">  keyword : <span class="string">''</span>,</span><br><span class="line">  type : type,</span><br><span class="line">  sortType : sortType,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="u8BA2_u5355_u8BC4_u8BBA"><a href="#u8BA2_u5355_u8BC4_u8BBA" class="headerlink" title="订单评论"></a>订单评论</h2><blockquote>
 <p>从订单列表进来时,查看订单是否已经评论<br>根据订单ID获取待评论产品列表【订单id】 //产品列表<br>/impcomment/comments/{orderid}</p>
@@ -39,6 +39,8 @@
     <summary type="html">
     <![CDATA[<h1 id="u529F_u80FD_u5546_u54C1_u641C_u7D22_u53C2_u6570"><a href="#u529F_u80FD_u5546_u54C1_u641C_u7D22_u53C2_u6570" class="headerlink" title]]>
     </summary>
+    
+      <category term="积分商城" scheme="http://yoursite.com/tags/%E7%A7%AF%E5%88%86%E5%95%86%E5%9F%8E/"/>
     
   </entry>
   
