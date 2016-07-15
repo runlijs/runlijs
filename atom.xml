@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-07-14T01:22:25.000Z</updated>
+  <updated>2016-07-15T02:14:41.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,11 +15,44 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[2016-07-12新微商修改发货方式及更新记录]]></title>
+    <link href="http://yoursite.com/2016/07/15/2016-07-12%E6%96%B0%E5%BE%AE%E5%95%86%E4%BF%AE%E6%94%B9%E5%8F%91%E8%B4%A7%E6%96%B9%E5%BC%8F%E5%8F%8A%E6%9B%B4%E6%96%B0%E8%AE%B0%E5%BD%95/"/>
+    <id>http://yoursite.com/2016/07/15/2016-07-12新微商修改发货方式及更新记录/</id>
+    <published>2016-07-15T02:14:17.000Z</published>
+    <updated>2016-07-15T02:14:41.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="07-12__u6D4B_u8BD5_u670D_u52A1_u5668__u672C_u5730_u7248_u672C_u53F7_1-0-2"><a href="#07-12__u6D4B_u8BD5_u670D_u52A1_u5668__u672C_u5730_u7248_u672C_u53F7_1-0-2" class="headerlink" title="07-12 测试服务器 本地版本号 1.0.2"></a>07-12 测试服务器 本地版本号 1.0.2</h1><blockquote>
+<p>个人资料修改方式，<br>实名认证；<br>买家无效订单列表，买家可以取消订单；<br>卖家待发货未转采购的订单可以置为无效订单；<br>卖家无效订单列表，列表可以将无效订单恢复为有效订单；<br>投诉上级</p>
+</blockquote>
+<h2 id="u4E70_u5BB6_u626B_u7801_u6536_u8D27"><a href="#u4E70_u5BB6_u626B_u7801_u6536_u8D27" class="headerlink" title="买家扫码收货"></a>买家扫码收货</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  version         : <span class="number">1</span>,</span><br><span class="line">  statusCode      : <span class="number">4</span>,</span><br><span class="line">  canReceiveGood  : <span class="number">2</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="u4E70_u5BB6_u786E_u8BA4_u6536_u8D27"><a href="#u4E70_u5BB6_u786E_u8BA4_u6536_u8D27" class="headerlink" title="买家确认收货"></a>买家确认收货</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  version         : <span class="number">1</span>,</span><br><span class="line">  statusCode      : <span class="number">4</span>,</span><br><span class="line">  canReceiveGood  : <span class="number">1</span>,</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  version         : <span class="number">2</span>,</span><br><span class="line">  statusCode      : <span class="number">4</span>,</span><br><span class="line">  canReceiveGood  : !=<span class="number">0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="u4E70_u5BB6_u6536_u8D27"><a href="#u4E70_u5BB6_u6536_u8D27" class="headerlink" title="买家收货"></a>买家收货</h2><blockquote>
+<p>canReceiveGood<br>0 不能确认收货<br>1 可以收货，不需要扫码<br>2 可以收货，必须扫码</p>
+</blockquote>
+<p>买家收货接口<br>version == 1 使用老接口<br>// base.url.buyerHandleOrder_url+”?a=buyer_confirm_received”</p>
+<p>version == 2 使用新接口<br>// base.url.doOrder_url+”?a=buyer_received”</p>
+<p>======================</p>
+<h2 id="u5356_u5BB6_u786E_u8BA4_u53D1_u8D27"><a href="#u5356_u5BB6_u786E_u8BA4_u53D1_u8D27" class="headerlink" title="卖家确认发货"></a>卖家确认发货</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  version         : <span class="number">1</span>,</span><br><span class="line">  canDeliverGood  : <span class="number">1</span>,</span><br><span class="line">  ismerge         : <span class="number">0</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="u5356_u5BB6_u4E0B_u4E00_u6B65_u626B_u7801_u53D1_u8D27"><a href="#u5356_u5BB6_u4E0B_u4E00_u6B65_u626B_u7801_u53D1_u8D27" class="headerlink" title="卖家下一步扫码发货"></a>卖家下一步扫码发货</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  version         : <span class="number">1</span>,</span><br><span class="line">  canDeliverGood  : <span class="number">2</span>,</span><br><span class="line">  ismerge         : <span class="number">0</span>,</span><br><span class="line">&#125;</span><br><span class="line">&#123;</span><br><span class="line">  version         : <span class="number">2</span>,</span><br><span class="line">  ismerge         : <span class="number">0</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>canDeliverGood<br>0 不能点确认发货<br>1 确认发货不需要扫码<br>2 确认发货需要扫码</p>
+</blockquote>
+<p>卖家发货接口<br>version == 1 使用老接口<br>// base.url.sellerHandleOrder_url+”?a=seller_confirm_deliver”<br>version == 2 使用新接口<br>// base.url.doOrder_url+”?a=seller_deliver”</p>
+<p>===========================</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="07-12__u6D4B_u8BD5_u670D_u52A1_u5668__u672C_u5730_u7248_u672C_u53F7_1-0-2"><a href="#07-12__u6D4B_u8BD5_u670D_u52A1_u5668__u672C_u57]]>
+    </summary>
+    
+      <category term="新微商商城" scheme="http://yoursite.com/tags/%E6%96%B0%E5%BE%AE%E5%95%86%E5%95%86%E5%9F%8E/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[2016-07-13商品搜索与订单商品评论]]></title>
     <link href="http://yoursite.com/2016/07/13/2016-07-13%E5%95%86%E5%93%81%E6%90%9C%E7%B4%A2%E4%B8%8E%E8%AE%A2%E5%8D%95%E5%95%86%E5%93%81%E8%AF%84%E8%AE%BA/"/>
     <id>http://yoursite.com/2016/07/13/2016-07-13商品搜索与订单商品评论/</id>
     <published>2016-07-13T08:57:33.000Z</published>
-    <updated>2016-07-14T01:22:25.000Z</updated>
+    <updated>2016-07-14T07:47:31.000Z</updated>
     <content type="html"><![CDATA[<h1 id="u529F_u80FD_u5546_u54C1_u641C_u7D22_u53C2_u6570"><a href="#u529F_u80FD_u5546_u54C1_u641C_u7D22_u53C2_u6570" class="headerlink" title="功能商品搜索参数"></a>功能商品搜索参数</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line">  type  搜索类型 0：V币热兑,1：热卖商品</span><br><span class="line">*/</span></span><br><span class="line"><span class="comment">/**</span><br><span class="line">  sortType</span><br><span class="line">  descPrice 价格降序</span><br><span class="line">  ascPrice   价格升序</span><br><span class="line">  cost 销售</span><br><span class="line">*/</span></span><br><span class="line">&#123;</span><br><span class="line">  pageNow : <span class="number">1</span>,</span><br><span class="line">  pageSize : <span class="number">10</span>,</span><br><span class="line">  platform : <span class="number">1</span>,</span><br><span class="line">  keyword : <span class="string">''</span>,</span><br><span class="line">  type : type,</span><br><span class="line">  sortType : sortType,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="u8BA2_u5355_u8BC4_u8BBA"><a href="#u8BA2_u5355_u8BC4_u8BBA" class="headerlink" title="订单评论"></a>订单评论</h2><blockquote>
 <p>从订单列表进来时,查看订单是否已经评论<br>根据订单ID获取待评论产品列表【订单id】 //产品列表<br>/impcomment/comments/{orderid}</p>
@@ -27,11 +60,10 @@
 <p>添加订单评论 // 订单没有评论过就可以添加评论<br>/imordercomment/add<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  orderId:orderId</span><br><span class="line">  wuliuGrade : <span class="number">1</span> <span class="comment">//商品包装满意度</span></span><br><span class="line">  speedGrade : <span class="number">1</span> <span class="comment">// 送货速度</span></span><br><span class="line">  distributionGrade : <span class="number">1</span> <span class="comment">//配送员服务态度</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <h2 id="u8BA2_u5355_u4E2D_u7684_u5355_u4E2A_u5546_u54C1_u8BC4_u8BBA"><a href="#u8BA2_u5355_u4E2D_u7684_u5355_u4E2A_u5546_u54C1_u8BC4_u8BBA" class="headerlink" title="订单中的单个商品评论"></a>订单中的单个商品评论</h2><blockquote>
-<p>获取待评价产品详情【子订单id】<br>/impcomment/order1sDetail/{order1Id}<br>添加产品评论<br>/impcomment/add<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  imProductId : imProductId,  <span class="comment">// 商品ID</span></span><br><span class="line">  orderId     : orderId ,     <span class="comment">// 订单ID</span></span><br><span class="line">  order1Id    : order1Id,     <span class="comment">// 子订单ID</span></span><br><span class="line">  content     : <span class="string">'评论内容'</span>,    <span class="comment">//  评论内容</span></span><br><span class="line">  grade       : <span class="number">1</span>,            <span class="comment">// 星级1-5</span></span><br><span class="line">  commentImg  : <span class="string">''</span>,           <span class="comment">// 三张评论图片</span></span><br><span class="line">  commentImg1 : <span class="string">''</span>,</span><br><span class="line">  commentImg2 : <span class="string">''</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>获取待评价产品详情【子订单id】<br>/impcomment/order1sDetail/{order1Id}<br>上传图片<br>/file/fdfsUpload // name = ‘attachs’<br>添加产品评论<br>/impcomment/add<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  imProductId : imProductId,  <span class="comment">// 商品ID</span></span><br><span class="line">  orderId     : orderId ,     <span class="comment">// 订单ID</span></span><br><span class="line">  order1Id    : order1Id,     <span class="comment">// 子订单ID</span></span><br><span class="line">  content     : <span class="string">'评论内容'</span>,    <span class="comment">//  评论内容</span></span><br><span class="line">  grade       : <span class="number">1</span>,            <span class="comment">// 星级1-5</span></span><br><span class="line">  commentImg  : <span class="string">''</span>,           <span class="comment">// 三张评论图片</span></span><br><span class="line">  commentImg1 : <span class="string">''</span>,</span><br><span class="line">  commentImg2 : <span class="string">''</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<p>```</p>
 <h2 id="u67E5_u770B_u8BA2_u5355_u4E2D_u5355_u4E2A_u5546_u54C1_u8BC4_u8BBA_u8BE6_u60C5"><a href="#u67E5_u770B_u8BA2_u5355_u4E2D_u5355_u4E2A_u5546_u54C1_u8BC4_u8BBA_u8BE6_u60C5" class="headerlink" title="查看订单中单个商品评论详情"></a>查看订单中单个商品评论详情</h2><blockquote>
-<p>获取待评价产品详情【子订单id】<br>/impcomment/order1sDetail/{order1Id}<br>产品评论详情【产品ID】【子订单id】<br>/impcomment/detail/{orderId}/{order1Id}</p>
+<p>获取待评价产品详情【子订单id】<br>/impcomment/order1sDetail/{order1Id}<br>产品评论详情【产品ID】【子订单id】<br>/impcomment/detail/{productId}/{order1Id}</p>
 </blockquote>
 <h2 id="u5546_u54C1_u8BE6_u60C5_u7684_u8BC4_u8BBA_u5217_u8868"><a href="#u5546_u54C1_u8BE6_u60C5_u7684_u8BC4_u8BBA_u5217_u8868" class="headerlink" title="商品详情的评论列表"></a>商品详情的评论列表</h2><blockquote>
 <p>产品评论列表【产品id】<br>/impcomment/list/{productId}?pageSize=10&amp;pageNow=1</p>
