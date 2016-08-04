@@ -262,6 +262,67 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-2016-08-04消息大改版" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/04/2016-08-04消息大改版/" class="article-date">
+      <time datetime="2016-08-04T09:02:11.000Z" itemprop="datePublished">2016-08-04</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/04/2016-08-04消息大改版/">2016-08-04消息大改版</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="u8001_u5434_u670B_u53CB_u5708"><a href="#u8001_u5434_u670B_u53CB_u5708" class="headerlink" title="老吴朋友圈"></a>老吴朋友圈</h1><blockquote>
+<p>showType显示类型：<br>视频 //暂时不添加<br>6=外链<br>7=纯文本<br>3=图文混排<br>2=列表</p>
+</blockquote>
+<h1 id="u5FAE_u4FE1_u5206_u4EAB"><a href="#u5FAE_u4FE1_u5206_u4EAB" class="headerlink" title="微信分享"></a>微信分享</h1><blockquote>
+<p>#/message/mdetail/{id}/{type}<br>公告通告 ：publish<br>美文分享 ：read<br>老吴培训课 ：course<br>微商视频 ：video<br>微商海报 ：poster</p>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-2016-07-12新微商修改发货方式及更新记录" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -956,138 +1017,6 @@
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-javascript中的正则表达学习" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/23/javascript中的正则表达学习/" class="article-date">
-      <time datetime="2015-12-23T01:30:18.000Z" itemprop="datePublished">2015-12-23</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/23/javascript中的正则表达学习/">javascript中的正则表达学习</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="u5B9A_u4E49"><a href="#u5B9A_u4E49" class="headerlink" title="定义"></a>定义</h1><p>###在javascript中我们可以通过内建的类定义一个正则表达式</p>
-<blockquote>
-<p>var re = new RegExp(‘[0-9]’);</p>
-</blockquote>
-<p>###实际上RegExp类可以接收两个参数，除了本身的需要匹配的模式字符串外，还可以定义额外处理方式的第二个参数</p>
-<blockquote>
-<p>var re = new RegExp(‘[0-9]’,’g’);</p>
-</blockquote>
-<p>###我们可以打印看下re的值</p>
-<blockquote>
-<p>console.log(re)// /[0-9]/g</p>
-</blockquote>
-<p>###所以我们可以用第二种方式定义正则表达式</p>
-<blockquote>
-<p>var re = /[0-9]/g</p>
-</blockquote>
-<p>###如果我们需要匹配’\’<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第一种方式</span></span><br><span class="line"><span class="keyword">var</span> re = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'\\\\'</span>);</span><br><span class="line"><span class="comment">//第二种方式</span></span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/\\/</span></span><br></pre></td></tr></table></figure></p>
-<p>####记住，一个完整的正则表达式里’\’后面一定会有会另外一个字符</p>
-<p>#javascript中的正则表达式<br>其实上面我们已经简单的介绍了正则表达式的定义，但是要如何的使用呢？在javascript中RegRxp和String中都有方式处理这些正则表达式</p>
-<blockquote>
-<ul>
-<li>test – RegRxp中的test方法用来检查字符串是否匹配正则表达式，返回布尔值</li>
-<li>exec – RegRxp中的exec方法返回包含第一个匹配的的数组或null；</li>
-<li>match – String中的match方法返回包含所有匹配子字符串的数组</li>
-<li>replace – String中的replace方法用来替换匹配的字符串，支持正则匹配</li>
-<li>split – String中的split匹配指定符号来分割字符串，支持正则匹配，返回数组</li>
-</ul>
-</blockquote>
-<p>一个实例对象除了方法当然还有属性，一个正则表达式有以下属性：</p>
-<blockquote>
-<ul>
-<li>global – 布尔值，若全局选项g已设置则返回true，否则返回false；</li>
-<li>ignoreCase – 布尔值，若忽略大小写选项i已设置则返回true，否则返回false；</li>
-</ul>
-</blockquote>
-<p>#元字符</p>
-<h4 id="u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u4E00_u4E9B_u7279_u6B8A_u5B57_u7B26_u662F_u4E0D_u80FD_u76F4_u63A5_u4F7F_u7528_u7684_uFF0C_u5FC5_u987B_u5BF9_u5B83_u8FDB_u884C_u8F6C_u4E49_u540E_u624D_u53EF_u4EE5_uFF0C_u6BD4_u5982_u2019_5C_u2019_uFF0C_u56E0_u4E3A_u8FD9_u4E9B_u5B57_u7B26_u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u7279_u6B8A_u7684_u8BED_u6CD5_u542B_u4E49_uFF0C_u8FD9_u7C7B_u5B57_u7B26_u88AB_u79F0_u4E3A_u5143_u5B57_u7B26_uFF0C_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u7684_u5143_u5B57_u7B26_u6709"><a href="#u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u4E00_u4E9B_u7279_u6B8A_u5B57_u7B26_u662F_u4E0D_u80FD_u76F4_u63A5_u4F7F_u7528_u7684_uFF0C_u5FC5_u987B_u5BF9_u5B83_u8FDB_u884C_u8F6C_u4E49_u540E_u624D_u53EF_u4EE5_uFF0C_u6BD4_u5982_u2019_5C_u2019_uFF0C_u56E0_u4E3A_u8FD9_u4E9B_u5B57_u7B26_u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u7279_u6B8A_u7684_u8BED_u6CD5_u542B_u4E49_uFF0C_u8FD9_u7C7B_u5B57_u7B26_u88AB_u79F0_u4E3A_u5143_u5B57_u7B26_uFF0C_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u7684_u5143_u5B57_u7B26_u6709" class="headerlink" title="在正则表达式中有一些特殊字符是不能直接使用的，必须对它进行转义后才可以，比如’\’，因为这些字符在正则表达式中有特殊的语法含义，这类字符被称为元字符，正则表达式中的元字符有"></a>在正则表达式中有一些特殊字符是不能直接使用的，必须对它进行转义后才可以，比如’\’，因为这些字符在正则表达式中有特殊的语法含义，这类字符被称为元字符，正则表达式中的元字符有</h4><blockquote>
-<p>. \ / ? * + { } [ ( ) ] ^ $ |</p>
-</blockquote>
-<p>#范围匹配</p>
-<h4 id="u4E00_u4E2A_u7B80_u5355_u7684_u5B57_u7B26_u5C31_u53EF_u4EE5_u662F_u4E00_u4E2A_u5339_u914D_u6A21_u5F0F_uFF0C_u4F46_u662F_u73B0_u5B9E_u60C5_u51B5_u4E0D_u4F1A_u8FD9_u4E48_u7B80_u5355_uFF0C_u6BD4_u5982_u6211_u4EEC_u9700_u8981_u5339_u914D0-9_u7684_u6570_u5B57"><a href="#u4E00_u4E2A_u7B80_u5355_u7684_u5B57_u7B26_u5C31_u53EF_u4EE5_u662F_u4E00_u4E2A_u5339_u914D_u6A21_u5F0F_uFF0C_u4F46_u662F_u73B0_u5B9E_u60C5_u51B5_u4E0D_u4F1A_u8FD9_u4E48_u7B80_u5355_uFF0C_u6BD4_u5982_u6211_u4EEC_u9700_u8981_u5339_u914D0-9_u7684_u6570_u5B57" class="headerlink" title="一个简单的字符就可以是一个匹配模式，但是现实情况不会这么简单，比如我们需要匹配0-9的数字"></a>一个简单的字符就可以是一个匹配模式，但是现实情况不会这么简单，比如我们需要匹配0-9的数字</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">6</span>;</span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/^[0123456789]$/</span></span><br><span class="line"><span class="built_in">console</span>.log(re.test(a)) <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(re.test(b)) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
-<h4 id="u5982_u679C_u6211_u4EEC_u8981_u5339_u914D26_u4E2A_u5927_u5C0F_u5199_u5B57_u6BCD_uFF0C_u5982_u4E0B_uFF0C_u4EE3_u7801_u4F1A_u5F88_u4E0D_u7F8E_u89C2_2C_u4E5F_u4E0D_u7B80_u6D01"><a href="#u5982_u679C_u6211_u4EEC_u8981_u5339_u914D26_u4E2A_u5927_u5C0F_u5199_u5B57_u6BCD_uFF0C_u5982_u4E0B_uFF0C_u4EE3_u7801_u4F1A_u5F88_u4E0D_u7F8E_u89C2_2C_u4E5F_u4E0D_u7B80_u6D01" class="headerlink" title="如果我们要匹配26个大小写字母，如下，代码会很不美观,也不简洁"></a>如果我们要匹配26个大小写字母，如下，代码会很不美观,也不简洁</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> re = <span class="regexp">/^[abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ]$/</span>;</span><br></pre></td></tr></table></figure>
-<h4 id="u8FD9_u6837_u6211_u4EEC_u53EF_u4EE5_u7528_u8303_u56F4_u5339_u914D_u8868_u8FBE_u5F0F_u2019-_u2018_uFF0C_u8FD9_u6837_u5C31_u53EF_u4EE5_u4E86_uFF0C_u201C-_u201D_u7528_u6765_u5B9A_u4E49_u4E00_u4E2A_u5339_u914D_u533A_u95F4_uFF0C_u5B57_u7B26_u7684_u5177_u4F53_u987A_u5E8F_u7531ASCII_u5B57_u7B26_u8868_u786E_u5B9A_uFF0C_u6240_u4EE5_u4E0D_u80FD_u5199_u6210/A-z/_uFF0C_u56E0_u4E3AZ-a_u4E4B_u95F4_u8FD8_u5305_u542B_u7740_u5176_u4ED6_u5B57_u7B26_u3002"><a href="#u8FD9_u6837_u6211_u4EEC_u53EF_u4EE5_u7528_u8303_u56F4_u5339_u914D_u8868_u8FBE_u5F0F_u2019-_u2018_uFF0C_u8FD9_u6837_u5C31_u53EF_u4EE5_u4E86_uFF0C_u201C-_u201D_u7528_u6765_u5B9A_u4E49_u4E00_u4E2A_u5339_u914D_u533A_u95F4_uFF0C_u5B57_u7B26_u7684_u5177_u4F53_u987A_u5E8F_u7531ASCII_u5B57_u7B26_u8868_u786E_u5B9A_uFF0C_u6240_u4EE5_u4E0D_u80FD_u5199_u6210/A-z/_uFF0C_u56E0_u4E3AZ-a_u4E4B_u95F4_u8FD8_u5305_u542B_u7740_u5176_u4ED6_u5B57_u7B26_u3002" class="headerlink" title="这样我们可以用范围匹配表达式’-‘，这样就可以了，“-”用来定义一个匹配区间，字符的具体顺序由ASCII字符表确定，所以不能写成/A-z/，因为Z-a之间还包含着其他字符。"></a>这样我们可以用范围匹配表达式’-‘，这样就可以了，“-”用来定义一个匹配区间，字符的具体顺序由ASCII字符表确定，所以不能写成/A-z/，因为Z-a之间还包含着其他字符。</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> reNum = <span class="regexp">/^[0-9]$/</span></span><br><span class="line"><span class="keyword">var</span> reStr = <span class="regexp">/^[a-zA-Z]$/</span></span><br></pre></td></tr></table></figure>
-<p>#取非匹配</p>
-<p>####很多编程语言中都使用“!”取非操作，包括javascript。正则表达式中也有取非操作，比如/[^0-9]/就是一个取非操作的正则表达式了。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">5</span>;</span><br><span class="line"><span class="keyword">var</span> s = <span class="string">"o"</span>;</span><br><span class="line"><span class="keyword">var</span> rec = <span class="regexp">/[^0-9]/</span>;<span class="comment">//取非数字</span></span><br><span class="line"><span class="built_in">console</span>.log(rec.test(i));<span class="comment">//false</span></span><br><span class="line"><span class="built_in">console</span>.log(rec.test(s));<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-<h1 id="u7279_u6B8A_u5B57_u7B26"><a href="#u7279_u6B8A_u5B57_u7B26" class="headerlink" title="特殊字符"></a>特殊字符</h1><h4 id="u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u4E00_u4E9B_u7279_u5B9A_u7684_u5B57_u7B26_u96C6_u5408_u53EF_u4EE5_u7528_u7279_u6B8A_u5B57_u7B26_u6765_u66FF_u4EE3_uFF0C_u8FD9_u4E9B_u7279_u6B8A_u7684_u5B57_u7B26_u5E76_u4E0D_u662F_u5FC5_u4E0D_u53EF_u5C11_u7684_uFF0C_u4F46_u662F_u5374_u53EF_u4EE5_u7ED9_u6211_u4EEC_u5E26_u6765_u4E0D_u5C11_u65B9_u4FBF_u3002/_5B0-9_5D/_u5C31_u5B8C_u5168_u53EF_u4EE5_u5199_u6210_u8FD9_u6837"><a href="#u5728_u6B63_u5219_u8868_u8FBE_u5F0F_u4E2D_u6709_u4E00_u4E9B_u7279_u5B9A_u7684_u5B57_u7B26_u96C6_u5408_u53EF_u4EE5_u7528_u7279_u6B8A_u5B57_u7B26_u6765_u66FF_u4EE3_uFF0C_u8FD9_u4E9B_u7279_u6B8A_u7684_u5B57_u7B26_u5E76_u4E0D_u662F_u5FC5_u4E0D_u53EF_u5C11_u7684_uFF0C_u4F46_u662F_u5374_u53EF_u4EE5_u7ED9_u6211_u4EEC_u5E26_u6765_u4E0D_u5C11_u65B9_u4FBF_u3002/_5B0-9_5D/_u5C31_u5B8C_u5168_u53EF_u4EE5_u5199_u6210_u8FD9_u6837" class="headerlink" title="在正则表达式中有一些特定的字符集合可以用特殊字符来替代，这些特殊的字符并不是必不可少的，但是却可以给我们带来不少方便。/[0-9]/就完全可以写成这样"></a>在正则表达式中有一些特定的字符集合可以用特殊字符来替代，这些特殊的字符并不是必不可少的，但是却可以给我们带来不少方便。/[0-9]/就完全可以写成这样</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reNum = <span class="regexp">/\d/</span></span><br></pre></td></tr></table></figure>
-<p>常见的特殊字符有</p>
-<blockquote>
-<ul>
-<li>/\d/ 任何一个数字字符，等价于/[0-9]/</li>
-<li>/\D/ 任何一个非数字字符，等价于/[^0-9]/</li>
-<li>/\w/ 任何一个数字字母下划线，等价于/[a-zA-Z0-9_]/</li>
-<li>/\W/ 任何一个非数字字母下划线，等价于/[^a-zA-Z0-9_]/</li>
-<li>/\s/ 任何一个空白字符，包括换页符、换行符、回车符、制表符和垂直制表符，等价于[\f\n\r\t\v]</li>
-<li>/\S/ 任何一个非空白字符，等价于[^\f\n\r\t\v]</li>
-<li>/./  任何一个非空格回车，等价于[^\n\r]<br>相同字母大小写总是进行取非操作的</li>
-</ul>
-</blockquote>
-<p>#贪婪模式(重复模式)<br>以匹配一个邮箱username@email.com为例，邮箱包括一个用户名，@符号与一个域名，用户名与域名的的个数无法判断，但是可以肯定的是用户名与域名至少有一个字符<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// \w 写特殊字符</span></span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/^\w+@\w+.\w+$/</span></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">'user_name@email.com'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(re.test(str)) <span class="comment">// true</span></span><br></pre></td></tr></table></figure></p>
-<p>贪婪模式有几个符号我们需要了解</p>
-<blockquote>
-<p>1、 + 表示出现一次或多次，至少一次<br>2、 * 表示出现任意次数，零次，一次，或多次<br>3、 ? 表示出来零次或一次，最多一次<br>4、 {n}   能且只能出现n次<br>5、 {n,}  最少出现n次，最多不限<br>6、 {n,m} 最少出现n次，最多出现m次</p>
-</blockquote>
-<p>#防止过度匹配</p>
-<p>有这样一段HTML文本：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> html = <span class="string">"&lt;em&gt;nowamagic&lt;/em&gt;for a simple life&lt;em&gt;http://nowamagic.net/&lt;/em&gt;"</span>;</span><br></pre></td></tr></table></figure></p>
-<p>如果现在要将<em></em>及其中间的文本匹配出来，正则表达式可以这样写：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> re = <span class="regexp">/&lt;em&gt;.*&lt;\/em&gt;/gi</span>;</span><br><span class="line"><span class="built_in">console</span>.log(html.match(re))<span class="comment">//[ '&lt;em&gt;nowamagic&lt;/em&gt;for a simple life&lt;em&gt;http://nowamagic.net/&lt;/em&gt;' ]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/&lt;em&gt;.*?&lt;\/em&gt;/gi</span>;</span><br><span class="line"><span class="built_in">console</span>.log(html.match(re)) <span class="comment">// '&lt;em&gt;nowamagic&lt;/em&gt;'</span></span><br></pre></td></tr></table></figure>
-<p>当使用贪婪模式的时候，”.<em>”会最大程度地进行字符匹配，所以输出了整个字符串。而在惰性模式中，”.</em>?”只进行最小限度的匹配，所以完整的输出了我们需要的字符串。</p>
-<p>惰性模式的语法很简单，即是在贪婪模式后面加上一个“?”即可。</p>
-<blockquote>
-<p>1、<em> –&gt; </em>?<br>2、+ –&gt; +?<br>3、{n,} –&gt; {n,}?</p>
-</blockquote>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
     </div>
 
       
