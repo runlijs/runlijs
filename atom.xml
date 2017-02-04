@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-08-04T09:33:22.000Z</updated>
+  <updated>2017-02-04T05:50:54.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[简明教程]]></title>
+    <link href="http://yoursite.com/2017/02/04/%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/"/>
+    <id>http://yoursite.com/2017/02/04/简明教程/</id>
+    <published>2017-02-04T05:43:33.000Z</published>
+    <updated>2017-02-04T05:50:54.000Z</updated>
+    <content type="html"><![CDATA[<p>#用s命令替换<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ cat pets.txt</span><br><span class="line">This is my cat</span><br><span class="line">  my cat<span class="string">'s name is betty</span><br><span class="line">This is my dog</span><br><span class="line">  my dog'</span>s name is frank</span><br><span class="line">This is my fish</span><br><span class="line">  my fish<span class="string">'s name is george</span><br><span class="line">This is my goat</span><br><span class="line">  my goat'</span>s name is adam</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>#用s命令替换<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><b]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[2016-08-04消息大改版]]></title>
