@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-04T06:02:10.000Z</updated>
+  <updated>2017-02-04T06:02:39.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://yoursite.com/2017/02/04/%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/"/>
     <id>http://yoursite.com/2017/02/04/简明教程/</id>
     <published>2017-02-04T05:43:33.000Z</published>
-    <updated>2017-02-04T06:02:10.000Z</updated>
-    <content type="html"><![CDATA[<p>#用s命令替换<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ cat pets.txt</span><br><span class="line">This is my cat</span><br><span class="line">  my cat<span class="string">'s name is betty</span><br><span class="line">This is my dog</span><br><span class="line">  my dog'</span>s name is frank</span><br><span class="line">This is my fish</span><br><span class="line">  my fish<span class="string">'s name is george</span><br><span class="line">This is my goat</span><br><span class="line">  my goat'</span>s name is adam</span><br></pre></td></tr></table></figure></p>
+    <updated>2017-02-04T06:02:39.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="u7528s_u547D_u4EE4_u66FF_u6362"><a href="#u7528s_u547D_u4EE4_u66FF_u6362" class="headerlink" title="用s命令替换"></a>用s命令替换</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ cat pets.txt</span><br><span class="line">This is my cat</span><br><span class="line">  my cat<span class="string">'s name is betty</span><br><span class="line">This is my dog</span><br><span class="line">  my dog'</span>s name is frank</span><br><span class="line">This is my fish</span><br><span class="line">  my fish<span class="string">'s name is george</span><br><span class="line">This is my goat</span><br><span class="line">  my goat'</span>s name is adam</span><br></pre></td></tr></table></figure>
 <p>把其中的my字符串替换成Hao Chen’s，下面的语句应该很好理解（s表示替换命令，/my/表示匹配my，/Hao Chen’s/表示把匹配替换成Hao Chen’s，/g 表示一行上的替换所有的匹配）：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ sed <span class="string">"s/my/Hao Chen's/g"</span> pets.txt</span><br><span class="line">This is Hao Chen<span class="string">'s cat</span><br><span class="line">  Hao Chen'</span>s cat<span class="string">'s name is betty</span><br><span class="line">This is Hao Chen'</span>s dog</span><br><span class="line">  Hao Chen<span class="string">'s dog'</span>s name is frank</span><br><span class="line">This is Hao Chen<span class="string">'s fish</span><br><span class="line">  Hao Chen'</span>s fish<span class="string">'s name is george</span><br><span class="line">This is Hao Chen'</span>s goat</span><br><span class="line">  Hao Chen<span class="string">'s goat'</span>s name is adam</span><br></pre></td></tr></table></figure>
 <p>注意：如果你要使用单引号，那么你没办法通过\’这样来转义，就有双引号就可以了，在双引号内可以用\”来转义。</p>
@@ -31,7 +31,7 @@
 <p>顺手介绍一下正则表达式的一些最基本的东西：<br>-^ 表示一行的开头。如：/^#/ 以#开头的匹配。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>#用s命令替换<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><b]]>
+    <![CDATA[<h2 id="u7528s_u547D_u4EE4_u66FF_u6362"><a href="#u7528s_u547D_u4EE4_u66FF_u6362" class="headerlink" title="用s命令替换"></a>用s命令替换</h2><figure c]]>
     </summary>
     
   </entry>
