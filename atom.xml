@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-04T06:20:15.000Z</updated>
+  <updated>2017-02-04T06:21:40.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2017/02/04/%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/"/>
     <id>http://yoursite.com/2017/02/04/简明教程/</id>
     <published>2017-02-04T05:43:33.000Z</published>
-    <updated>2017-02-04T06:20:15.000Z</updated>
+    <updated>2017-02-04T06:21:40.000Z</updated>
     <content type="html"><![CDATA[<h2 id="u7528s_u547D_u4EE4_u66FF_u6362"><a href="#u7528s_u547D_u4EE4_u66FF_u6362" class="headerlink" title="用s命令替换"></a>用s命令替换</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ cat pets.txt</span><br><span class="line">This is my cat</span><br><span class="line">  my cat<span class="string">'s name is betty</span><br><span class="line">This is my dog</span><br><span class="line">  my dog'</span>s name is frank</span><br><span class="line">This is my fish</span><br><span class="line">  my fish<span class="string">'s name is george</span><br><span class="line">This is my goat</span><br><span class="line">  my goat'</span>s name is adam</span><br></pre></td></tr></table></figure>
 <p>把其中的my字符串替换成Hao Chen’s，下面的语句应该很好理解（s表示替换命令，/my/表示匹配my，/Hao Chen’s/表示把匹配替换成Hao Chen’s，/g 表示一行上的替换所有的匹配）：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ sed <span class="string">"s/my/Hao Chen's/g"</span> pets.txt</span><br><span class="line">This is Hao Chen<span class="string">'s cat</span><br><span class="line">  Hao Chen'</span>s cat<span class="string">'s name is betty</span><br><span class="line">This is Hao Chen'</span>s dog</span><br><span class="line">  Hao Chen<span class="string">'s dog'</span>s name is frank</span><br><span class="line">This is Hao Chen<span class="string">'s fish</span><br><span class="line">  Hao Chen'</span>s fish<span class="string">'s name is george</span><br><span class="line">This is Hao Chen'</span>s goat</span><br><span class="line">  Hao Chen<span class="string">'s goat'</span>s name is adam</span><br></pre></td></tr></table></figure>
@@ -35,7 +35,7 @@
 <li>\&lt; 表示词首。 如 \&lt;abc 表示以 abc 为首的詞。</li>
 <li><span>\&gt;</span> 表示词尾。 如 abc\&gt; 表示以 abc 結尾的詞。</li>
 <li>. 表示任何单个字符。</li>
-<li>\* 表示某个字符出现了0次或多次。<br>[ ] 字符集合。 如：[abc]表示匹配a或b或c，还有[a-zA-Z]表示匹配所有的26个字符。如果其中有^表示反，如[^a]表示非a的字符</li>
+<li>* 表示某个字符出现了0次或多次。<br>[ ] 字符集合。 如：[abc]表示匹配a或b或c，还有[a-zA-Z]表示匹配所有的26个字符。如果其中有^表示反，如[^a]表示非a的字符</li>
 </ul>
 <p>正规则表达式是一些很牛的事，比如我们要去掉某html中的tags：<br>HTML.TXT<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">b</span>&gt;</span>This<span class="tag">&lt;/<span class="title">b</span>&gt;</span> is what <span class="tag">&lt;<span class="title">span</span> <span class="attribute">style</span>=<span class="value">"text-decoration: underline;"</span>&gt;</span>I<span class="tag">&lt;/<span class="title">span</span>&gt;</span> meant. Understand?</span><br></pre></td></tr></table></figure></p>
 <p>看看我们的sed命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果你这样搞的话，就会有问题</span></span><br><span class="line">$ sed <span class="string">'s/&lt;.*&gt;//g'</span> html.txt</span><br><span class="line"> meant. Understand?</span><br><span class="line"><span class="comment"># 要解决上面的那个问题，就得像下面这样。</span></span><br><span class="line"><span class="comment"># 其中的'[^&gt;]' 指定了除了&gt;的字符重复0次或多次。</span></span><br><span class="line">$ sed <span class="string">'s/&lt;[^&gt;]*&gt;//g'</span> html.txt</span><br><span class="line">This is what I meant. Understand?</span><br></pre></td></tr></table></figure></p>
