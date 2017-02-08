@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-08T02:52:50.000Z</updated>
+  <updated>2017-02-08T02:58:41.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,12 +19,16 @@
     <link href="http://yoursite.com/2017/02/08/mac%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEmongodb/"/>
     <id>http://yoursite.com/2017/02/08/mac安装配置mongodb/</id>
     <published>2017-02-08T02:35:49.000Z</published>
-    <updated>2017-02-08T02:52:50.000Z</updated>
+    <updated>2017-02-08T02:58:41.000Z</updated>
     <content type="html"><![CDATA[<p>mac下安装mongodb一般有两种方式,一种是下载压缩包，另一种是通过homebrew命令来安装。</p>
 <p>本人采用是压缩包安装，下载地址 <a href="https://www.mongodb.org/dl/osx/x86_64" target="_blank" rel="external">https://www.mongodb.org/dl/osx/x86_64</a>选择对应版本</p>
 <p>1、下载成功后，文件解压到/Users/likai/下，并将文件夹重名为mongodb</p>
 <p>2、在mongodb目录下新建二个目录：data/db——和于存放数据文件，etc——用于存放mongod.conf。<br>  使用vim或其它编辑器创建mongod.conf文件，内容如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#mongodb config file</span></span><br><span class="line">dbpath=/Users/likai/mongodb/data/db</span><br><span class="line">logpath=/Users/likai/mongodb/mongod.log</span><br><span class="line">logappend=<span class="literal">true</span></span><br><span class="line">port=<span class="number">27017</span></span><br><span class="line">fork=<span class="literal">true</span></span><br><span class="line">auth=<span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
 <p>3、修改系统环境变量PATH，把 /Users/likai/mongodb/bin 目录加到PATH中。<br>修改环境变量的方法比较多，这里采用如下方式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">'export PATH=$PATH:/Users/likai/mongodb/bin'</span>&gt;&gt;~/.bash_profile</span><br></pre></td></tr></table></figure></p>
+<p>添加完成后，需要重启shell终端或者执行source ~/.bash_profile命令，让环境变量生效</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<p>执行后查看环境变量</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>mac下安装mongodb一般有两种方式,一种是下载压缩包，另一种是通过homebrew命令来安装。</p>
