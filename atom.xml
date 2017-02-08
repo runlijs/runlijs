@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-08T07:43:21.000Z</updated>
+  <updated>2017-02-08T07:46:09.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2017/02/08/macOS%E4%B8%8Bssh%E8%BF%9E%E6%8E%A5linux%E5%85%8D%E5%AF%86%E7%A0%81%E7%99%BB%E5%BD%95/"/>
     <id>http://yoursite.com/2017/02/08/macOS下ssh连接linux免密码登录/</id>
     <published>2017-02-08T07:13:59.000Z</published>
-    <updated>2017-02-08T07:43:21.000Z</updated>
+    <updated>2017-02-08T07:46:09.000Z</updated>
     <content type="html"><![CDATA[<p>文本主要讲的，是如何简化mac连接到linux服务器的步骤，提交效率。</p>
 <p>所谓的“免登陆”其实是不存在的，只是说，从验证密码的登录方式，改为公私钥对的登录验证方式。使用后者的方式，每次会由ssh客户端自动发送验证信息，所以就免去了人工输入密码，看起来好像“免登陆”一样。</p>
 <p>关于这么做的原理，大家可以自己去Google，关键词是“非对称加密”，“RSA算法”，“基于ssh密钥对的自动登录”，等等，我就不多解释了。我直接说操作步骤吧：</p>
@@ -30,11 +30,11 @@
 <p>做完这个步骤后，cd ~/.ssh，你就可以看到你刚才生成的密钥对，id_rsa是私钥，id_rsa.pub是公钥。下一步，就是把公钥拷贝到目标主机上。</p>
 <h1 id="u7B2C_u4E8C_u6B65_uFF1A_u5C06_u516C_u94A5_u62F7_u8D1D_u5230_u76EE_u6807_u4E3B_u673A"><a href="#u7B2C_u4E8C_u6B65_uFF1A_u5C06_u516C_u94A5_u62F7_u8D1D_u5230_u76EE_u6807_u4E3B_u673A" class="headerlink" title="第二步：将公钥拷贝到目标主机"></a>第二步：将公钥拷贝到目标主机</h1><p>用ssh登录到目标主机，<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh username@host</span><br></pre></td></tr></table></figure></p>
 <p>username主机登录用户<br>host 主机IP<br>这里需要手动输入登录密码</p>
-<p>然后cd ~/.ssh目录，如果目录不存在，那么要自己创建mkdir -p ~/.ssh.</p>
+<p>然后cd ~/.ssh目录，如果目录不存在，那么要自己创建mkdir -p ~/.ssh</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure>
 <p>你今后要用哪个帐户登录主机，就在哪个帐户的home目录下操作，如果要免登陆root，就要去/root下操作。使用~比较好，不用多想了。</p>
 <p>有了.ssh目录后，进去，然后把id_rsa.pub传过去，<br>可以用scp命令，这里要做的一个主要操作，就是将id_rsa.pub，的文件内容，写到一个叫authorized_keys的文件中去<br>如果目标主机的相应用户名下已经有了.ssh目录和authorized_keys文件，那你操作要小心一点，可能别人也做过免登陆的设置，这个时候你要小心不要把别人的设置给覆盖了</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp ~/.ssh/id_rsa.pub username@host:/home/user/.ssh #&#36825;&#37324;&#38656;&#35201;&#25163;&#21160;&#36755;&#20837;&#19968;&#27425;&#23494;&#30721;&#10;#&#22914;&#26524;&#27809;&#26377;authorized_keys&#25991;&#20214;&#38656;&#35201;&#21019;&#24314;&#25991;&#20214;&#10;cd ~/.ssh&#10;touch authorized_keys&#10;cat id_rsa.pub &#62;&#62; authorized_keys ## &#23558;&#20844;&#38053;&#36861;&#21152;&#21040; authorized_keys &#25991;&#20214;&#26368;&#21518;&#19968;&#34892;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp ~/.ssh/id_rsa.pub username@host:/home/user/.ssh #&#36825;&#37324;&#38656;&#35201;&#25163;&#21160;&#36755;&#20837;&#19968;&#27425;&#23494;&#30721;&#10;#&#25991;&#20214;&#19978;&#20256;&#25104;&#21151;&#21518;&#65292;&#36830;&#25509;&#21040;&#26381;&#21153;&#22120;&#10;ssh username@host #&#36825;&#37324;&#38656;&#35201;&#25163;&#21160;&#36755;&#20837;&#19968;&#27425;&#23494;&#30721;&#10;#&#22914;&#26524;.ssh&#30446;&#24405;&#19981;&#23384;&#22312; &#21019;&#24314;&#10;mkdir -p ~/.ssh&#10;cd ~/.ssh&#10;#&#22914;&#26524;&#27809;&#26377;authorized_keys&#25991;&#20214;&#38656;&#35201;&#21019;&#24314;&#25991;&#20214;&#10;touch authorized_keys&#10;cat id_rsa.pub &#62;&#62; authorized_keys ## &#23558;&#20844;&#38053;&#36861;&#21152;&#21040; authorized_keys &#25991;&#20214;&#26368;&#21518;&#19968;&#34892;</span><br></pre></td></tr></table></figure>
 <p>到此免密码登录基本完成</p>
 ]]></content>
     <summary type="html">
