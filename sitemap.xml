@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/02/08/mac%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEmongodb/</loc>
+    <lastmod>2017-02-08T02:42:24.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/02/04/%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2017-02-04T07:35:27.000Z</lastmod>
   </url>
