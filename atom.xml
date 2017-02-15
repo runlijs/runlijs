@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-15T08:10:09.000Z</updated>
+  <updated>2017-02-15T08:44:50.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,10 +19,19 @@
     <link href="http://yoursite.com/2017/02/15/mongodb%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://yoursite.com/2017/02/15/mongodb常用命令/</id>
     <published>2017-02-15T08:10:09.000Z</published>
-    <updated>2017-02-15T08:10:09.000Z</updated>
-    <content type="html"></content>
+    <updated>2017-02-15T08:44:50.000Z</updated>
+    <content type="html"><![CDATA[<p>这篇文章记录Mongodb的一些常用命令</p>
+<h4 id="u521B_u5EFA_u6570_u636E_u5E93"><a href="#u521B_u5EFA_u6570_u636E_u5E93" class="headerlink" title="创建数据库"></a>创建数据库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; use databasename</span><br></pre></td></tr></table></figure>
+<p>如果数据库不存在，则创建数据库，否则切换到指定数据库。</p>
+<p>实例</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; use sb</span><br><span class="line">switched to db sb</span><br><span class="line">&gt; db</span><br><span class="line">sb</span><br></pre></td></tr></table></figure>
+<p>这里我成功创建数据库sb</p>
+<h4 id="u67E5_u770B_u6240_u6709_u6570_u636E_u5E93"><a href="#u67E5_u770B_u6240_u6709_u6570_u636E_u5E93" class="headerlink" title="查看所有数据库"></a>查看所有数据库</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; show dbs</span><br><span class="line">admin  <span class="number">0.000</span>GB</span><br><span class="line"><span class="built_in">local</span>  <span class="number">0.000</span>GB</span><br></pre></td></tr></table></figure>
+<p>我们新创建的</p>
+]]></content>
     <summary type="html">
-    
+    <![CDATA[<p>这篇文章记录Mongodb的一些常用命令</p>
+<h4 id="u521B_u5EFA_u6570_u636E_u5E93"><a href="#u521B_u5EFA_u6570_u636E_u5E93" class="headerlink" title="创建数据库"]]>
     </summary>
     
   </entry>
