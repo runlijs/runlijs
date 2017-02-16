@@ -2,7 +2,17 @@
 所谓的“免登陆”其实是不存在的，只是说，从验证密码的登录方式，改为公私钥对的登录验证方式。使用后者的方式，每次会由ssh客户端自动发送验证信息，所以就免去了人工输入密码，看起来好像“免登陆”一样。
 关于这么做的原理，大家可以自己去Google，关键词是“非对称加密”，“RSA算法”，“基于ssh密钥对的自动登录”，等等，我就不多解释了。我直接说操作步骤吧：
 1.生成密钥对2.用密码登录远程主机，将公钥拷贝过去3.done
-第一步：生成密匙对12&lt;spa"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="https://github.com/runlijs" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">macOS下ssh连接linux免密码登录</h1><div class="post-meta"><div class="post-time">Feb 8, 2017</div></div><div class="post-content"><p>文本主要讲的，是如何简化mac连接到linux服务器的步骤，提交效率。</p>
+
+文本主要讲的，是如何简化mac连接到linux服务器的步骤，提交效率。
+所谓的“免登陆”其实是不存在的，只是说，从验证密码的登录方式，改为公私钥对的登录验证方式。使用后者的方式，每次会由ssh客户端自动发送验证信息，所以就免去了人工输入密码，看起来好像“免登陆”一样。
+关于这么做的原理，大家可以自己去Google，关键词是“非对称加密”，“RSA算法”，“基于ssh密钥对的自动登录”，等等，我就不多解释了。我直接说操作步骤吧：
+1.生成密钥对2.用密码登录远程主机，将公钥拷贝过去3.done
+&lt;h1 id=&quot;u7B2"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="short icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="http://fonts.useso.com/css?family=Source+Sans+Pro:400,600" type="text/css"></head><body><header><a href="/" class="logo-link"><img src="/favicon.png"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">博客</a></li><li class="nav-list-item"><a href="https://github.com/runlijs" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">macOS下ssh连接linux免密码登录</h1><div class="post-meta"><div class="post-time">Feb 8, 2017</div></div><div class="post-content"><p>文本主要讲的，是如何简化mac连接到linux服务器的步骤，提交效率。</p>
+<p>所谓的“免登陆”其实是不存在的，只是说，从验证密码的登录方式，改为公私钥对的登录验证方式。使用后者的方式，每次会由ssh客户端自动发送验证信息，所以就免去了人工输入密码，看起来好像“免登陆”一样。</p>
+<p>关于这么做的原理，大家可以自己去Google，关键词是“非对称加密”，“RSA算法”，“基于ssh密钥对的自动登录”，等等，我就不多解释了。我直接说操作步骤吧：</p>
+<p>1.生成密钥对<br>2.用密码登录远程主机，将公钥拷贝过去<br>3.done</p>
+<a id="more"></a>
+<p>文本主要讲的，是如何简化mac连接到linux服务器的步骤，提交效率。</p>
 <p>所谓的“免登陆”其实是不存在的，只是说，从验证密码的登录方式，改为公私钥对的登录验证方式。使用后者的方式，每次会由ssh客户端自动发送验证信息，所以就免去了人工输入密码，看起来好像“免登陆”一样。</p>
 <p>关于这么做的原理，大家可以自己去Google，关键词是“非对称加密”，“RSA算法”，“基于ssh密钥对的自动登录”，等等，我就不多解释了。我直接说操作步骤吧：</p>
 <p>1.生成密钥对<br>2.用密码登录远程主机，将公钥拷贝过去<br>3.done</p>
