@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-16T03:35:17.000Z</updated>
+  <updated>2017-02-16T07:37:02.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2017/02/16/mongodb%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%B9%8B%E5%A2%9E%E6%9F%A5%E6%94%B9%E5%88%A0/"/>
     <id>http://yoursite.com/2017/02/16/mongodb常用命令之增查改删/</id>
     <published>2017-02-16T02:03:51.000Z</published>
-    <updated>2017-02-16T03:35:17.000Z</updated>
+    <updated>2017-02-16T07:37:02.000Z</updated>
     <content type="html"><![CDATA[<p>今天这篇文章主要介绍下集合(collenction)的增查改删</p>
 <p>切换到对应的数据库</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; use sb </span><br><span class="line">switched to db sb</span><br></pre></td></tr></table></figure>
@@ -34,7 +34,10 @@
 <p>db.collection.insert() 插入单个document时返回一个WriteResult对象的状态信息。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&gt;db.invertory.insert([</span><br><span class="line">  &#123; item: <span class="string">"journal"</span>, qty: <span class="number">25</span>, tags: [<span class="string">"blank"</span>, <span class="string">"red"</span>], size: &#123; h: <span class="number">14</span>, w: <span class="number">21</span>, uom: <span class="string">"cm"</span> &#125; &#125;,</span><br><span class="line">  &#123; item: <span class="string">"mat"</span>, qty: <span class="number">85</span>, tags: [<span class="string">"gray"</span>], size: &#123; h: <span class="number">27.9</span>, w: <span class="number">35.5</span>, uom: <span class="string">"cm"</span> &#125; &#125;,</span><br><span class="line">  &#123; item: <span class="string">"mousepad"</span>, qty: <span class="number">25</span>, tags: [<span class="string">"gel"</span>, <span class="string">"blue"</span>], size: &#123; h: <span class="number">19</span>, w: <span class="number">22.85</span>, uom: <span class="string">"cm"</span> &#125; &#125;</span><br><span class="line">])</span><br><span class="line">BulkWriteResult(&#123;</span><br><span class="line">  <span class="string">"writeErrors"</span> : [ ],</span><br><span class="line">  <span class="string">"writeConcernErrors"</span> : [ ],</span><br><span class="line">  <span class="string">"nInserted"</span> : <span class="number">3</span>,</span><br><span class="line">  <span class="string">"nUpserted"</span> : <span class="number">0</span>,</span><br><span class="line">  <span class="string">"nMatched"</span> : <span class="number">0</span>,</span><br><span class="line">  <span class="string">"nModified"</span> : <span class="number">0</span>,</span><br><span class="line">  <span class="string">"nRemoved"</span> : <span class="number">0</span>,</span><br><span class="line">  <span class="string">"upserted"</span> : [ ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>db.collection.insert() 插入多个documents时返回一个操作状态的BulkWriteResult对象，以上操作成功插入documents后返回的BulkWriteResult对象</p>
-<h2 id="Insert_Behavior__28_u63D2_u5165_u7EA6_u675F_29"><a href="#Insert_Behavior__28_u63D2_u5165_u7EA6_u675F_29" class="headerlink" title="Insert Behavior (插入约束)"></a>Insert Behavior (插入约束)</h2><h3 id="Collection_Creation__28_u96C6_u5408_u521B_u5EFA_29"><a href="#Collection_Creation__28_u96C6_u5408_u521B_u5EFA_29" class="headerlink" title="Collection Creation (集合创建)"></a>Collection Creation (集合创建)</h3><p>如果集合(collection)不存在，插入操作将会创建这个集合(collection)</p>
+<h2 id="Insert_Behavior__28_u63D2_u5165_u884C_u4E3A_29"><a href="#Insert_Behavior__28_u63D2_u5165_u884C_u4E3A_29" class="headerlink" title="Insert Behavior (插入行为)"></a>Insert Behavior (插入行为)</h2><h3 id="Collection_Creation__28_u96C6_u5408_u521B_u5EFA_29"><a href="#Collection_Creation__28_u96C6_u5408_u521B_u5EFA_29" class="headerlink" title="Collection Creation (集合创建)"></a>Collection Creation (集合创建)</h3><p>如果集合(collection)不存在，插入操作将会创建这个集合(collection)</p>
+<h3 id="id_Field__28_id_u5B57_u6BB5_29"><a href="#id_Field__28_id_u5B57_u6BB5_29" class="headerlink" title="_id Field (_id字段)"></a>_id Field (_id字段)</h3><p>在MongoDB中，存储在集合(collection)中的每个文档都需要一个唯一的_id字段作为主键。 如果插入的文档省略_id字段，MongoDB驱动程序会自动为_id字段生成ObjectId。</p>
+<h3 id="Atomicity"><a href="#Atomicity" class="headerlink" title="Atomicity"></a>Atomicity</h3><p>All write operations in MongoDB are atomic on the level of a single document. For more information on MongoDB and atomicity, see Atomicity and Transactions</p>
+<h3 id="Write_Acknowledgement"><a href="#Write_Acknowledgement" class="headerlink" title="Write Acknowledgement"></a>Write Acknowledgement</h3><p>With write concerns, you can specify the level of acknowledgement requested from MongoDB for write operations. For details, see Write Concern.</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>今天这篇文章主要介绍下集合(collenction)的增查改删</p>
@@ -701,13 +704,15 @@ $
     <link href="http://yoursite.com/2015/12/18/mac-sublime-text-3-%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6/"/>
     <id>http://yoursite.com/2015/12/18/mac-sublime-text-3-安装插件/</id>
     <published>2015-12-18T05:53:02.000Z</published>
-    <updated>2015-12-18T06:10:34.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="sublime_text3__u5B89_u88C5_u63D2_u4EF6_u7BA1_u7406_u5668Package_Control"><a href="#sublime_text3__u5B89_u88C5_u63D2_u4EF6_u7BA1_u7406_u5668Package_Control" class="headerlink" title="sublime text3 安装插件管理器Package Control"></a>sublime text3 安装插件管理器Package Control</h1><h4 id="u6253_u5F00Sublime_uFF0C_u6309_u4E0BControl_+__28Mac_29_u6216_u8005Ctrl_+_28Windows_29_uFF0C_u7136_u540E_u7C98_u8D34_u4E0A_u4E0B_u9762_u7684_u4EE3_u7801"><a href="#u6253_u5F00Sublime_uFF0C_u6309_u4E0BControl_+__28Mac_29_u6216_u8005Ctrl_+_28Windows_29_uFF0C_u7136_u540E_u7C98_u8D34_u4E0A_u4E0B_u9762_u7684_u4EE3_u7801" class="headerlink" title="打开Sublime，按下Control + (Mac)或者Ctrl +(Windows)，然后粘贴上下面的代码"></a>打开Sublime，按下Control + <code>(Mac)或者Ctrl +</code>(Windows)，然后粘贴上下面的代码</h4><blockquote>
+    <updated>2017-02-16T05:15:34.000Z</updated>
+    <content type="html"><![CDATA[<p>sublime text3 安装插件管理器Package Control<br>打开Sublime，按下Control + <code>(Mac)或者Ctrl +</code>(Windows)，然后粘贴上下面的代码<br><a id="more"></a></p>
+<h1 id="sublime_text3__u5B89_u88C5_u63D2_u4EF6_u7BA1_u7406_u5668Package_Control"><a href="#sublime_text3__u5B89_u88C5_u63D2_u4EF6_u7BA1_u7406_u5668Package_Control" class="headerlink" title="sublime text3 安装插件管理器Package Control"></a>sublime text3 安装插件管理器Package Control</h1><h4 id="u6253_u5F00Sublime_uFF0C_u6309_u4E0BControl_+__28Mac_29_u6216_u8005Ctrl_+_28Windows_29_uFF0C_u7136_u540E_u7C98_u8D34_u4E0A_u4E0B_u9762_u7684_u4EE3_u7801"><a href="#u6253_u5F00Sublime_uFF0C_u6309_u4E0BControl_+__28Mac_29_u6216_u8005Ctrl_+_28Windows_29_uFF0C_u7136_u540E_u7C98_u8D34_u4E0A_u4E0B_u9762_u7684_u4EE3_u7801" class="headerlink" title="打开Sublime，按下Control + (Mac)或者Ctrl +(Windows)，然后粘贴上下面的代码"></a>打开Sublime，按下Control + <code>(Mac)或者Ctrl +</code>(Windows)，然后粘贴上下面的代码</h4><blockquote>
 <p>import urllib.request,os; pf = ‘Package Control.sublime-package’; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), ‘wb’).write(urllib.request.urlopen( ‘<a href="http://sublime.wbond.net/" target="_blank" rel="external">http://sublime.wbond.net/</a>‘ + pf.replace(‘ ‘,’%20’)).read())</p>
 </blockquote>
 <h4 id="u5B89_u88C5_u597D_u63D2_u4EF6_u7BA1_u7406_u5668_u540E_uFF0C_u6309_u4E0Bcommand+shift+p_2C_u641C_u7D22Install_Package_2C_u53EF_u4EE5_u641C_u7D22_u60F3_u8981_u5B89_u88C5_u7684_u63D2_u4EF6_u5305"><a href="#u5B89_u88C5_u597D_u63D2_u4EF6_u7BA1_u7406_u5668_u540E_uFF0C_u6309_u4E0Bcommand+shift+p_2C_u641C_u7D22Install_Package_2C_u53EF_u4EE5_u641C_u7D22_u60F3_u8981_u5B89_u88C5_u7684_u63D2_u4EF6_u5305" class="headerlink" title="安装好插件管理器后，按下command+shift+p,搜索Install Package,可以搜索想要安装的插件包"></a>安装好插件管理器后，按下command+shift+p,搜索Install Package,可以搜索想要安装的插件包</h4><h4 id="u6309_u4E0Bcommand+shift+p_2C_u641C_u7D22Remove_Package_2C_u53EF_u4EE5_u641C_u7D22_u60F3_u8981_u79FB_u9664_u7684_u63D2_u4EF6_u5305"><a href="#u6309_u4E0Bcommand+shift+p_2C_u641C_u7D22Remove_Package_2C_u53EF_u4EE5_u641C_u7D22_u60F3_u8981_u79FB_u9664_u7684_u63D2_u4EF6_u5305" class="headerlink" title="按下command+shift+p,搜索Remove Package,可以搜索想要移除的插件包"></a>按下command+shift+p,搜索Remove Package,可以搜索想要移除的插件包</h4>]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="sublime_text3__u5B89_u88C5_u63D2_u4EF6_u7BA1_u7406_u5668Package_Control"><a href="#sublime_text3__u5B89_u88C5_u63D2_u4EF6_u7BA1_u740]]>
+    <![CDATA[<p>sublime text3 安装插件管理器Package Control<br>打开Sublime，按下Control + <code>(Mac)或者Ctrl +</code>(Windows)，然后粘贴上下面的代码<br>]]>
+    
     </summary>
     
   </entry>
