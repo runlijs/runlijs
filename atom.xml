@@ -117,8 +117,10 @@
     <link href="http://yoursite.com/2017/02/08/mac%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEmongodb/"/>
     <id>http://yoursite.com/2017/02/08/mac安装配置mongodb/</id>
     <published>2017-02-08T02:35:49.000Z</published>
-    <updated>2017-02-15T08:24:30.000Z</updated>
+    <updated>2017-02-16T05:12:55.000Z</updated>
     <content type="html"><![CDATA[<p>mac下安装mongodb一般有两种方式,一种是下载压缩包，另一种是通过homebrew命令来安装。</p>
+<p>本人采用是压缩包安装，下载地址 <a href="https://www.mongodb.org/dl/osx/x86_64" target="_blank" rel="external">https://www.mongodb.org/dl/osx/x86_64</a>选择对应版本<br><a id="more"></a></p>
+<p>mac下安装mongodb一般有两种方式,一种是下载压缩包，另一种是通过homebrew命令来安装。</p>
 <p>本人采用是压缩包安装，下载地址 <a href="https://www.mongodb.org/dl/osx/x86_64" target="_blank" rel="external">https://www.mongodb.org/dl/osx/x86_64</a>选择对应版本</p>
 <p>1、下载成功后，文件解压到/Users/likai/下，并将文件夹重名为mongodb</p>
 <p>2、在mongodb目录下新建二个目录：data/db——和于存放数据文件，etc——用于存放mongod.conf。<br>  使用vim或其它编辑器创建mongod.conf文件，内容如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#mongodb config file </span></span><br><span class="line">dbpath=/Users/likai/mongodb/data/db</span><br><span class="line">logpath=/Users/likai/mongodb/mongod.log</span><br><span class="line">logappend=<span class="literal">true</span></span><br><span class="line">port=<span class="number">27017</span></span><br><span class="line">fork=<span class="literal">true</span></span><br><span class="line">auth=<span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
@@ -140,7 +142,8 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<p>mac下安装mongodb一般有两种方式,一种是下载压缩包，另一种是通过homebrew命令来安装。</p>
-<p>本人采用是压缩包安装，下载地址 <a href="https://www.mongodb.org/dl/osx/x86_64" target="_blank"]]>
+<p>本人采用是压缩包安装，下载地址 <a href="https://www.mongodb.org/dl/osx/x86_64">https://www.mongodb.org/dl/osx/x86_64</a>选择对应版本<br>]]>
+    
     </summary>
     
   </entry>
@@ -348,8 +351,11 @@ $
     <link href="http://yoursite.com/2016/01/18/%E6%8E%8C%E6%8F%A1Node-js%E7%9A%84%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F-File-System-%E5%9F%BA%E7%A1%80/"/>
     <id>http://yoursite.com/2016/01/18/掌握Node-js的文件系统-File-System-基础/</id>
     <published>2016-01-18T01:20:01.000Z</published>
-    <updated>2016-01-18T03:01:14.000Z</updated>
+    <updated>2017-02-16T05:12:15.000Z</updated>
     <content type="html"><![CDATA[<p>Node最引以为傲的就是它有一个非常小的核心，有一些语言绑定了完整的POSIX API,而Node实现了尽可能少的绑定，并通过同步，异步或流API形式暴露他们。</p>
+<p>这种方法意味着，操作系统中有一些非常方便的功能，需要在Node中重建。这是一个教你如何使用文件系统软件包的实用教程。</p>
+<a id="more"></a>
+<p>Node最引以为傲的就是它有一个非常小的核心，有一些语言绑定了完整的POSIX API,而Node实现了尽可能少的绑定，并通过同步，异步或流API形式暴露他们。</p>
 <p>这种方法意味着，操作系统中有一些非常方便的功能，需要在Node中重建。这是一个教你如何使用文件系统软件包的实用教程。</p>
 <h1 id="u5F15_u7528_u6587_u4EF6"><a href="#u5F15_u7528_u6587_u4EF6" class="headerlink" title="引用文件"></a>引用文件</h1><p>与文件系统的交互很重要的一点是要指向正确的文件。由于NPM的包使用相对路径引用，所以你不能把路径写死在代码。有两个主要方式来以确保包能引用到正确的文件</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//使用'path.join()'而不是'+'确保Windows也能正常工作</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 找到基于调用点的相对路径，对于命令行程序(CLI applications)非常实用</span></span><br><span class="line">path.join(process.cwd(),<span class="string">'my-dynamic-file'</span>);</span><br><span class="line"><span class="comment">//或者</span></span><br><span class="line">path.resolve(<span class="string">'my-dynamic-file'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 基于一个文件找到别一个文件</span></span><br><span class="line">path.join(__dirname,<span class="string">'my-dynamic-file'</span>)</span><br></pre></td></tr></table></figure>
@@ -374,7 +380,8 @@ $
 ]]></content>
     <summary type="html">
     <![CDATA[<p>Node最引以为傲的就是它有一个非常小的核心，有一些语言绑定了完整的POSIX API,而Node实现了尽可能少的绑定，并通过同步，异步或流API形式暴露他们。</p>
-<p>这种方法意味着，操作系统中有一些非常方便的功能，需要在Node中重建。这是一个教你如何使用文件系统]]>
+<p>这种方法意味着，操作系统中有一些非常方便的功能，需要在Node中重建。这是一个教你如何使用文件系统软件包的实用教程。</p>]]>
+    
     </summary>
     
       <category term="nodejs" scheme="http://yoursite.com/tags/nodejs/"/>
@@ -436,8 +443,9 @@ $
     <link href="http://yoursite.com/2015/12/28/%E4%BB%8E%E7%BD%91%E6%98%93%E4%B8%8E%E6%B7%98%E5%AE%9D%E7%9A%84font-size%E6%80%9D%E8%80%83%E5%89%8D%E7%AB%AF%E8%AE%BE%E8%AE%A1%E7%A8%BF%E4%B8%8E%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
     <id>http://yoursite.com/2015/12/28/从网易与淘宝的font-size思考前端设计稿与工作流/</id>
     <published>2015-12-28T01:49:47.000Z</published>
-    <updated>2015-12-28T08:41:22.000Z</updated>
-    <content type="html"><![CDATA[<p>本文结合自己对网易与淘宝移动端首页html元素上的font-size这个属性的思考与学习，讨论html5设计稿尺寸以及前端与设计之间协作流程的问题，内容较多，但对你的技术和工作一定有价值，欢迎阅读与点评 </p>
+    <updated>2017-02-16T05:11:58.000Z</updated>
+    <content type="html"><![CDATA[<p>本文结合自己对网易与淘宝移动端首页html元素上的font-size这个属性的思考与学习，讨论html5设计稿尺寸以及前端与设计之间协作流程的问题，内容较多，但对你的技术和工作一定有价值，欢迎阅读与点评<br> <a id="more"></a></p>
+<p>本文结合自己对网易与淘宝移动端首页html元素上的font-size这个属性的思考与学习，讨论html5设计稿尺寸以及前端与设计之间协作流程的问题，内容较多，但对你的技术和工作一定有价值，欢迎阅读与点评 </p>
 <h1 id="1-__u95EE_u9898_u7684_u5F15_u51FA"><a href="#1-__u95EE_u9898_u7684_u5F15_u51FA" class="headerlink" title="1. 问题的引出"></a>1. 问题的引出</h1><p>最近阅读白树的的博文《<a href="http://www.cnblogs.com/PeunZhang/p/3407453.html" target="_blank" rel="external">移动web资源的整理</a>》时，他在博文中有一段指出，如果html5要适应各种分辨率的移动设备，应该使用rem这样的尺寸单位，同时给出了一段针对各个分辨率范围在html上设置font-size的代码：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">html</span><span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">10px</span></span></span></span>&#125;</span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (min-width:<span class="number">321px</span>) and (max-width:<span class="number">375px</span>)</span>&#123; </span><br><span class="line">	<span class="tag">html</span> <span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">11px</span></span></span>;&#125;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (min-width:<span class="number">376px</span>) and (max-width:<span class="number">414px</span>) </span>&#123;</span><br><span class="line">	<span class="tag">html</span> <span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">13px</span></span></span></span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (min-width:<span class="number">415px</span>) and (max-width:<span class="number">639px</span>)</span><br><span class="line">	html</span>&#123;<span class="tag">font-size</span><span class="pseudo">:15px</span>&#125;</span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (min-width:<span class="number">640px</span>) and (max-width:<span class="number">719px</span>)</span>&#123;</span><br><span class="line">	<span class="tag">html</span><span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">20px</span></span></span></span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (min-width:<span class="number">720px</span>) and (max-width:<span class="number">749px</span>)</span>&#123;</span><br><span class="line">	<span class="tag">html</span><span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">22.5px</span></span></span></span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (min-width:<span class="number">750px</span>) and (max-width:<span class="number">799px</span>)</span>&#123;</span><br><span class="line">	<span class="tag">html</span><span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">23.5px</span></span></span></span>&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="at_rule">@<span class="keyword">media</span> screen and (min-width:<span class="number">800px</span>)</span>&#123;</span><br><span class="line">	<span class="tag">html</span><span class="rules">&#123;<span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">25px</span></span></span></span>&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>在实际项目中，把与元素尺寸有关的css,如width,height,line-height,margin,padding等都以rem作为单位，这样页面在不同设备下就保持一致的网页的布局，举例来说，网页有一个.item类，设置了width为3.4rem，该类在不同的分辨率下对应的实际宽度如下：</p>
 <blockquote>
@@ -543,8 +551,8 @@ $
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>本文结合自己对网易与淘宝移动端首页html元素上的font-size这个属性的思考与学习，讨论html5设计稿尺寸以及前端与设计之间协作流程的问题，内容较多，但对你的技术和工作一定有价值，欢迎阅读与点评 </p>
-<h1 id="1-__u95EE_u9898_u7684_]]>
+    <![CDATA[<p>本文结合自己对网易与淘宝移动端首页html元素上的font-size这个属性的思考与学习，讨论html5设计稿尺寸以及前端与设计之间协作流程的问题，内容较多，但对你的技术和工作一定有价值，欢迎阅读与点评<br>]]>
+    
     </summary>
     
       <category term="html" scheme="http://yoursite.com/tags/html/"/>
