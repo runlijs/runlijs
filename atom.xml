@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-20T08:42:15.000Z</updated>
+  <updated>2017-02-20T08:56:00.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2017/02/16/mongodb%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%B9%8B%E5%A2%9E%E6%9F%A5%E6%94%B9%E5%88%A0/"/>
     <id>http://yoursite.com/2017/02/16/mongodb常用命令之增查改删/</id>
     <published>2017-02-16T02:03:51.000Z</published>
-    <updated>2017-02-20T08:42:15.000Z</updated>
+    <updated>2017-02-20T08:56:00.000Z</updated>
     <content type="html"><![CDATA[<p>今天这篇文章主要介绍下集合(collenction)的增查改删</p>
 <p>切换到对应的数据库</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; use sb </span><br><span class="line">switched to db sb</span><br></pre></td></tr></table></figure>
@@ -61,6 +61,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; db.intory.find(&#123; <span class="variable">$or</span>:[ &#123;status:A,qty:&#123;<span class="variable">$lt</span>:<span class="number">30</span>&#125;&#125; ] &#125;)</span><br><span class="line">&#123; <span class="string">"_id"</span> : ObjectId(<span class="string">"58aa82bfa8aebe2021fb958d"</span>), <span class="string">"item"</span> : <span class="string">"journal"</span>, <span class="string">"qty"</span> : <span class="number">25</span>, <span class="string">"size"</span> : &#123; <span class="string">"h"</span> : <span class="number">14</span>, <span class="string">"w"</span> : <span class="number">21</span>, <span class="string">"uom"</span> : <span class="string">"cm"</span> &#125;, <span class="string">"status"</span> : <span class="string">"A"</span> &#125;</span><br></pre></td></tr></table></figure>
 <h3 id="u6307_u5B9AAND_u4EE5_u53CAOR_u6761_u4EF6__28Specify_AND_as_well_as_OR_Conditions_29"><a href="#u6307_u5B9AAND_u4EE5_u53CAOR_u6761_u4EF6__28Specify_AND_as_well_as_OR_Conditions_29" class="headerlink" title="指定AND以及OR条件 (Specify AND as well as OR Conditions)"></a>指定AND以及OR条件 (Specify AND as well as OR Conditions)</h3><p>下面这个例子，查找集合中的所有文档，当status=’A’ and ( qty&lt;30($lt) or item字段值以p开始 )</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; db.intory.find(&#123;</span><br><span class="line">  status:<span class="string">'A'</span>,</span><br><span class="line">  <span class="variable">$or</span>:[&#123;qtp:&#123;<span class="variable">$lt</span>:<span class="number">30</span>&#125;&#125;,&#123; item:/^p/ &#125;]</span><br><span class="line">&#125;)</span><br><span class="line">&#123; <span class="string">"_id"</span> : ObjectId(<span class="string">"58aa82bfa8aebe2021fb9591"</span>), <span class="string">"item"</span> : <span class="string">"postcard"</span>, <span class="string">"qty"</span> : <span class="number">45</span>, <span class="string">"size"</span> : &#123; <span class="string">"h"</span> : <span class="number">10</span>, <span class="string">"w"</span> : <span class="number">15.25</span>, <span class="string">"uom"</span> : <span class="string">"cm"</span> &#125;, <span class="string">"status"</span> : <span class="string">"A"</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>今天就简单的介绍了一下查询的方法，下篇文章介绍下查询运算符</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>今天这篇文章主要介绍下集合(collenction)的增查改删</p>
