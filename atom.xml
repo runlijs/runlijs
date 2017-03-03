@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-20T08:56:00.000Z</updated>
+  <updated>2017-03-03T01:31:49.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,11 +15,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[44个Javascript变态题解析]]></title>
+    <link href="http://yoursite.com/2017/02/28/44%E4%B8%AAJavascript%E5%8F%98%E6%80%81%E9%A2%98%E8%A7%A3%E6%9E%90/"/>
+    <id>http://yoursite.com/2017/02/28/44个Javascript变态题解析/</id>
+    <published>2017-02-28T08:07:21.000Z</published>
+    <updated>2017-03-03T01:31:49.000Z</updated>
+    <content type="html"><![CDATA[<p>原题来自: <a href="http://javascript-puzzlers.herokuapp.com/" target="_blank" rel="external">http://javascript-puzzlers.herokuapp.com/</a></p>
+<p>读者可以先去做一下感受感受. 当初笔者的成绩是 21/44…</p>
+<p>当初笔者做这套题的时候不仅怀疑智商, 连人生都开始怀疑了….</p>
+<p>不过, 对于基础知识的理解是深入编程的前提. 让我们一起来看看这些变态题到底变态不变态吧!</p>
+<a id="more"></a>
+<p>##1<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].map(<span class="built_in">parseInt</span>)</span><br></pre></td></tr></table></figure></p>
+<p>首先, map接受两个参数, 一个回调函数 callback, 一个回调函数的this值</p>
+<p>其中回调函数接受三个参数 currentValue, index, arrary;</p>
+<p>而题目中, map只传入了回调函数–parseInt.</p>
+<p>其次, parseInt 只接受两个两个参数 string, radix(基数).</p>
+<div class="tips"><br>可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。<br><br>如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。<br><br>如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。<br></div>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>原题来自: <a href="http://javascript-puzzlers.herokuapp.com/">http://javascript-puzzlers.herokuapp.com/</a></p>
+<p>读者可以先去做一下感受感受. 当初笔者的成绩是 21/44…</p>
+<p>当初笔者做这套题的时候不仅怀疑智商, 连人生都开始怀疑了….</p>
+<p>不过, 对于基础知识的理解是深入编程的前提. 让我们一起来看看这些变态题到底变态不变态吧!</p>]]>
+    
+    </summary>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[mongodb常用命令之增查改删]]></title>
     <link href="http://yoursite.com/2017/02/16/mongodb%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%B9%8B%E5%A2%9E%E6%9F%A5%E6%94%B9%E5%88%A0/"/>
     <id>http://yoursite.com/2017/02/16/mongodb常用命令之增查改删/</id>
     <published>2017-02-16T02:03:51.000Z</published>
-    <updated>2017-02-20T08:56:00.000Z</updated>
+    <updated>2017-02-21T00:46:21.000Z</updated>
     <content type="html"><![CDATA[<p>今天这篇文章主要介绍下集合(collenction)的增查改删</p>
 <p>切换到对应的数据库</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; use sb </span><br><span class="line">switched to db sb</span><br></pre></td></tr></table></figure>
