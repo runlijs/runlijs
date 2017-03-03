@@ -32,8 +32,57 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
+<td>Undefined</td>
+<td>‘undefined’</td>
+</tr>
+<tr>
+<td>null</td>
+<td>‘object’</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>‘boolean’</td>
+</tr>
+<tr>
+<td>Number</td>
+<td>‘number’</td>
+</tr>
+<tr>
+<td>String</td>
+<td>‘string’</td>
+</tr>
+<tr>
+<td>Symbol</td>
+<td>‘symbol’</td>
+</tr>
+<tr>
+<td>Function</td>
+<td>‘function’</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>‘object’</td>
 </tr>
 </tbody>
 </table>
+<p>答案就是[object,false]</p>
+<h1 id="u7B2C3_u9898"><a href="#u7B2C3_u9898" class="headerlink" title="第3题"></a>第3题</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>].reduce(<span class="built_in">Math</span>.pow),[].reduce(<span class="built_in">Math</span>.pow)]</span><br></pre></td></tr></table></figure>
+<p>arr.reduce(callback[, initialValue])</p>
+<p>reduce接受两个参数, 一个回调, 一个初始值.</p>
+<p>回调函数接受四个参数 previousValue, currentValue, currentIndex, array</p>
+<p>需要注意的是 If the array is empty and no initialValue was provided, TypeError would be thrown.</p>
+<p>所以第二个表达式会报异常. 第一个表达式等价于 Math.pow(3, 2) =&gt; 9; Math.pow(9, 1) =&gt;9</p>
+<p>答案是 [9,erroe]</p>
+<h1 id="u7B2C4_u9898"><a href="#u7B2C4_u9898" class="headerlink" title="第4题"></a>第4题</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> val  = <span class="string">'st'</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'Value is '</span>+(val===<span class="string">'st'</span>) ? <span class="string">"Something"</span>:<span class="string">"Nothing"</span>)</span><br></pre></td></tr></table></figure>
+<p>简而言之+号优先级大?号</p>
+<p>本题主要讲的是符号的优先级，<br>()括号大玩+号大于?号</p>
+<p>所以原题等价于 ‘Value is true’ ? ‘Somthing’ : ‘Nonthing’ 而不是 ‘Value is’ + (true ? ‘Something’ : ‘Nonthing’)</p>
+<p>答案 ‘Something’</p>
+<p>如果把上题改一下,答案会是什么呢</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> val = <span class="string">'st'</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"Value is "</span>+ (val===<span class="string">'st'</span> ? <span class="string">"Something"</span>:<span class="string">"Nothing"</span>) )</span><br></pre></td></tr></table></figure>
+<h1 id="u7B2C5_u9898"><a href="#u7B2C5_u9898" class="headerlink" title="第5题"></a>第5题</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">'World'</span></span><br><span class="line"><span class="comment">// 原题是没有前页的加号</span></span><br><span class="line"><span class="comment">// 不加的话在chrome 控制台会报错</span></span><br><span class="line">+(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="keyword">typeof</span> name === <span class="string">'undefined'</span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> name = <span class="string">'Jack'</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Goodbye "</span>+name)</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Hello "</span>+name)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+<p>在 JavaScript中， functions 和 variables 会被提升。变量提升是JavaScript将声明移至作用域 scope (全局域或者当前函数作用域) 顶部的行为。</p>
+<p>这个题目相当于</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">'World'</span></span><br><span class="line">+(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> name</span><br><span class="line">  <span class="keyword">if</span>(<span class="keyword">typeof</span> name === <span class="string">'undefined'</span>)&#123;</span><br><span class="line">    name = <span class="string">'Jack'</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Goodbye "</span>+name)</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Hello "</span>+name)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+<p>所以答案是 ‘Goodbye Jack’</p>
 </div></article></div></section><footer><div class="paginator"><a class="prev"> </a><a href="/2017/02/16/mongodb常用命令之增查改删/" class="next">下一篇</a></div></footer><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script><script>var _hmt = _hmt || [];(function() {var hm = document.createElement("script");hm.src = "//hm.baidu.com/hm.js?a36e15d9e2adec9a21fcdd9f686b1ed2";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s);})();</script><script src="https://cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script></body></html>
