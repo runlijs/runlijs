@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-28T06:03:39.000Z</updated>
+  <updated>2017-03-28T06:05:14.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,11 +19,11 @@
     <link href="http://yoursite.com/2017/03/28/mongodb%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E4%B9%8B%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
     <id>http://yoursite.com/2017/03/28/mongodb常用命令之逻辑运算符/</id>
     <published>2017-03-28T05:56:51.000Z</published>
-    <updated>2017-03-28T06:03:39.000Z</updated>
+    <updated>2017-03-28T06:05:14.000Z</updated>
     <content type="html"><![CDATA[<p>在mongodb的查询中，除了简单的find()方法查询外，我们还可以使用逻辑运算符来做一些复杂的查询<br><a id="more"></a></p>
 <h1 id="24on__u4F7F_u7528_u903B_u8F91_24or_u8FDE_u63A5_u67E5_u8BE2_u5B50_u53E5_u8FD4_u56DE_u4E0E_u4EFB_u4E00_u5B50_u53E5_u7684_u6761_u4EF6_u76F8_u5339_u914D_u7684_u6240_u6709_u6587_u6863_u3002"><a href="#24on__u4F7F_u7528_u903B_u8F91_24or_u8FDE_u63A5_u67E5_u8BE2_u5B50_u53E5_u8FD4_u56DE_u4E0E_u4EFB_u4E00_u5B50_u53E5_u7684_u6761_u4EF6_u76F8_u5339_u914D_u7684_u6240_u6709_u6587_u6863_u3002" class="headerlink" title="$on 使用逻辑$or连接查询子句返回与任一子句的条件相匹配的所有文档。"></a>$on 使用逻辑$or连接查询子句返回与任一子句的条件相匹配的所有文档。</h1><p>语法</p>
 <blockquote>
-<p>{ $or: [ { <expression1> }, { <expression2> }, … , { <expressionn> } ] }</expressionn></expression2></expression1></p>
+<p>{ $or: [ { expression1 }, { expression2 }, … , { expressionN } ] }</p>
 </blockquote>
 ]]></content>
     <summary type="html">
